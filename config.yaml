@@ -1,0 +1,66 @@
+# Configuration for AI Digest sources
+
+sources:
+  rss_feeds:
+    - name: "Hugging Face Blog"
+      url: "https://huggingface.co/blog/feed.xml"
+      category: "industry"
+    
+    - name: "vLLM Blog"
+      url: "https://blog.vllm.ai/feed.xml"
+      category: "inference"
+    
+    - name: "Modal Labs Blog"
+      url: "https://modal.com/blog/rss.xml"
+      category: "infrastructure"
+    
+    - name: "Fireworks.ai Blog"
+      url: "https://fireworks.ai/blog/rss.xml"
+      category: "inference"
+    
+    - name: "Sebastian Raschka Substack"
+      url: "https://magazine.sebastianraschka.com/feed"
+      category: "research"
+    
+    - name: "Cameron R. Wolfe Substack"
+      url: "https://cameronrwolfe.substack.com/feed"
+      category: "research"
+    
+    - name: "Import AI Newsletter"
+      url: "https://jack-clark.net/feed/"
+      category: "news"
+
+  arxiv_queries:
+    - query: "cat:cs.LG AND (ti:inference OR ti:quantization OR ti:serving)"
+      max_results: 10
+      category: "inference"
+    
+    - query: "cat:cs.LG AND (ti:RLHF OR ti:DPO OR ti:post-training OR ti:alignment)"
+      max_results: 10
+      category: "post-training"
+    
+    - query: "cat:cs.CL AND (ti:reasoning OR ti:chain-of-thought)"
+      max_results: 5
+      category: "reasoning"
+
+  github_trending:
+    - language: "python"
+      since: "daily"
+      keywords: ["llm", "inference", "vllm", "quantization", "training"]
+
+# LLM Configuration
+llm:
+  provider: "anthropic"  # or "openai"
+  model: "claude-3-5-sonnet-20241022"  # or "gpt-4-turbo"
+  temperature: 0.3
+  max_tokens: 4000
+
+# Build Configuration
+build:
+  lookback_days: 7  # How many days to fetch
+  summary_storage: "summaries/"
+  output_dir: "public/"
+  
+# Significance thresholds (for filtering)
+significance:
+  min_score: 0.6  # 0-1 scale, determined by LLM
