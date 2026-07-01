@@ -24,20 +24,30 @@ Your audience is an ML practitioner who checks this summary periodically (not da
 
 I will provide you with a list of recent articles, blog posts, and papers.
 
-IMPORTANT FORMAT INSTRUCTIONS:
-- Respond with ONLY valid JSON
-- Use single quotes inside descriptions, NOT double quotes
-- Keep descriptions concise (under 100 characters each)
-- Escape any special characters properly
+CRITICAL JSON FORMAT REQUIREMENTS:
+1. Your ENTIRE response must be valid JSON - no text before or after
+2. Use ONLY double quotes for JSON strings (never single quotes)
+3. Keep descriptions SHORT (under 80 characters) to avoid formatting issues
+4. Do NOT include literal newlines, tabs, or control characters in strings
+5. Escape special characters: use \" for quotes, \\ for backslashes
+6. If uncertain about special characters, omit them or use simple punctuation
 
-For each significant advancement, provide a JSON object with these fields (keep each field SHORT):
-- title: The original title (string)
-- url: The source URL (string)
-- core_innovation: What is new in 50 characters or less (string)
-- significance: Why it matters in 50 characters or less (string)
-- practical_readiness: One of: research, prototype, or production-ready (string)
-- significance_score: A number from 0.0 to 1.0 (float)
-- category: One of: inference, post-training, architecture, tooling, research (string)
+Response schema (return ONLY this JSON, nothing else):
+{
+  "items": [
+    {
+      "title": "string (original title)",
+      "url": "string (source URL)",
+      "core_innovation": "string (what is new - max 60 chars)",
+      "significance": "string (why it matters - max 60 chars)",
+      "practical_readiness": "string (one of: research, prototype, production-ready)",
+      "significance_score": 0.8,
+      "category": "string (one of: inference, post-training, architecture, tooling, research)"
+    }
+  ],
+  "trends": ["string (max 70 chars)", "string (max 70 chars)"],
+  "summary": "Brief 2-3 sentence overview of key developments"
+}
 
 Prioritize signal over noise. Omit items that are:
 - Marginal improvements on existing methods
@@ -45,12 +55,7 @@ Prioritize signal over noise. Omit items that are:
 - Purely theoretical without experimental validation
 - Marketing content without technical substance
 
-Respond with this JSON structure (NO OTHER TEXT):
-{
-  "items": [list of item objects],
-  "trends": [list of trend strings, each under 80 characters],
-  "summary": "Brief 2-3 sentence overview"
-}
+Remember: Output ONLY valid JSON. No markdown code blocks, no explanations, just the JSON object.
 
 Here are the items to analyze:
 
@@ -126,21 +131,60 @@ class SummaryGenerator:
                 print(f"  JSON parsing error: {e}")
                 print(f"  Attempting to fix common JSON issues...")
                 
-                # Try to fix common issues: unescaped newlines and quotes in strings
+                # Save the problematic response for debugging
+                debug_file = f"debug_response_{datetime.now().strftime('%Y%m%d_%H%M%S')}.txt"
+                with open(debug_file, "w") as f:
+                    f.write(response_text)
+                print(f"  Raw response saved to {debug_file}")
+                
+                # Try multiple repair strategies
                 import re
-                # This is a simple fix - for production, might need more robust handling
                 fixed_text = response_text
                 
-                # Try parsing the fixed version
-                try:
-                    summary_data = json.loads(fixed_text)
-                    print(f"  Successfully parsed after cleaning")
-                except json.JSONDecodeError as e2:
-                    print(f"  Could not fix JSON. Saving raw response for debugging.")
-                    # Save the problematic response
-                    with open("debug_response.txt", "w") as f:
-                        f.write(response_text)
-                    raise ValueError(f"Failed to parse JSON response. Error: {e2}. Raw response saved to debug_response.txt")
+                # Strategy 1: Remove control characters and fix escaped quotes
+                fixed_text = re.sub(r'[\x00-\x1f\x7f-\x9f]', '', fixed_text)
+                
+                # Strategy 2: Fix common escaping issues in strings
+                # Replace unescaped newlines within JSON string values
+                fixed_text = re.sub(r'(?<!\\)\\n', ' ', fixed_text)
+                fixed_text = re.sub(r'(?<!\\)\\t', ' ', fixed_text)
+                
+                # Strategy 3: Try to repair unterminated strings by finding the last valid position
+                # This is a heuristic approach - look for common JSON structure markers
+                if e.msg.startswith("Unterminated string"):
+                    # Try to find where the JSON structure broke
+                    # Look for the last occurrence of valid JSON markers before the error position
+                    error_pos = e.pos if hasattr(e, 'pos') else len(fixed_text)
+                    # Try truncating at various positions and adding closing structures
+                    for search_back in [0, 100, 200, 500]:
+                        truncate_pos = max(0, error_pos - search_back)
+                        test_text = fixed_text[:truncate_pos]
+                        # Try adding closing quotes and braces
+                        for ending in ['"}]}', '"],"trends":[],"summary":"Partial response due to parsing error"}',
+                                      '"}],"trends":[],"summary":"Partial response"}']:
+                            try:
+                                summary_data = json.loads(test_text + ending)
+                                print(f"  Successfully repaired JSON by truncating and adding closure")
+                                break
+                            except json.JSONDecodeError:
+                                continue
+                        if 'summary_data' in locals():
+                            break
+                
+                # If we haven't succeeded with repair strategies, try the cleaned text
+                if 'summary_data' not in locals():
+                    try:
+                        summary_data = json.loads(fixed_text)
+                        print(f"  Successfully parsed after cleaning control characters")
+                    except json.JSONDecodeError as e2:
+                        # Last resort: return a minimal valid structure
+                        print(f"  Could not repair JSON. Returning minimal structure.")
+                        summary_data = {
+                            "items": [],
+                            "trends": ["JSON parsing error - manual review needed"],
+                            "summary": f"Failed to parse LLM response. Error: {e2}. Check {debug_file}",
+                            "parsing_error": True
+                        }
             
             # Add metadata
             summary_data['generated_at'] = datetime.now().isoformat()
