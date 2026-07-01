@@ -48,8 +48,9 @@ jobs:
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
           
-          # Add generated files
-          git add summaries/*.json public/index.html
+          # Add generated files (force add for gitignored files)
+          git add summaries/*.json
+          git add -f public/index.html
           
           # Commit if there are changes
           if git diff --staged --quiet; then
