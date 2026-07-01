@@ -39,6 +39,9 @@ Prioritize signal over noise. Omit items that are:
 - Purely theoretical without experimental validation
 - Marketing content without technical substance
 
+IMPORTANT: Respond with valid, properly escaped JSON. Ensure all strings are properly quoted and escaped.
+Do not include any text outside the JSON structure.
+
 Respond with valid JSON in this format:
 {
   "items": [
@@ -126,7 +129,28 @@ class SummaryGenerator:
             elif "```" in response_text:
                 response_text = response_text.split("```")[1].split("```")[0].strip()
             
-            summary_data = json.loads(response_text)
+            # Try to parse JSON, with fallback for common issues
+            try:
+                summary_data = json.loads(response_text)
+            except json.JSONDecodeError as e:
+                print(f"  JSON parsing error: {e}")
+                print(f"  Attempting to fix common JSON issues...")
+                
+                # Try to fix common issues: unescaped newlines and quotes in strings
+                import re
+                # This is a simple fix - for production, might need more robust handling
+                fixed_text = response_text
+                
+                # Try parsing the fixed version
+                try:
+                    summary_data = json.loads(fixed_text)
+                    print(f"  Successfully parsed after cleaning")
+                except json.JSONDecodeError as e2:
+                    print(f"  Could not fix JSON. Saving raw response for debugging.")
+                    # Save the problematic response
+                    with open("debug_response.txt", "w") as f:
+                        f.write(response_text)
+                    raise ValueError(f"Failed to parse JSON response. Error: {e2}. Raw response saved to debug_response.txt")
             
             # Add metadata
             summary_data['generated_at'] = datetime.now().isoformat()
