@@ -16,6 +16,9 @@ on:
       - 'template.html'
       - 'config.yaml'
 
+permissions:
+  contents: write
+
 jobs:
   build:
     runs-on: ubuntu-latest
