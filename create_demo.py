@@ -19,37 +19,37 @@ def create_demo_summaries():
             "summary": "This week saw major advances in inference optimization with new quantization techniques and breakthrough improvements in reasoning models. The focus is shifting toward practical deployment at scale.",
             "items": [
                 {
-                    "title": "BitNet 4.0: 1-bit LLMs Reach GPT-4 Performance",
-                    "url": "https://arxiv.org/abs/2606.example1",
-                    "core_innovation": "Achieves competitive performance with GPT-4 using only 1-bit weights through novel training techniques and architectural modifications.",
+                    "title": "The Era of 1-bit LLMs: All Large Language Models are in 1.58 Bits",
+                    "url": "https://arxiv.org/abs/2402.17764",
+                    "core_innovation": "Introduces 1.58-bit quantization that matches full precision Transformer LLM performance",
                     "significance": "Could reduce inference costs by 10-20x while maintaining quality, making large models accessible for edge deployment.",
                     "practical_readiness": "prototype",
                     "significance_score": 0.95,
                     "category": "inference"
                 },
                 {
-                    "title": "Gemini 2.0 Pro: Native Tool Use and Multi-Modal Reasoning",
-                    "url": "https://blog.google/technology/ai/gemini-2-release",
-                    "core_innovation": "First production model with native tool calling trained end-to-end, plus real-time video understanding capabilities.",
-                    "significance": "Eliminates complex prompt engineering for tool use and enables new classes of interactive AI applications.",
+                    "title": "vLLM: Easy, Fast, and Cheap LLM Serving with PagedAttention",
+                    "url": "https://blog.vllm.ai/2023/06/20/vllm.html",
+                    "core_innovation": "PagedAttention manages attention key-value memory efficiently for high-throughput serving",
+                    "significance": "Enables 24x higher throughput than traditional methods, making LLM serving more practical at scale.",
                     "practical_readiness": "production-ready",
                     "significance_score": 0.92,
-                    "category": "post-training"
-                },
-                {
-                    "title": "vLLM 0.8: Speculative Decoding with 2x Speedup",
-                    "url": "https://blog.vllm.ai/2026/06/speculative-decoding",
-                    "core_innovation": "Production-ready speculative decoding with automatic draft model selection and dynamic batch size adjustment.",
-                    "significance": "Doubles inference throughput for many workloads without accuracy loss, immediately applicable to existing deployments.",
-                    "practical_readiness": "production-ready",
-                    "significance_score": 0.88,
                     "category": "inference"
                 },
                 {
-                    "title": "Constitutional AI at Scale: Training LLMs with 10M Examples",
-                    "url": "https://www.anthropic.com/research/constitutional-ai-scale",
-                    "core_innovation": "Demonstrates that constitutional AI methods scale effectively to massive datasets, improving both safety and capabilities.",
-                    "significance": "Provides a clear path for aligning increasingly powerful models without human preference data bottlenecks.",
+                    "title": "Direct Preference Optimization: Your Language Model is Secretly a Reward Model",
+                    "url": "https://arxiv.org/abs/2305.18290",
+                    "core_innovation": "Eliminates need for separate reward model by optimizing policy directly from preferences",
+                    "significance": "Simplifies RLHF pipeline and reduces computational costs while improving alignment quality.",
+                    "practical_readiness": "production-ready",
+                    "significance_score": 0.88,
+                    "category": "post-training"
+                },
+                {
+                    "title": "Constitutional AI: Harmlessness from AI Feedback",
+                    "url": "https://arxiv.org/abs/2212.08073",
+                    "core_innovation": "Trains AI systems using AI-generated feedback guided by constitutional principles",
+                    "significance": "Provides a scalable path for aligning increasingly powerful models without human preference data bottlenecks.",
                     "practical_readiness": "research",
                     "significance_score": 0.85,
                     "category": "post-training"
@@ -70,18 +70,18 @@ def create_demo_summaries():
             "summary": "Major focus on RLHF alternatives and synthetic data generation. Multiple papers showing DPO variants outperforming traditional RLHF with lower computational costs.",
             "items": [
                 {
-                    "title": "DPO++: Fixing Distribution Mismatch in Direct Preference Optimization",
-                    "url": "https://arxiv.org/abs/2606.example2",
-                    "core_innovation": "Addresses key weakness in DPO where the reference model distribution diverges, leading to more stable training.",
-                    "significance": "Makes DPO more reliable for production use, potentially replacing RLHF as the default post-training method.",
+                    "title": "RLAIF: Scaling Reinforcement Learning from Human Feedback with AI Feedback",
+                    "url": "https://arxiv.org/abs/2309.00267",
+                    "core_innovation": "Demonstrates that AI-generated preferences can match human preferences for RLHF",
+                    "significance": "Makes DPO more reliable for production use by addressing the data bottleneck in RLHF.",
                     "practical_readiness": "prototype",
                     "significance_score": 0.82,
                     "category": "post-training"
                 },
                 {
-                    "title": "Synthetic Data for Math Reasoning: Quality Over Quantity",
-                    "url": "https://arxiv.org/abs/2606.example3",
-                    "core_innovation": "Shows that 10K high-quality synthetic math problems outperform 100K scraped problems when properly filtered.",
+                    "title": "Textbooks Are All You Need II: phi-1.5 technical report",
+                    "url": "https://arxiv.org/abs/2309.05463",
+                    "core_innovation": "Shows that 1.3B model trained on high-quality synthetic data can match larger models",
                     "significance": "Challenges the scaling paradigm and suggests we need better data curation, not just more data.",
                     "practical_readiness": "research",
                     "significance_score": 0.78,
@@ -102,9 +102,9 @@ def create_demo_summaries():
             "summary": "Inference optimization continues to dominate with new frameworks and techniques. Several breakthroughs in long-context handling and memory efficiency.",
             "items": [
                 {
-                    "title": "Infinite-Context Transformers: O(1) Memory for Any Sequence Length",
-                    "url": "https://arxiv.org/abs/2606.example4",
-                    "core_innovation": "Uses hierarchical compression to maintain constant memory while processing arbitrarily long sequences.",
+                    "title": "Efficient Streaming Language Models with Attention Sinks",
+                    "url": "https://arxiv.org/abs/2309.17453",
+                    "core_innovation": "Enables LLMs to handle infinite sequence lengths by keeping attention sink tokens",
                     "significance": "Removes a fundamental limitation of transformers, enabling new applications in long-form content.",
                     "practical_readiness": "research",
                     "significance_score": 0.91,
