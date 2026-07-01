@@ -22,16 +22,22 @@ Your audience is an ML practitioner who checks this summary periodically (not da
 3. **Trend identification** - recurring themes across multiple papers/posts
 4. **Longitudinal context** - how today's developments build on or diverge from recent work
 
-I will provide you with a list of recent articles, blog posts, and papers. For each significant advancement, analyze and structure your response as JSON.
+I will provide you with a list of recent articles, blog posts, and papers.
 
-For each item worth including, provide:
-- title: The original title
-- url: The source URL
-- core_innovation: 1-2 sentences on what's genuinely new
-- significance: Why it matters for inference/post-training (1-2 sentences)
-- practical_readiness: One of ["research", "prototype", "production-ready"]
-- significance_score: A float from 0.0 to 1.0 indicating importance
-- category: One of ["inference", "post-training", "architecture", "tooling", "research"]
+IMPORTANT FORMAT INSTRUCTIONS:
+- Respond with ONLY valid JSON
+- Use single quotes inside descriptions, NOT double quotes
+- Keep descriptions concise (under 100 characters each)
+- Escape any special characters properly
+
+For each significant advancement, provide a JSON object with these fields (keep each field SHORT):
+- title: The original title (string)
+- url: The source URL (string)
+- core_innovation: What is new in 50 characters or less (string)
+- significance: Why it matters in 50 characters or less (string)
+- practical_readiness: One of: research, prototype, or production-ready (string)
+- significance_score: A number from 0.0 to 1.0 (float)
+- category: One of: inference, post-training, architecture, tooling, research (string)
 
 Prioritize signal over noise. Omit items that are:
 - Marginal improvements on existing methods
@@ -39,27 +45,11 @@ Prioritize signal over noise. Omit items that are:
 - Purely theoretical without experimental validation
 - Marketing content without technical substance
 
-IMPORTANT: Respond with valid, properly escaped JSON. Ensure all strings are properly quoted and escaped.
-Do not include any text outside the JSON structure.
-
-Respond with valid JSON in this format:
+Respond with this JSON structure (NO OTHER TEXT):
 {
-  "items": [
-    {
-      "title": "...",
-      "url": "...",
-      "core_innovation": "...",
-      "significance": "...",
-      "practical_readiness": "...",
-      "significance_score": 0.8,
-      "category": "..."
-    }
-  ],
-  "trends": [
-    "Trend 1 description",
-    "Trend 2 description"
-  ],
-  "summary": "A brief 2-3 sentence overview of the week's developments"
+  "items": [list of item objects],
+  "trends": [list of trend strings, each under 80 characters],
+  "summary": "Brief 2-3 sentence overview"
 }
 
 Here are the items to analyze:
