@@ -9,6 +9,8 @@ import requests
 from datetime import datetime, timedelta
 from typing import List, Dict, Any
 import time
+from security_fixes.url_validator import URLValidator
+from security_fixes.input_sanitizer import InputSanitizer, PromptInjectionDetector
 
 
 class SourceFetcher:
@@ -18,6 +20,11 @@ class SourceFetcher:
         self.config = config
         self.lookback_days = config.get('build', {}).get('lookback_days', 7)
         self.cutoff_date = datetime.now() - timedelta(days=self.lookback_days)
+        
+        # Initialize security components
+        self.url_validator = URLValidator()
+        self.input_sanitizer = InputSanitizer()
+        self.injection_detector = PromptInjectionDetector()
     
     def fetch_all(self) -> List[Dict[str, Any]]:
         """Fetch from all configured sources."""
@@ -45,7 +52,14 @@ class SourceFetcher:
         items = []
         
         try:
-            feed = feedparser.parse(feed_config['url'])
+            # Validate URL before fetching (SSRF protection)
+            url = feed_config['url']
+            is_safe, error = self.url_validator.is_safe_url(url)
+            if not is_safe:
+                print(f"    ⚠️  Blocked unsafe URL for {feed_config['name']}: {error}")
+                return []
+            
+            feed = feedparser.parse(url)
             
             for entry in feed.entries:
                 # Parse published date
@@ -59,7 +73,8 @@ class SourceFetcher:
                 if pub_date and pub_date < self.cutoff_date:
                     continue
                 
-                item = {
+                # Create raw item
+                raw_item = {
                     'title': entry.get('title', 'Untitled'),
                     'url': entry.get('link', ''),
                     'summary': entry.get('summary', entry.get('description', '')),
@@ -68,7 +83,17 @@ class SourceFetcher:
                     'category': feed_config.get('category', 'general'),
                     'type': 'blog'
                 }
-                items.append(item)
+                
+                # Sanitize input (XSS and injection prevention)
+                sanitized = self.input_sanitizer.sanitize_feed_item(raw_item)
+                
+                # Detect potential prompt injection
+                combined_text = sanitized['title'] + ' ' + sanitized['summary']
+                is_suspicious, patterns = self.injection_detector.detect_injection(combined_text)
+                if is_suspicious:
+                    print(f"    ⚠️  Suspicious content detected in {feed_config['name']}: {patterns[0]}")
+                
+                items.append(sanitized)
         
         except Exception as e:
             print(f"    Error fetching {feed_config['name']}: {e}")
@@ -93,7 +118,8 @@ class SourceFetcher:
                 if pub_date < self.cutoff_date:
                     continue
                 
-                item = {
+                # Create raw item
+                raw_item = {
                     'title': result.title,
                     'url': result.entry_id,
                     'summary': result.summary,
@@ -103,7 +129,17 @@ class SourceFetcher:
                     'type': 'paper',
                     'authors': [author.name for author in result.authors]
                 }
-                items.append(item)
+                
+                # Sanitize input
+                sanitized = self.input_sanitizer.sanitize_feed_item(raw_item)
+                
+                # Detect potential prompt injection
+                combined_text = sanitized['title'] + ' ' + sanitized['summary']
+                is_suspicious, patterns = self.injection_detector.detect_injection(combined_text)
+                if is_suspicious:
+                    print(f"    ⚠️  Suspicious content detected in arXiv paper: {patterns[0]}")
+                
+                items.append(sanitized)
         
         except Exception as e:
             print(f"    Error fetching arXiv: {e}")

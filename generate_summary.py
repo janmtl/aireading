@@ -10,8 +10,9 @@ from datetime import datetime, timedelta
 from pathlib import Path
 from typing import List, Dict, Any
 import anthropic
-from jinja2 import Template
 from fetch_sources import SourceFetcher
+from security_fixes.safe_template_renderer import SafeTemplateRenderer, add_security_meta_tags
+from security_fixes.safe_file_operations import SafeFileHandler, DebugFileHandler, SecureJSONHandler
 
 
 SUMMARIZATION_PROMPT = """You are an AI research curator creating a digest of advancements in AI inference and post-training methods.
@@ -73,6 +74,9 @@ class SummaryGenerator:
         self.temperature = llm_config.get('temperature', 0.3)
         self.max_tokens = llm_config.get('max_tokens', 4000)
         
+        # Initialize security components
+        self.debug_handler = DebugFileHandler("ai-digest")
+        
         # Initialize API client
         if self.provider == 'anthropic':
             api_key = os.environ.get('ANTHROPIC_API_KEY')
@@ -131,10 +135,11 @@ class SummaryGenerator:
                 print(f"  JSON parsing error: {e}")
                 print(f"  Attempting to fix common JSON issues...")
                 
-                # Save the problematic response for debugging
-                debug_file = f"debug_response_{datetime.now().strftime('%Y%m%d_%H%M%S')}.txt"
-                with open(debug_file, "w") as f:
-                    f.write(response_text)
+                # Save the problematic response for debugging (secure temp location)
+                debug_file = self.debug_handler.write_debug_file(
+                    response_text,
+                    "json_parse_error"
+                )
                 print(f"  Raw response saved to {debug_file}")
                 
                 # Try multiple repair strategies
@@ -221,13 +226,15 @@ Type: {item['type']}
 
 def save_summary(summary: Dict[str, Any], output_dir: str):
     """Save summary to JSON file."""
-    Path(output_dir).mkdir(parents=True, exist_ok=True)
+    # Use SafeFileHandler for secure path operations
+    handler = SafeFileHandler(output_dir)
     
     date_str = datetime.now().strftime("%Y-%m-%d")
-    filepath = Path(output_dir) / f"{date_str}.json"
-    
-    with open(filepath, 'w') as f:
-        json.dump(summary, f, indent=2)
+    filepath = handler.safe_write(
+        f"{date_str}.json",
+        json.dumps(summary, indent=2),
+        permissions=0o644  # Readable by all, writable by owner
+    )
     
     print(f"Summary saved to {filepath}")
     return filepath
@@ -251,10 +258,17 @@ def load_recent_summaries(summary_dir: str, days: int = 30) -> List[Dict[str, An
             if file_date < cutoff:
                 continue
             
-            with open(filepath, 'r') as f:
-                data = json.load(f)
-                data['date'] = date_str
-                summaries.append(data)
+            # Load and validate JSON securely
+            data = SecureJSONHandler.safe_json_load(filepath, max_size=10_000_000)
+            
+            # Validate summary structure
+            is_valid, error = SecureJSONHandler.validate_summary(data)
+            if not is_valid:
+                print(f"  Warning: Invalid summary format in {filepath}: {error}")
+                continue
+            
+            data['date'] = date_str
+            summaries.append(data)
         
         except Exception as e:
             print(f"Error loading {filepath}: {e}")
@@ -270,8 +284,8 @@ def generate_html(summaries: List[Dict[str, Any]], output_dir: str):
         print("Warning: template.html not found, skipping HTML generation")
         return
     
-    with open(template_path, 'r') as f:
-        template = Template(f.read())
+    # Use SafeTemplateRenderer with auto-escaping enabled
+    renderer = SafeTemplateRenderer(".")
     
     # Prepare data for template
     latest_summary = summaries[0] if summaries else None
@@ -291,22 +305,89 @@ def generate_html(summaries: List[Dict[str, Any]], output_dir: str):
     for summary in summaries[:7]:  # Last 7 days
         all_trends.extend(summary.get('trends', []))
     
-    html_content = template.render(
-        latest_summary=latest_summary,
-        weekly_items=weekly_items[:10],  # Top 10
-        all_summaries=summaries,
-        all_trends=list(set(all_trends)),
-        generated_at=datetime.now().strftime("%Y-%m-%d %H:%M UTC")
+    # Render template with auto-escaping
+    html_content = renderer.render_template(
+        "template.html",
+        {
+            'latest_summary': latest_summary,
+            'weekly_items': weekly_items[:10],  # Top 10
+            'all_summaries': summaries,
+            'all_trends': list(set(all_trends)),
+            'generated_at': datetime.now().strftime("%Y-%m-%d %H:%M UTC")
+        }
     )
     
-    # Save HTML
-    output_path = Path(output_dir) / "index.html"
-    output_path.parent.mkdir(parents=True, exist_ok=True)
+    # Add security meta tags
+    html_content = add_security_meta_tags(html_content)
     
-    with open(output_path, 'w') as f:
-        f.write(html_content)
+    # Save HTML with secure file operations
+    handler = SafeFileHandler(output_dir)
+    handler.safe_write(
+        "index.html",
+        html_content,
+        permissions=0o644  # Readable by all
+    )
     
-    print(f"HTML generated at {output_path}")
+    print(f"HTML generated at {output_dir}/index.html")
+
+
+def validate_config(config: Dict[str, Any]) -> tuple[bool, str]:
+    """
+    Validate configuration file for security and correctness.
+    
+    Args:
+        config: Configuration dictionary
+        
+    Returns:
+        Tuple of (is_valid, error_message)
+    """
+    try:
+        # Validate build settings
+        build = config.get('build', {})
+        
+        lookback_days = build.get('lookback_days', 7)
+        if not isinstance(lookback_days, int) or lookback_days < 1 or lookback_days > 90:
+            return False, "lookback_days must be between 1 and 90"
+        
+        # Validate paths don't contain traversal
+        summary_storage = build.get('summary_storage', 'summaries/')
+        output_dir = build.get('output_dir', 'public/')
+        
+        for path_name, path_value in [('summary_storage', summary_storage), ('output_dir', output_dir)]:
+            if '..' in path_value or path_value.startswith('/'):
+                return False, f"{path_name} contains invalid path: {path_value}"
+        
+        # Validate LLM settings
+        llm = config.get('llm', {})
+        
+        max_tokens = llm.get('max_tokens', 4000)
+        if not isinstance(max_tokens, int) or max_tokens < 100 or max_tokens > 100000:
+            return False, "max_tokens must be between 100 and 100000"
+        
+        temperature = llm.get('temperature', 0.3)
+        if not isinstance(temperature, (int, float)) or temperature < 0.0 or temperature > 2.0:
+            return False, "temperature must be between 0.0 and 2.0"
+        
+        provider = llm.get('provider', 'anthropic')
+        allowed_providers = ['anthropic', 'openai']
+        if provider not in allowed_providers:
+            return False, f"provider must be one of: {allowed_providers}"
+        
+        # Validate significance threshold
+        significance = config.get('significance', {})
+        min_score = significance.get('min_score', 0.6)
+        if not isinstance(min_score, (int, float)) or min_score < 0.0 or min_score > 1.0:
+            return False, "min_score must be between 0.0 and 1.0"
+        
+        # Validate sources exist
+        sources = config.get('sources', {})
+        if not sources.get('rss_feeds') and not sources.get('arxiv_queries'):
+            return False, "At least one RSS feed or arXiv query must be configured"
+        
+        return True, ""
+        
+    except Exception as e:
+        return False, f"Configuration validation error: {e}"
 
 
 def main():
@@ -314,6 +395,12 @@ def main():
     # Load configuration
     with open('config.yaml', 'r') as f:
         config = yaml.safe_load(f)
+    
+    # Validate configuration
+    is_valid, error = validate_config(config)
+    if not is_valid:
+        print(f"❌ Invalid configuration: {error}")
+        return
     
     # Fetch sources
     fetcher = SourceFetcher(config)

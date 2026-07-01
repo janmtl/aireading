@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+    <meta http-equiv="X-Frame-Options" content="DENY">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AI Research Digest</title>
@@ -363,7 +366,7 @@
         <div class="container">
             <h1>🧠 AI Research Digest</h1>
             <div class="subtitle">Latest Advancements in AI Inference & Post-Training</div>
-            <div class="last-updated">Last updated: 2026-07-01 09:31 UTC</div>
+            <div class="last-updated">Last updated: 2026-07-01 19:50 UTC</div>
         </div>
     </header>
 
@@ -376,10 +379,9 @@
 
         <!-- Weekly Highlights Tab -->
         <div id="weekly" class="tab-content active">
-            
             <div class="summary-overview">
                 <h2>📊 Weekly Overview</h2>
-                <p></p>
+                <p>This week saw major advances in inference optimization with new quantization techniques and breakthrough improvements in reasoning models. The focus is shifting toward practical deployment at scale.</p>
             </div>
 
             <div class="stats-grid">
@@ -392,22 +394,19 @@
                     <div class="stat-label">Active Trends</div>
                 </div>
                 <div class="stat-card">
-                    <div class="stat-value">33</div>
+                    <div class="stat-value">47</div>
                     <div class="stat-label">Sources Analyzed</div>
                 </div>
             </div>
 
             <h2 style="margin-bottom: 20px; color: var(--text);">🔥 Top Developments</h2>
             <div class="items-grid">
-                
                 <div class="item-card">
                     <div class="item-header">
                         <div class="item-title">
                             <a href="https://arxiv.org/abs/2606.example1" target="_blank" rel="noopener">BitNet 4.0: 1-bit LLMs Reach GPT-4 Performance</a>
                         </div>
-                        
                         <span class="significance-badge significance-high">High Impact</span>
-                        
                     </div>
                     <div class="item-meta">
                         <span class="meta-badge">inference</span>
@@ -420,15 +419,30 @@
                         <strong>Why it matters:</strong> Could reduce inference costs by 10-20x while maintaining quality, making large models accessible for edge deployment.
                     </div>
                 </div>
-                
+                <div class="item-card">
+                    <div class="item-header">
+                        <div class="item-title">
+                            <a href="https://arxiv.org/abs/2606.example1" target="_blank" rel="noopener">BitNet 4.0: 1-bit LLMs Reach GPT-4 Performance</a>
+                        </div>
+                        <span class="significance-badge significance-high">High Impact</span>
+                    </div>
+                    <div class="item-meta">
+                        <span class="meta-badge">inference</span>
+                        <span class="meta-badge">prototype</span>
+                    </div>
+                    <div class="item-innovation">
+                        <strong>Innovation:</strong> Achieves competitive performance with GPT-4 using only 1-bit weights through novel training techniques and architectural modifications.
+                    </div>
+                    <div class="item-significance">
+                        <strong>Why it matters:</strong> Could reduce inference costs by 10-20x while maintaining quality, making large models accessible for edge deployment.
+                    </div>
+                </div>
                 <div class="item-card">
                     <div class="item-header">
                         <div class="item-title">
                             <a href="https://blog.google/technology/ai/gemini-2-release" target="_blank" rel="noopener">Gemini 2.0 Pro: Native Tool Use and Multi-Modal Reasoning</a>
                         </div>
-                        
                         <span class="significance-badge significance-high">High Impact</span>
-                        
                     </div>
                     <div class="item-meta">
                         <span class="meta-badge">post-training</span>
@@ -441,15 +455,30 @@
                         <strong>Why it matters:</strong> Eliminates complex prompt engineering for tool use and enables new classes of interactive AI applications.
                     </div>
                 </div>
-                
+                <div class="item-card">
+                    <div class="item-header">
+                        <div class="item-title">
+                            <a href="https://blog.google/technology/ai/gemini-2-release" target="_blank" rel="noopener">Gemini 2.0 Pro: Native Tool Use and Multi-Modal Reasoning</a>
+                        </div>
+                        <span class="significance-badge significance-high">High Impact</span>
+                    </div>
+                    <div class="item-meta">
+                        <span class="meta-badge">post-training</span>
+                        <span class="meta-badge">production-ready</span>
+                    </div>
+                    <div class="item-innovation">
+                        <strong>Innovation:</strong> First production model with native tool calling trained end-to-end, plus real-time video understanding capabilities.
+                    </div>
+                    <div class="item-significance">
+                        <strong>Why it matters:</strong> Eliminates complex prompt engineering for tool use and enables new classes of interactive AI applications.
+                    </div>
+                </div>
                 <div class="item-card">
                     <div class="item-header">
                         <div class="item-title">
                             <a href="https://blog.vllm.ai/2026/06/speculative-decoding" target="_blank" rel="noopener">vLLM 0.8: Speculative Decoding with 2x Speedup</a>
                         </div>
-                        
                         <span class="significance-badge significance-high">High Impact</span>
-                        
                     </div>
                     <div class="item-meta">
                         <span class="meta-badge">inference</span>
@@ -462,15 +491,30 @@
                         <strong>Why it matters:</strong> Doubles inference throughput for many workloads without accuracy loss, immediately applicable to existing deployments.
                     </div>
                 </div>
-                
+                <div class="item-card">
+                    <div class="item-header">
+                        <div class="item-title">
+                            <a href="https://blog.vllm.ai/2026/06/speculative-decoding" target="_blank" rel="noopener">vLLM 0.8: Speculative Decoding with 2x Speedup</a>
+                        </div>
+                        <span class="significance-badge significance-high">High Impact</span>
+                    </div>
+                    <div class="item-meta">
+                        <span class="meta-badge">inference</span>
+                        <span class="meta-badge">production-ready</span>
+                    </div>
+                    <div class="item-innovation">
+                        <strong>Innovation:</strong> Production-ready speculative decoding with automatic draft model selection and dynamic batch size adjustment.
+                    </div>
+                    <div class="item-significance">
+                        <strong>Why it matters:</strong> Doubles inference throughput for many workloads without accuracy loss, immediately applicable to existing deployments.
+                    </div>
+                </div>
                 <div class="item-card">
                     <div class="item-header">
                         <div class="item-title">
                             <a href="https://www.anthropic.com/research/constitutional-ai-scale" target="_blank" rel="noopener">Constitutional AI at Scale: Training LLMs with 10M Examples</a>
                         </div>
-                        
                         <span class="significance-badge significance-high">High Impact</span>
-                        
                     </div>
                     <div class="item-meta">
                         <span class="meta-badge">post-training</span>
@@ -483,15 +527,30 @@
                         <strong>Why it matters:</strong> Provides a clear path for aligning increasingly powerful models without human preference data bottlenecks.
                     </div>
                 </div>
-                
+                <div class="item-card">
+                    <div class="item-header">
+                        <div class="item-title">
+                            <a href="https://www.anthropic.com/research/constitutional-ai-scale" target="_blank" rel="noopener">Constitutional AI at Scale: Training LLMs with 10M Examples</a>
+                        </div>
+                        <span class="significance-badge significance-high">High Impact</span>
+                    </div>
+                    <div class="item-meta">
+                        <span class="meta-badge">post-training</span>
+                        <span class="meta-badge">research</span>
+                    </div>
+                    <div class="item-innovation">
+                        <strong>Innovation:</strong> Demonstrates that constitutional AI methods scale effectively to massive datasets, improving both safety and capabilities.
+                    </div>
+                    <div class="item-significance">
+                        <strong>Why it matters:</strong> Provides a clear path for aligning increasingly powerful models without human preference data bottlenecks.
+                    </div>
+                </div>
                 <div class="item-card">
                     <div class="item-header">
                         <div class="item-title">
                             <a href="https://arxiv.org/abs/2606.example2" target="_blank" rel="noopener">DPO++: Fixing Distribution Mismatch in Direct Preference Optimization</a>
                         </div>
-                        
                         <span class="significance-badge significance-high">High Impact</span>
-                        
                     </div>
                     <div class="item-meta">
                         <span class="meta-badge">post-training</span>
@@ -504,237 +563,57 @@
                         <strong>Why it matters:</strong> Makes DPO more reliable for production use, potentially replacing RLHF as the default post-training method.
                     </div>
                 </div>
-                
                 <div class="item-card">
                     <div class="item-header">
                         <div class="item-title">
-                            <a href="https://arxiv.org/abs/2606.example3" target="_blank" rel="noopener">Synthetic Data for Math Reasoning: Quality Over Quantity</a>
+                            <a href="https://arxiv.org/abs/2606.example2" target="_blank" rel="noopener">DPO++: Fixing Distribution Mismatch in Direct Preference Optimization</a>
                         </div>
-                        
-                        <span class="significance-badge significance-medium">Notable</span>
-                        
+                        <span class="significance-badge significance-high">High Impact</span>
                     </div>
                     <div class="item-meta">
                         <span class="meta-badge">post-training</span>
-                        <span class="meta-badge">research</span>
-                    </div>
-                    <div class="item-innovation">
-                        <strong>Innovation:</strong> Shows that 10K high-quality synthetic math problems outperform 100K scraped problems when properly filtered.
-                    </div>
-                    <div class="item-significance">
-                        <strong>Why it matters:</strong> Challenges the scaling paradigm and suggests we need better data curation, not just more data.
-                    </div>
-                </div>
-                
-                <div class="item-card">
-                    <div class="item-header">
-                        <div class="item-title">
-                            <a href="https://magazine.sebastianraschka.com/p/using-local-coding-agents" target="_blank" rel="noopener">Using Local Coding Agents</a>
-                        </div>
-                        
-                        <span class="significance-badge significance-medium">Notable</span>
-                        
-                    </div>
-                    <div class="item-meta">
-                        <span class="meta-badge">tooling</span>
-                        <span class="meta-badge">production-ready</span>
-                    </div>
-                    <div class="item-innovation">
-                        <strong>Innovation:</strong> Practical guide to open-weight models in local coding harnesses
-                    </div>
-                    <div class="item-significance">
-                        <strong>Why it matters:</strong> Viable free/private alternative to Claude Code/Codex subscriptions
-                    </div>
-                </div>
-                
-                <div class="item-card">
-                    <div class="item-header">
-                        <div class="item-title">
-                            <a href="http://arxiv.org/abs/2606.31779v1" target="_blank" rel="noopener">Bridging the Gap Between Latent and Explicit Reasoning with Looped Transformers</a>
-                        </div>
-                        
-                        <span class="significance-badge significance-medium">Notable</span>
-                        
-                    </div>
-                    <div class="item-meta">
-                        <span class="meta-badge">architecture</span>
-                        <span class="meta-badge">research</span>
-                    </div>
-                    <div class="item-innovation">
-                        <strong>Innovation:</strong> Recurrent-depth looped transformers close latent-CoT scaling gap
-                    </div>
-                    <div class="item-significance">
-                        <strong>Why it matters:</strong> Could enable efficient latent reasoning beyond 1B params
-                    </div>
-                </div>
-                
-                <div class="item-card">
-                    <div class="item-header">
-                        <div class="item-title">
-                            <a href="http://arxiv.org/abs/2606.31519v1" target="_blank" rel="noopener">RaBitQCache: Rotated Binary Quantization for KVCache in Long Context LLM Inference</a>
-                        </div>
-                        
-                        <span class="significance-badge significance-medium">Notable</span>
-                        
-                    </div>
-                    <div class="item-meta">
-                        <span class="meta-badge">inference</span>
                         <span class="meta-badge">prototype</span>
                     </div>
                     <div class="item-innovation">
-                        <strong>Innovation:</strong> Binary-INT4 rotated quantization for sparse attention KV cache
+                        <strong>Innovation:</strong> Addresses key weakness in DPO where the reference model distribution diverges, leading to more stable training.
                     </div>
                     <div class="item-significance">
-                        <strong>Why it matters:</strong> Cuts long-context inference memory/compute vs fixed top-k methods
+                        <strong>Why it matters:</strong> Makes DPO more reliable for production use, potentially replacing RLHF as the default post-training method.
                     </div>
                 </div>
-                
-                <div class="item-card">
-                    <div class="item-header">
-                        <div class="item-title">
-                            <a href="http://arxiv.org/abs/2606.30406v1" target="_blank" rel="noopener">MOPD: Multi-Teacher On-Policy Distillation for Capability Integration in LLM Post-Training</a>
-                        </div>
-                        
-                        <span class="significance-badge significance-medium">Notable</span>
-                        
-                    </div>
-                    <div class="item-meta">
-                        <span class="meta-badge">post-training</span>
-                        <span class="meta-badge">research</span>
-                    </div>
-                    <div class="item-innovation">
-                        <strong>Innovation:</strong> On-policy distillation merges multiple domain-RL teacher capabilities
-                    </div>
-                    <div class="item-significance">
-                        <strong>Why it matters:</strong> Solves capability-integration bottleneck better than Mix-RL
-                    </div>
-                </div>
-                
             </div>
-            
         </div>
 
         <!-- Trends Tab -->
         <div id="trends" class="tab-content">
-            
             <div class="summary-overview">
                 <h2>📈 Emerging Trends</h2>
                 <p>Key patterns and directions observed across recent AI research and industry developments.</p>
             </div>
             <div class="trends">
-                
-                <div class="trend-badge">Synthetic data quality becoming more important than scale</div>
-                
                 <div class="trend-badge">Focus on data efficiency rather than pure scaling</div>
-                
-                <div class="trend-badge">Production systems adopting speculative decoding</div>
-                
-                <div class="trend-badge">Quantization techniques achieving near-zero quality loss</div>
-                
                 <div class="trend-badge">Memory efficiency becoming as important as speed</div>
-                
-                <div class="trend-badge">Long-context methods moving toward production</div>
-                
-                <div class="trend-badge">DPO variants gaining momentum over traditional RLHF</div>
-                
-                <div class="trend-badge">Tool use moving from prompt engineering to native training</div>
-                
                 <div class="trend-badge">Multi-modal models becoming standard, not specialized</div>
-                
+                <div class="trend-badge">Long-context methods moving toward production</div>
+                <div class="trend-badge">DPO variants gaining momentum over traditional RLHF</div>
+                <div class="trend-badge">Production systems adopting speculative decoding</div>
+                <div class="trend-badge">Synthetic data quality becoming more important than scale</div>
+                <div class="trend-badge">Quantization techniques achieving near-zero quality loss</div>
+                <div class="trend-badge">Tool use moving from prompt engineering to native training</div>
             </div>
-            
         </div>
 
         <!-- Timeline Tab -->
         <div id="timeline" class="tab-content">
-            
             <div class="summary-overview">
                 <h2>📅 Historical Timeline</h2>
                 <p>A longitudinal view of AI advancements over the past month.</p>
             </div>
             <div class="timeline">
-                
                 <div class="timeline-item">
                     <div class="timeline-date">2026-07-01</div>
-                    <p style="color: var(--text-secondary); margin-bottom: 15px;"></p>
-                    
-                    <div class="items-grid">
-                        
-                        
-                        <div class="item-card">
-                            <div class="item-header">
-                                <div class="item-title">
-                                    <a href="https://magazine.sebastianraschka.com/p/using-local-coding-agents" target="_blank" rel="noopener">Using Local Coding Agents</a>
-                                </div>
-                            </div>
-                            <div class="item-meta">
-                                <span class="meta-badge">tooling</span>
-                            </div>
-                            <div class="item-innovation">Practical guide to open-weight models in local coding harnesses</div>
-                        </div>
-                        
-                        
-                        
-                        <div class="item-card">
-                            <div class="item-header">
-                                <div class="item-title">
-                                    <a href="https://huggingface.co/blog/vllm-jobs" target="_blank" rel="noopener">Run a vLLM Server on HF Jobs in One Command</a>
-                                </div>
-                            </div>
-                            <div class="item-meta">
-                                <span class="meta-badge">tooling</span>
-                            </div>
-                            <div class="item-innovation">One-command vLLM deployment via HF Jobs infrastructure</div>
-                        </div>
-                        
-                        
-                        
-                        <div class="item-card">
-                            <div class="item-header">
-                                <div class="item-title">
-                                    <a href="https://huggingface.co/blog/nvidia/accelerating-fine-tuning-nvidia-nemo-automodel" target="_blank" rel="noopener">Accelerating Transformers Fine-Tuning with NVIDIA NeMo AutoModel</a>
-                                </div>
-                            </div>
-                            <div class="item-meta">
-                                <span class="meta-badge">tooling</span>
-                            </div>
-                            <div class="item-innovation">NeMo AutoModel speeds up HF Transformers fine-tuning</div>
-                        </div>
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                    </div>
-                    
-                </div>
-                
-                <div class="timeline-item">
-                    <div class="timeline-date">2026-06-30</div>
                     <p style="color: var(--text-secondary); margin-bottom: 15px;">This week saw major advances in inference optimization with new quantization techniques and breakthrough improvements in reasoning models. The focus is shifting toward practical deployment at scale.</p>
-                    
                     <div class="items-grid">
-                        
-                        
                         <div class="item-card">
                             <div class="item-header">
                                 <div class="item-title">
@@ -746,9 +625,6 @@
                             </div>
                             <div class="item-innovation">Achieves competitive performance with GPT-4 using only 1-bit weights through novel training techniques and architectural modifications.</div>
                         </div>
-                        
-                        
-                        
                         <div class="item-card">
                             <div class="item-header">
                                 <div class="item-title">
@@ -760,9 +636,6 @@
                             </div>
                             <div class="item-innovation">First production model with native tool calling trained end-to-end, plus real-time video understanding capabilities.</div>
                         </div>
-                        
-                        
-                        
                         <div class="item-card">
                             <div class="item-header">
                                 <div class="item-title">
@@ -774,21 +647,51 @@
                             </div>
                             <div class="item-innovation">Production-ready speculative decoding with automatic draft model selection and dynamic batch size adjustment.</div>
                         </div>
-                        
-                        
-                        
-                        
                     </div>
-                    
                 </div>
-                
                 <div class="timeline-item">
-                    <div class="timeline-date">2026-06-27</div>
-                    <p style="color: var(--text-secondary); margin-bottom: 15px;">Major focus on RLHF alternatives and synthetic data generation. Multiple papers showing DPO variants outperforming traditional RLHF with lower computational costs.</p>
-                    
+                    <div class="timeline-date">2026-06-30</div>
+                    <p style="color: var(--text-secondary); margin-bottom: 15px;">This week saw major advances in inference optimization with new quantization techniques and breakthrough improvements in reasoning models. The focus is shifting toward practical deployment at scale.</p>
                     <div class="items-grid">
-                        
-                        
+                        <div class="item-card">
+                            <div class="item-header">
+                                <div class="item-title">
+                                    <a href="https://arxiv.org/abs/2606.example1" target="_blank" rel="noopener">BitNet 4.0: 1-bit LLMs Reach GPT-4 Performance</a>
+                                </div>
+                            </div>
+                            <div class="item-meta">
+                                <span class="meta-badge">inference</span>
+                            </div>
+                            <div class="item-innovation">Achieves competitive performance with GPT-4 using only 1-bit weights through novel training techniques and architectural modifications.</div>
+                        </div>
+                        <div class="item-card">
+                            <div class="item-header">
+                                <div class="item-title">
+                                    <a href="https://blog.google/technology/ai/gemini-2-release" target="_blank" rel="noopener">Gemini 2.0 Pro: Native Tool Use and Multi-Modal Reasoning</a>
+                                </div>
+                            </div>
+                            <div class="item-meta">
+                                <span class="meta-badge">post-training</span>
+                            </div>
+                            <div class="item-innovation">First production model with native tool calling trained end-to-end, plus real-time video understanding capabilities.</div>
+                        </div>
+                        <div class="item-card">
+                            <div class="item-header">
+                                <div class="item-title">
+                                    <a href="https://blog.vllm.ai/2026/06/speculative-decoding" target="_blank" rel="noopener">vLLM 0.8: Speculative Decoding with 2x Speedup</a>
+                                </div>
+                            </div>
+                            <div class="item-meta">
+                                <span class="meta-badge">inference</span>
+                            </div>
+                            <div class="item-innovation">Production-ready speculative decoding with automatic draft model selection and dynamic batch size adjustment.</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-date">2026-06-28</div>
+                    <p style="color: var(--text-secondary); margin-bottom: 15px;">Major focus on RLHF alternatives and synthetic data generation. Multiple papers showing DPO variants outperforming traditional RLHF with lower computational costs.</p>
+                    <div class="items-grid">
                         <div class="item-card">
                             <div class="item-header">
                                 <div class="item-title">
@@ -800,9 +703,6 @@
                             </div>
                             <div class="item-innovation">Addresses key weakness in DPO where the reference model distribution diverges, leading to more stable training.</div>
                         </div>
-                        
-                        
-                        
                         <div class="item-card">
                             <div class="item-header">
                                 <div class="item-title">
@@ -814,19 +714,40 @@
                             </div>
                             <div class="item-innovation">Shows that 10K high-quality synthetic math problems outperform 100K scraped problems when properly filtered.</div>
                         </div>
-                        
-                        
                     </div>
-                    
                 </div>
-                
                 <div class="timeline-item">
-                    <div class="timeline-date">2026-06-23</div>
-                    <p style="color: var(--text-secondary); margin-bottom: 15px;">Inference optimization continues to dominate with new frameworks and techniques. Several breakthroughs in long-context handling and memory efficiency.</p>
-                    
+                    <div class="timeline-date">2026-06-27</div>
+                    <p style="color: var(--text-secondary); margin-bottom: 15px;">Major focus on RLHF alternatives and synthetic data generation. Multiple papers showing DPO variants outperforming traditional RLHF with lower computational costs.</p>
                     <div class="items-grid">
-                        
-                        
+                        <div class="item-card">
+                            <div class="item-header">
+                                <div class="item-title">
+                                    <a href="https://arxiv.org/abs/2606.example2" target="_blank" rel="noopener">DPO++: Fixing Distribution Mismatch in Direct Preference Optimization</a>
+                                </div>
+                            </div>
+                            <div class="item-meta">
+                                <span class="meta-badge">post-training</span>
+                            </div>
+                            <div class="item-innovation">Addresses key weakness in DPO where the reference model distribution diverges, leading to more stable training.</div>
+                        </div>
+                        <div class="item-card">
+                            <div class="item-header">
+                                <div class="item-title">
+                                    <a href="https://arxiv.org/abs/2606.example3" target="_blank" rel="noopener">Synthetic Data for Math Reasoning: Quality Over Quantity</a>
+                                </div>
+                            </div>
+                            <div class="item-meta">
+                                <span class="meta-badge">post-training</span>
+                            </div>
+                            <div class="item-innovation">Shows that 10K high-quality synthetic math problems outperform 100K scraped problems when properly filtered.</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-date">2026-06-24</div>
+                    <p style="color: var(--text-secondary); margin-bottom: 15px;">Inference optimization continues to dominate with new frameworks and techniques. Several breakthroughs in long-context handling and memory efficiency.</p>
+                    <div class="items-grid">
                         <div class="item-card">
                             <div class="item-header">
                                 <div class="item-title">
@@ -838,14 +759,26 @@
                             </div>
                             <div class="item-innovation">Uses hierarchical compression to maintain constant memory while processing arbitrarily long sequences.</div>
                         </div>
-                        
-                        
                     </div>
-                    
                 </div>
-                
+                <div class="timeline-item">
+                    <div class="timeline-date">2026-06-23</div>
+                    <p style="color: var(--text-secondary); margin-bottom: 15px;">Inference optimization continues to dominate with new frameworks and techniques. Several breakthroughs in long-context handling and memory efficiency.</p>
+                    <div class="items-grid">
+                        <div class="item-card">
+                            <div class="item-header">
+                                <div class="item-title">
+                                    <a href="https://arxiv.org/abs/2606.example4" target="_blank" rel="noopener">Infinite-Context Transformers: O(1) Memory for Any Sequence Length</a>
+                                </div>
+                            </div>
+                            <div class="item-meta">
+                                <span class="meta-badge">architecture</span>
+                            </div>
+                            <div class="item-innovation">Uses hierarchical compression to maintain constant memory while processing arbitrarily long sequences.</div>
+                        </div>
+                    </div>
+                </div>
             </div>
-            
         </div>
     </div>
 
