@@ -10,6 +10,13 @@ from datetime import datetime, timedelta
 from typing import List, Dict, Any
 import time
 
+try:
+    from mastodon import Mastodon
+    MASTODON_AVAILABLE = True
+except ImportError:
+    MASTODON_AVAILABLE = False
+    print("Warning: Mastodon.py not installed. Mastodon fetching will be disabled.")
+
 
 class SourceFetcher:
     """Fetches content from RSS feeds, arXiv, and other sources."""
@@ -35,6 +42,16 @@ class SourceFetcher:
         for query_config in self.config.get('sources', {}).get('arxiv_queries', []):
             print(f"  Fetching arXiv: {query_config['query'][:50]}...")
             items.extend(self._fetch_arxiv(query_config))
+            time.sleep(1)
+        
+        # Fetch Hacker News stories
+        if self.config.get('sources', {}).get('hackernews', {}).get('enabled', True):
+            items.extend(self._fetch_hackernews())
+            time.sleep(1)
+        
+        # Fetch Mastodon posts
+        if self.config.get('sources', {}).get('mastodon', {}).get('enabled', True):
+            items.extend(self._fetch_mastodon())
             time.sleep(1)
         
         print(f"Total items fetched: {len(items)}")
@@ -116,6 +133,172 @@ class SourceFetcher:
         # This would require scraping or using a third-party service
         # Leaving as placeholder for now
         return []
+    
+    def _fetch_hackernews(self) -> List[Dict[str, Any]]:
+        """Fetch top stories from Hacker News."""
+        items = []
+        hn_config = self.config.get('sources', {}).get('hackernews', {})
+        
+        if not hn_config.get('enabled', True):
+            return items
+        
+        max_stories = hn_config.get('max_stories', 50)
+        min_score = hn_config.get('min_score', 20)
+        
+        try:
+            print(f"  Fetching Hacker News top stories...")
+            
+            # Fetch top story IDs
+            response = requests.get('https://hacker-news.firebaseio.com/v0/topstories.json')
+            response.raise_for_status()
+            story_ids = response.json()[:max_stories]
+            
+            # Fetch individual stories
+            for story_id in story_ids:
+                try:
+                    time.sleep(0.1)  # Be polite with rate limiting
+                    response = requests.get(f'https://hacker-news.firebaseio.com/v0/item/{story_id}.json')
+                    response.raise_for_status()
+                    story = response.json()
+                    
+                    if not story or story.get('type') != 'story':
+                        continue
+                    
+                    score = story.get('score', 0)
+                    if score < min_score:
+                        continue
+                    
+                    # Parse timestamp
+                    pub_date = datetime.fromtimestamp(story.get('time', 0))
+                    
+                    # Filter by date
+                    if pub_date < self.cutoff_date:
+                        continue
+                    
+                    comments = story.get('descendants', 0)
+                    title = story.get('title', 'Untitled')
+                    url = story.get('url', f"https://news.ycombinator.com/item?id={story_id}")
+                    
+                    item = {
+                        'title': title,
+                        'url': url,
+                        'summary': f"HN discussion with {score} points, {comments} comments",
+                        'published': pub_date.isoformat(),
+                        'source': 'Hacker News',
+                        'category': 'community',
+                        'type': 'discussion',
+                        'score': score,
+                        'comments': comments
+                    }
+                    items.append(item)
+                
+                except Exception as e:
+                    print(f"    Error fetching HN story {story_id}: {e}")
+                    continue
+            
+            print(f"    Fetched {len(items)} HN stories")
+        
+        except Exception as e:
+            print(f"    Error fetching Hacker News: {e}")
+        
+        return items
+    
+    def _fetch_mastodon(self) -> List[Dict[str, Any]]:
+        """Fetch posts from Mastodon instance via hashtags."""
+        items = []
+        
+        if not MASTODON_AVAILABLE:
+            print("  Mastodon.py not available, skipping Mastodon fetching")
+            return items
+        
+        mastodon_config = self.config.get('sources', {}).get('mastodon', {})
+        
+        if not mastodon_config.get('enabled', True):
+            return items
+        
+        instance = mastodon_config.get('instance', 'https://sigmoid.social')
+        hashtags = mastodon_config.get('hashtags', [])
+        lookback_hours = mastodon_config.get('lookback_hours', 168)
+        max_posts_per_tag = mastodon_config.get('max_posts_per_tag', 30)
+        
+        if not hashtags:
+            return items
+        
+        try:
+            print(f"  Fetching Mastodon posts from {instance}...")
+            
+            # Connect to instance (no auth needed for public timeline search)
+            mastodon = Mastodon(api_base_url=instance)
+            
+            cutoff_time = datetime.now() - timedelta(hours=lookback_hours)
+            seen_urls = set()  # Deduplicate posts
+            
+            for hashtag in hashtags:
+                try:
+                    print(f"    Searching hashtag: #{hashtag}")
+                    
+                    # Search for hashtag
+                    results = mastodon.timeline_hashtag(
+                        hashtag,
+                        limit=max_posts_per_tag
+                    )
+                    
+                    for post in results:
+                        # Parse timestamp
+                        pub_date = post['created_at']
+                        if pub_date.tzinfo:
+                            pub_date = pub_date.replace(tzinfo=None)
+                        
+                        # Filter by date
+                        if pub_date < cutoff_time:
+                            continue
+                        
+                        post_url = post['url']
+                        
+                        # Skip duplicates
+                        if post_url in seen_urls:
+                            continue
+                        seen_urls.add(post_url)
+                        
+                        # Extract content
+                        content = post.get('content', '')
+                        # Strip HTML tags for summary
+                        from bs4 import BeautifulSoup
+                        clean_content = BeautifulSoup(content, 'html.parser').get_text()
+                        
+                        author = post['account']['username']
+                        title_preview = clean_content[:100].replace('\n', ' ').strip()
+                        if len(clean_content) > 100:
+                            title_preview += '...'
+                        
+                        item = {
+                            'title': f"Post by @{author}: {title_preview}",
+                            'url': post_url,
+                            'summary': clean_content,
+                            'published': pub_date.isoformat(),
+                            'source': 'Mastodon (sigmoid.social)',
+                            'category': 'social',
+                            'type': 'post',
+                            'author': f"@{author}",
+                            'engagement': {
+                                'boosts': post.get('reblogs_count', 0),
+                                'favorites': post.get('favourites_count', 0)
+                            }
+                        }
+                        items.append(item)
+                    
+                    time.sleep(1)  # Be polite between hashtag searches
+                
+                except Exception as e:
+                    print(f"    Error fetching hashtag #{hashtag}: {e}")
+                    continue
+            
+            print(f"    Fetched {len(items)} Mastodon posts")
+        
+        except Exception as e:
+            print(f"    Error fetching Mastodon: {e}")
+        
+        return items
 
 
 def main():
