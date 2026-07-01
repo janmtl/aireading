@@ -115,7 +115,28 @@ class SummaryGenerator:
                     response_text += block.text
             
             if not response_text:
-                raise ValueError("No text content found in response")
+                # Log the response structure for debugging
+                print(f"  Warning: No text content found in API response")
+                print(f"  Response has {len(message.content)} content blocks")
+                for i, block in enumerate(message.content):
+                    print(f"    Block {i}: type={type(block).__name__}, has_text={hasattr(block, 'text')}")
+                
+                # Create a fallback response instead of crashing
+                print(f"  Creating fallback summary structure...")
+                summary_data = {
+                    "items": [],
+                    "trends": ["API returned no text content - unable to generate summary"],
+                    "summary": "The LLM response contained no text content. This may be due to an API issue or rate limiting.",
+                    "api_error": True
+                }
+                
+                # Add metadata and return early
+                summary_data['generated_at'] = datetime.now().isoformat()
+                summary_data['model'] = self.model
+                summary_data['total_items_analyzed'] = len(items)
+                
+                print(f"  Returning fallback summary (no items)")
+                return summary_data
             
             # Parse JSON response
             # Handle potential markdown code blocks
@@ -325,7 +346,23 @@ def main():
     
     # Generate summary
     generator = SummaryGenerator(config)
-    summary = generator.generate_summary(items)
+    try:
+        summary = generator.generate_summary(items)
+    except Exception as e:
+        print(f"Error generating summary: {e}")
+        print("Creating fallback summary structure...")
+        
+        # Create a minimal fallback summary
+        summary = {
+            "items": [],
+            "trends": [f"Summary generation failed: {str(e)[:100]}"],
+            "summary": "Unable to generate AI summary due to an error. Please check logs.",
+            "generated_at": datetime.now().isoformat(),
+            "model": config.get('llm', {}).get('model', 'unknown'),
+            "total_items_analyzed": len(items),
+            "generation_error": str(e)
+        }
+        print("Using fallback summary to prevent build failure")
     
     # Save summary
     summary_dir = config.get('build', {}).get('summary_storage', 'summaries/')
