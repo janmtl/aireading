@@ -259,7 +259,20 @@ The project includes your existing `reading-list-draft.md` as reference material
 # Test source fetching
 python fetch_sources.py
 
-# Test with sample data
+# Generate demo HTML with sample data (for testing UI without API calls)
+python create_demo.py
+
+# Generate real summary from live sources
+python generate_summary.py
+```
+
+**Important:** If you've run `create_demo.py` for testing, delete the demo summary files before running `generate_summary.py` to avoid mixing demo and real data:
+
+```bash
+# Remove demo summaries (if they exist)
+rm summaries/2026-*.json
+
+# Then generate real summaries
 python generate_summary.py
 ```
 
