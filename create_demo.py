@@ -62,7 +62,7 @@ def create_demo_summaries():
                 "Tool use moving from prompt engineering to native training"
             ],
             "generated_at": datetime.now().isoformat(),
-            "model": "claude-3-5-sonnet-20241022",
+            "model": "claude-sonnet-5",
             "total_items_analyzed": 47
         },
         {
@@ -94,7 +94,7 @@ def create_demo_summaries():
                 "Focus on data efficiency rather than pure scaling"
             ],
             "generated_at": (datetime.now() - timedelta(days=3)).isoformat(),
-            "model": "claude-3-5-sonnet-20241022",
+            "model": "claude-sonnet-5",
             "total_items_analyzed": 39
         },
         {
@@ -116,7 +116,7 @@ def create_demo_summaries():
                 "Memory efficiency becoming as important as speed"
             ],
             "generated_at": (datetime.now() - timedelta(days=7)).isoformat(),
-            "model": "claude-3-5-sonnet-20241022",
+            "model": "claude-sonnet-5",
             "total_items_analyzed": 42
         }
     ]

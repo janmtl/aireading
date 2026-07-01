@@ -93,15 +93,21 @@ class SummaryGenerator:
         
         # Call LLM
         try:
-            message = self.client.messages.create(
-                model=self.model,
-                max_tokens=self.max_tokens,
-                temperature=self.temperature,
-                messages=[{
+            # claude-sonnet-5 doesn't support custom sampling parameters
+            api_params = {
+                "model": self.model,
+                "max_tokens": self.max_tokens,
+                "messages": [{
                     "role": "user",
                     "content": SUMMARIZATION_PROMPT + items_text
                 }]
-            )
+            }
+            
+            # Only add temperature for models that support it
+            if not self.model.startswith("claude-sonnet-5"):
+                api_params["temperature"] = self.temperature
+            
+            message = self.client.messages.create(**api_params)
             
             response_text = message.content[0].text
             
