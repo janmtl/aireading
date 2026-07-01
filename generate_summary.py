@@ -109,7 +109,15 @@ class SummaryGenerator:
             
             message = self.client.messages.create(**api_params)
             
-            response_text = message.content[0].text
+            # Extract text from response
+            # Claude Sonnet 5 has adaptive thinking enabled, so we need to find the TextBlock
+            response_text = ""
+            for block in message.content:
+                if hasattr(block, 'text'):
+                    response_text += block.text
+            
+            if not response_text:
+                raise ValueError("No text content found in response")
             
             # Parse JSON response
             # Handle potential markdown code blocks

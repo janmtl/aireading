@@ -80,15 +80,17 @@ class SourceFetcher:
         items = []
         
         try:
+            client = arxiv.Client()
             search = arxiv.Search(
                 query=query_config['query'],
                 max_results=query_config.get('max_results', 10),
                 sort_by=arxiv.SortCriterion.SubmittedDate
             )
             
-            for result in search:
+            for result in client.results(search):
                 # Filter by date
-                if result.published.replace(tzinfo=None) < self.cutoff_date:
+                pub_date = result.published.replace(tzinfo=None) if result.published.tzinfo else result.published
+                if pub_date < self.cutoff_date:
                     continue
                 
                 item = {
