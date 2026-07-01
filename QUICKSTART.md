@@ -67,7 +67,7 @@ Edit `config.yaml` to:
 
 ## Cost Estimate
 
-- **Anthropic Claude 3.5 Sonnet**: ~$0.15 per daily run
+- **Anthropic Claude Sonnet 5**: ~$0.15 per daily run
 - **Monthly cost**: ~$5-7
 - **AWS Amplify**: Free tier covers most use cases
 

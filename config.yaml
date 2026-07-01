@@ -51,8 +51,8 @@ sources:
 # LLM Configuration
 llm:
   provider: "anthropic"  # or "openai"
-  model: "claude-3-5-sonnet-20241022"  # or "gpt-4-turbo"
-  temperature: 0.3
+  model: "claude-sonnet-5"  # Latest: claude-sonnet-5, or "gpt-4-turbo" for OpenAI
+  temperature: 0.3  # Note: claude-sonnet-5 does not support custom temperature
   max_tokens: 4000
 
 # Build Configuration

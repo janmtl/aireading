@@ -201,9 +201,11 @@ The project includes your existing `reading-list-draft.md` as reference material
 
 ## Cost Estimates
 
-### Anthropic API (Claude 3.5 Sonnet)
+### Anthropic API (Claude Sonnet 5)
 - ~$0.10-0.30 per daily summary
 - ~$3-10 per month
+- Promotional pricing through Aug 31, 2026: $2/MTok input, $10/MTok output
+- Standard pricing after: $3/MTok input, $15/MTok output
 
 ### AWS Amplify
 - Free tier: 1000 build minutes/month

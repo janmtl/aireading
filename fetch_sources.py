@@ -86,9 +86,9 @@ class SourceFetcher:
                 sort_by=arxiv.SortCriterion.SubmittedDate
             )
             
-            for result in search.results():
+            for result in search:
                 # Filter by date
-                if result.published < self.cutoff_date:
+                if result.published.replace(tzinfo=None) < self.cutoff_date:
                     continue
                 
                 item = {
