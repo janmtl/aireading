@@ -1,0 +1,28 @@
+version: 1
+
+frontend:
+  phases:
+    preBuild:
+      commands:
+        - echo "Installing Python dependencies"
+        - pip3 install -r requirements.txt --target ./python_modules
+        - export PYTHONPATH=$PYTHONPATH:./python_modules
+    
+    build:
+      commands:
+        - echo "Generating AI digest"
+        - python3 generate_summary.py
+        - echo "Build completed"
+  
+  artifacts:
+    baseDirectory: public
+    files:
+      - '**/*'
+  
+  cache:
+    paths:
+      - python_modules/**/*
+      - summaries/**/*
+
+# Environment variables (set these in AWS Amplify Console):
+# ANTHROPIC_API_KEY - Your Anthropic API key (or OpenAI key if using GPT)
