@@ -1,0 +1,137 @@
+{
+  "items": [
+    {
+      "title": "GSRQ: Gain-Shape Residual Quantization for Sub-1-bit KV Cache",
+      "url": "http://arxiv.org/abs/2607.01065v1",
+      "core_innovation": "Sub-1-bit KV cache quantization fixing high-dim K-means bias",
+      "significance": "Enables much longer context windows at lower memory cost",
+      "practical_readiness": "research",
+      "significance_score": 0.65,
+      "category": "inference"
+    },
+    {
+      "title": "MosaicKV: Serving Long-Context LLM with Dynamic Two-D KV Cache Compression",
+      "url": "http://arxiv.org/abs/2607.00760v1",
+      "core_innovation": "Compresses KV cache along both sequence and channel dims",
+      "significance": "Higher throughput headroom for million-token contexts",
+      "practical_readiness": "prototype",
+      "significance_score": 0.65,
+      "category": "inference"
+    },
+    {
+      "title": "RaBitQCache: Rotated Binary Quantization for KVCache in Long Context LLM Inference",
+      "url": "http://arxiv.org/abs/2606.31519v1",
+      "core_innovation": "Binary-INT4 rotated quantization for sparse attention KV",
+      "significance": "Cheaper, less biased attention-score estimation at scale",
+      "practical_readiness": "research",
+      "significance_score": 0.6,
+      "category": "inference"
+    },
+    {
+      "title": "Beyond Activation Alignment: The Alignment-Diversity Tradeoff in Task-Aware LLM Quantization",
+      "url": "http://arxiv.org/abs/2607.00908v1",
+      "core_innovation": "Shows perplexity-based sensitivity mismatches reasoning impact",
+      "significance": "Challenges standard practice in mixed-precision quantization",
+      "practical_readiness": "research",
+      "significance_score": 0.7,
+      "category": "inference"
+    },
+    {
+      "title": "Staleness-Learning Rate Scaling Laws for Asynchronous RLHF",
+      "url": "http://arxiv.org/abs/2607.01083v1",
+      "core_innovation": "Formal scaling law linking rollout staleness to LR in async GRPO",
+      "significance": "Guides stable high-throughput RLHF system design",
+      "practical_readiness": "research",
+      "significance_score": 0.65,
+      "category": "post-training"
+    },
+    {
+      "title": "Message Passing Enables Efficient Reasoning",
+      "url": "http://arxiv.org/abs/2607.01077v1",
+      "core_innovation": "Adds pointwise thread communication to fork-join parallel reasoning",
+      "significance": "Improves parallel scaling as alternative to long CoT",
+      "practical_readiness": "research",
+      "significance_score": 0.65,
+      "category": "reasoning"
+    },
+    {
+      "title": "CAT: Confidence-Adaptive Thinking for Efficient Reasoning of Large Reasoning Models",
+      "url": "http://arxiv.org/abs/2607.00862v1",
+      "core_innovation": "Fine-grained confidence-based CoT length adaptation",
+      "significance": "Cuts overthinking token overhead without hurting hard problems",
+      "practical_readiness": "prototype",
+      "significance_score": 0.6,
+      "category": "reasoning"
+    },
+    {
+      "title": "Theoria: Rewrite-Acceptability Verification over Informal Reasoning States",
+      "url": "http://arxiv.org/abs/2607.01223v1",
+      "core_innovation": "Auditable typed state-transition verification vs opaque LLM judges",
+      "significance": "Bridges formal proof rigor and informal reasoning coverage",
+      "practical_readiness": "research",
+      "significance_score": 0.6,
+      "category": "reasoning"
+    },
+    {
+      "title": "Efficient Multilingual Reasoning Transfer via Progressive Code-Switching",
+      "url": "http://arxiv.org/abs/2607.00485v1",
+      "core_innovation": "Code-switching to transfer English reasoning without distillation",
+      "significance": "Cheaper multilingual reasoning without external judge models",
+      "practical_readiness": "research",
+      "significance_score": 0.55,
+      "category": "reasoning"
+    },
+    {
+      "title": "Learning from Failure: Inference-Time Self-Improvement for Computer-Use Agents",
+      "url": "http://arxiv.org/abs/2606.31270v1",
+      "core_innovation": "Uses failed trajectories for inference-time agent self-improvement",
+      "significance": "Reduces need for costly synthetic success-only training loops",
+      "practical_readiness": "research",
+      "significance_score": 0.6,
+      "category": "inference"
+    },
+    {
+      "title": "ComplianceGate: Classifier-Gated Multi-Tier LLM Routing for Regulated Industries",
+      "url": "http://arxiv.org/abs/2606.31163v2",
+      "core_innovation": "PII-aware classifier gates routing across model tiers/regions",
+      "significance": "Practical cost/compliance-aware serving for regulated sectors",
+      "practical_readiness": "prototype",
+      "significance_score": 0.55,
+      "category": "inference"
+    },
+    {
+      "title": "NVIDIA TwoTower: diffusion LM built on frozen autoregressive backbone",
+      "url": "https://www.marktechpost.com/2026/07/01/nvidia-releases-nemotron-labs-twotower/",
+      "core_innovation": "Diffusion decoding head reuses frozen AR backbone for 2.42x speedup",
+      "significance": "Novel hybrid AR-diffusion approach retains 98.7% quality at higher speed",
+      "practical_readiness": "prototype",
+      "significance_score": 0.7,
+      "category": "architecture"
+    },
+    {
+      "title": "Google TabFM: hybrid attention tabular foundation model",
+      "url": "https://www.marktechpost.com/2026/07/01/google-ai-introduces-tabfm-a-hybrid-attention-tabular-foundation-model-for-zero-shot-classi",
+      "core_innovation": "Zero-shot tabular classification/regression via in-context learning",
+      "significance": "No per-dataset training or feature engineering needed",
+      "practical_readiness": "research",
+      "significance_score": 0.6,
+      "category": "architecture"
+    },
+    {
+      "title": "Baidu Unlimited OCR: 3B model with flat KV cache for long documents",
+      "url": "https://www.marktechpost.com/2026/06/24/baidu-releases-unlimited-ocr-a-3b-model-that-keeps-the-kv-cache-flat-for-long-document-parsing/",
+      "core_innovation": "Reference Sliding Window Attention keeps KV cache constant",
+      "significance": "Constant memory for arbitrarily long document parsing, open-sourced",
+      "practical_readiness": "production-ready",
+      "significance_score": 0.6,
+      "category": "inference"
+    },
+    {
+      "title": "PorTAL: Portable Task Adapters for LLMs",
+      "url": "https://twitter.com/ramplabs/status/2072381992285"
+    }
+  ],
+  "generated_at": "2026-07-02T05:57:02.873336",
+  "model": "claude-sonnet-5",
+  "total_items_analyzed": 164
+}
