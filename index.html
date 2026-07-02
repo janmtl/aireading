@@ -363,7 +363,7 @@
         <div class="container">
             <h1>🧠 AI Research Digest</h1>
             <div class="subtitle">Latest Advancements in AI Inference & Post-Training</div>
-            <div class="last-updated">Last updated: 2026-07-01 19:49 UTC</div>
+            <div class="last-updated">Last updated: 2026-07-02 05:57 UTC</div>
         </div>
     </header>
 
@@ -379,7 +379,7 @@
             
             <div class="summary-overview">
                 <h2>📊 Weekly Overview</h2>
-                <p>Partial response due to parsing error</p>
+                <p></p>
             </div>
 
             <div class="stats-grid">
@@ -392,13 +392,55 @@
                     <div class="stat-label">Active Trends</div>
                 </div>
                 <div class="stat-card">
-                    <div class="stat-value">33</div>
+                    <div class="stat-value">164</div>
                     <div class="stat-label">Sources Analyzed</div>
                 </div>
             </div>
 
             <h2 style="margin-bottom: 20px; color: var(--text);">🔥 Top Developments</h2>
             <div class="items-grid">
+                
+                <div class="item-card">
+                    <div class="item-header">
+                        <div class="item-title">
+                            <a href="http://arxiv.org/abs/2607.00908v1" target="_blank" rel="noopener">Beyond Activation Alignment: The Alignment-Diversity Tradeoff in Task-Aware LLM Quantization</a>
+                        </div>
+                        
+                        <span class="significance-badge significance-medium">Notable</span>
+                        
+                    </div>
+                    <div class="item-meta">
+                        <span class="meta-badge">inference</span>
+                        <span class="meta-badge">research</span>
+                    </div>
+                    <div class="item-innovation">
+                        <strong>Innovation:</strong> Shows perplexity-based sensitivity mismatches reasoning impact
+                    </div>
+                    <div class="item-significance">
+                        <strong>Why it matters:</strong> Challenges standard practice in mixed-precision quantization
+                    </div>
+                </div>
+                
+                <div class="item-card">
+                    <div class="item-header">
+                        <div class="item-title">
+                            <a href="https://www.marktechpost.com/2026/07/01/nvidia-releases-nemotron-labs-twotower/" target="_blank" rel="noopener">NVIDIA TwoTower: diffusion LM built on frozen autoregressive backbone</a>
+                        </div>
+                        
+                        <span class="significance-badge significance-medium">Notable</span>
+                        
+                    </div>
+                    <div class="item-meta">
+                        <span class="meta-badge">architecture</span>
+                        <span class="meta-badge">prototype</span>
+                    </div>
+                    <div class="item-innovation">
+                        <strong>Innovation:</strong> Diffusion decoding head reuses frozen AR backbone for 2.42x speedup
+                    </div>
+                    <div class="item-significance">
+                        <strong>Why it matters:</strong> Novel hybrid AR-diffusion approach retains 98.7% quality at higher speed
+                    </div>
+                </div>
                 
                 <div class="item-card">
                     <div class="item-header">
@@ -418,6 +460,90 @@
                     </div>
                     <div class="item-significance">
                         <strong>Why it matters:</strong> Could enable efficient latent reasoning at larger model scales
+                    </div>
+                </div>
+                
+                <div class="item-card">
+                    <div class="item-header">
+                        <div class="item-title">
+                            <a href="http://arxiv.org/abs/2607.01065v1" target="_blank" rel="noopener">GSRQ: Gain-Shape Residual Quantization for Sub-1-bit KV Cache</a>
+                        </div>
+                        
+                        <span class="significance-badge significance-medium">Notable</span>
+                        
+                    </div>
+                    <div class="item-meta">
+                        <span class="meta-badge">inference</span>
+                        <span class="meta-badge">research</span>
+                    </div>
+                    <div class="item-innovation">
+                        <strong>Innovation:</strong> Sub-1-bit KV cache quantization fixing high-dim K-means bias
+                    </div>
+                    <div class="item-significance">
+                        <strong>Why it matters:</strong> Enables much longer context windows at lower memory cost
+                    </div>
+                </div>
+                
+                <div class="item-card">
+                    <div class="item-header">
+                        <div class="item-title">
+                            <a href="http://arxiv.org/abs/2607.00760v1" target="_blank" rel="noopener">MosaicKV: Serving Long-Context LLM with Dynamic Two-D KV Cache Compression</a>
+                        </div>
+                        
+                        <span class="significance-badge significance-medium">Notable</span>
+                        
+                    </div>
+                    <div class="item-meta">
+                        <span class="meta-badge">inference</span>
+                        <span class="meta-badge">prototype</span>
+                    </div>
+                    <div class="item-innovation">
+                        <strong>Innovation:</strong> Compresses KV cache along both sequence and channel dims
+                    </div>
+                    <div class="item-significance">
+                        <strong>Why it matters:</strong> Higher throughput headroom for million-token contexts
+                    </div>
+                </div>
+                
+                <div class="item-card">
+                    <div class="item-header">
+                        <div class="item-title">
+                            <a href="http://arxiv.org/abs/2607.01083v1" target="_blank" rel="noopener">Staleness-Learning Rate Scaling Laws for Asynchronous RLHF</a>
+                        </div>
+                        
+                        <span class="significance-badge significance-medium">Notable</span>
+                        
+                    </div>
+                    <div class="item-meta">
+                        <span class="meta-badge">post-training</span>
+                        <span class="meta-badge">research</span>
+                    </div>
+                    <div class="item-innovation">
+                        <strong>Innovation:</strong> Formal scaling law linking rollout staleness to LR in async GRPO
+                    </div>
+                    <div class="item-significance">
+                        <strong>Why it matters:</strong> Guides stable high-throughput RLHF system design
+                    </div>
+                </div>
+                
+                <div class="item-card">
+                    <div class="item-header">
+                        <div class="item-title">
+                            <a href="http://arxiv.org/abs/2607.01077v1" target="_blank" rel="noopener">Message Passing Enables Efficient Reasoning</a>
+                        </div>
+                        
+                        <span class="significance-badge significance-medium">Notable</span>
+                        
+                    </div>
+                    <div class="item-meta">
+                        <span class="meta-badge">reasoning</span>
+                        <span class="meta-badge">research</span>
+                    </div>
+                    <div class="item-innovation">
+                        <strong>Innovation:</strong> Adds pointwise thread communication to fork-join parallel reasoning
+                    </div>
+                    <div class="item-significance">
+                        <strong>Why it matters:</strong> Improves parallel scaling as alternative to long CoT
                     </div>
                 </div>
                 
@@ -466,48 +592,6 @@
                 <div class="item-card">
                     <div class="item-header">
                         <div class="item-title">
-                            <a href="https://huggingface.co/blog/cerebras-gemma4-voice-ai" target="_blank" rel="noopener">Hugging Face and Cerebras bring Gemma 4 to real-time voice AI</a>
-                        </div>
-                        
-                        <span class="significance-badge significance-medium">Notable</span>
-                        
-                    </div>
-                    <div class="item-meta">
-                        <span class="meta-badge">inference</span>
-                        <span class="meta-badge">production-ready</span>
-                    </div>
-                    <div class="item-innovation">
-                        <strong>Innovation:</strong> Cerebras hardware serving Gemma 4 for low-latency voice apps
-                    </div>
-                    <div class="item-significance">
-                        <strong>Why it matters:</strong> Shows real-time voice inference at scale is now deployable
-                    </div>
-                </div>
-                
-                <div class="item-card">
-                    <div class="item-header">
-                        <div class="item-title">
-                            <a href="https://huggingface.co/blog/vllm-jobs" target="_blank" rel="noopener">Run a vLLM Server on HF Jobs in One Command</a>
-                        </div>
-                        
-                        <span class="significance-badge significance-medium">Notable</span>
-                        
-                    </div>
-                    <div class="item-meta">
-                        <span class="meta-badge">tooling</span>
-                        <span class="meta-badge">production-ready</span>
-                    </div>
-                    <div class="item-innovation">
-                        <strong>Innovation:</strong> One-command vLLM deployment via HF Jobs infra
-                    </div>
-                    <div class="item-significance">
-                        <strong>Why it matters:</strong> Lowers barrier to spinning up production LLM inference servers
-                    </div>
-                </div>
-                
-                <div class="item-card">
-                    <div class="item-header">
-                        <div class="item-title">
                             <a href="http://arxiv.org/abs/2606.31519v1" target="_blank" rel="noopener">RaBitQCache: Rotated Binary Quantization for KVCache in Long Context LLM Inference</a>
                         </div>
                         
@@ -519,94 +603,10 @@
                         <span class="meta-badge">research</span>
                     </div>
                     <div class="item-innovation">
-                        <strong>Innovation:</strong> Binary-INT4 rotated quantization for KV cache attention estimation
+                        <strong>Innovation:</strong> Binary-INT4 rotated quantization for sparse attention KV
                     </div>
                     <div class="item-significance">
-                        <strong>Why it matters:</strong> Cuts long-context memory/compute cost vs static top-k sparsity
-                    </div>
-                </div>
-                
-                <div class="item-card">
-                    <div class="item-header">
-                        <div class="item-title">
-                            <a href="http://arxiv.org/abs/2606.31270v1" target="_blank" rel="noopener">Learning from Failure: Inference-Time Self-Improvement for Computer-Use Agents</a>
-                        </div>
-                        
-                        <span class="significance-badge significance-medium">Notable</span>
-                        
-                    </div>
-                    <div class="item-meta">
-                        <span class="meta-badge">inference</span>
-                        <span class="meta-badge">research</span>
-                    </div>
-                    <div class="item-innovation">
-                        <strong>Innovation:</strong> Self-improvement loop from failed agent trajectories at inference time
-                    </div>
-                    <div class="item-significance">
-                        <strong>Why it matters:</strong> Reduces reliance on costly successful-trajectory data collection
-                    </div>
-                </div>
-                
-                <div class="item-card">
-                    <div class="item-header">
-                        <div class="item-title">
-                            <a href="http://arxiv.org/abs/2606.30406v1" target="_blank" rel="noopener">MOPD: Multi-Teacher On-Policy Distillation for Capability Integration</a>
-                        </div>
-                        
-                        <span class="significance-badge significance-medium">Notable</span>
-                        
-                    </div>
-                    <div class="item-meta">
-                        <span class="meta-badge">post-training</span>
-                        <span class="meta-badge">research</span>
-                    </div>
-                    <div class="item-innovation">
-                        <strong>Innovation:</strong> On-policy distillation merges multiple domain-specialized RL teachers
-                    </div>
-                    <div class="item-significance">
-                        <strong>Why it matters:</strong> Addresses hard problem of combining capabilities post-training
-                    </div>
-                </div>
-                
-                <div class="item-card">
-                    <div class="item-header">
-                        <div class="item-title">
-                            <a href="http://arxiv.org/abs/2606.29758v1" target="_blank" rel="noopener">PS-PPO: Prefix-Sampling PPO for Critic-Free RLHF</a>
-                        </div>
-                        
-                        <span class="significance-badge significance-medium">Notable</span>
-                        
-                    </div>
-                    <div class="item-meta">
-                        <span class="meta-badge">post-training</span>
-                        <span class="meta-badge">research</span>
-                    </div>
-                    <div class="item-innovation">
-                        <strong>Innovation:</strong> Prefix-level signal propagation avoids full-trajectory PPO updates
-                    </div>
-                    <div class="item-significance">
-                        <strong>Why it matters:</strong> Cuts RLHF optimization cost for long reasoning traces
-                    </div>
-                </div>
-                
-                <div class="item-card">
-                    <div class="item-header">
-                        <div class="item-title">
-                            <a href="http://arxiv.org/abs/2606.30852v1" target="_blank" rel="noopener">When Does Learning to Stop Help? A Cost-Aware Study of Early Exits in Reasoning Models</a>
-                        </div>
-                        
-                        <span class="significance-badge significance-medium">Notable</span>
-                        
-                    </div>
-                    <div class="item-meta">
-                        <span class="meta-badge">reasoning</span>
-                        <span class="meta-badge">research</span>
-                    </div>
-                    <div class="item-innovation">
-                        <strong>Innovation:</strong> LearnStop: learned checkpoint stopper vs confidence thresholds
-                    </div>
-                    <div class="item-significance">
-                        <strong>Why it matters:</strong> Practical route to adaptive test-time compute budgeting
+                        <strong>Why it matters:</strong> Cheaper, less biased attention-score estimation at scale
                     </div>
                 </div>
                 
@@ -631,6 +631,82 @@
                 <p>A longitudinal view of AI advancements over the past month.</p>
             </div>
             <div class="timeline">
+                
+                <div class="timeline-item">
+                    <div class="timeline-date">2026-07-02</div>
+                    <p style="color: var(--text-secondary); margin-bottom: 15px;"></p>
+                    
+                    <div class="items-grid">
+                        
+                        
+                        <div class="item-card">
+                            <div class="item-header">
+                                <div class="item-title">
+                                    <a href="http://arxiv.org/abs/2607.01065v1" target="_blank" rel="noopener">GSRQ: Gain-Shape Residual Quantization for Sub-1-bit KV Cache</a>
+                                </div>
+                            </div>
+                            <div class="item-meta">
+                                <span class="meta-badge">inference</span>
+                            </div>
+                            <div class="item-innovation">Sub-1-bit KV cache quantization fixing high-dim K-means bias</div>
+                        </div>
+                        
+                        
+                        
+                        <div class="item-card">
+                            <div class="item-header">
+                                <div class="item-title">
+                                    <a href="http://arxiv.org/abs/2607.00760v1" target="_blank" rel="noopener">MosaicKV: Serving Long-Context LLM with Dynamic Two-D KV Cache Compression</a>
+                                </div>
+                            </div>
+                            <div class="item-meta">
+                                <span class="meta-badge">inference</span>
+                            </div>
+                            <div class="item-innovation">Compresses KV cache along both sequence and channel dims</div>
+                        </div>
+                        
+                        
+                        
+                        <div class="item-card">
+                            <div class="item-header">
+                                <div class="item-title">
+                                    <a href="http://arxiv.org/abs/2606.31519v1" target="_blank" rel="noopener">RaBitQCache: Rotated Binary Quantization for KVCache in Long Context LLM Inference</a>
+                                </div>
+                            </div>
+                            <div class="item-meta">
+                                <span class="meta-badge">inference</span>
+                            </div>
+                            <div class="item-innovation">Binary-INT4 rotated quantization for sparse attention KV</div>
+                        </div>
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                    </div>
+                    
+                </div>
                 
                 <div class="timeline-item">
                     <div class="timeline-date">2026-07-01</div>
