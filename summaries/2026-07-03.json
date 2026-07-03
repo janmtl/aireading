@@ -1,0 +1,114 @@
+{
+  "items": [
+    {
+      "title": "Hugging Face and Cerebras bring Gemma 4 to real-time voice AI",
+      "url": "https://huggingface.co/blog/cerebras-gemma4-voice-ai",
+      "core_innovation": "Cerebras hardware serving Gemma 4 for low-latency voice inference",
+      "significance": "Shows specialized inference silicon enabling real-time LLM voice apps",
+      "practical_readiness": "production-ready",
+      "significance_score": 0.6,
+      "category": "inference"
+    },
+    {
+      "title": "Using Local Coding Agents",
+      "url": "https://magazine.sebastianraschka.com/p/using-local-coding-agents",
+      "core_innovation": "Practical guide to open-weight local coding agents vs Claude Code/Codex",
+      "significance": "Signals maturing local-agent tooling as viable subscription alternative",
+      "practical_readiness": "prototype",
+      "significance_score": 0.65,
+      "category": "tooling"
+    },
+    {
+      "title": "Object Aligner: JSON Schema Similarity for LLM Prompt Optimization",
+      "url": "http://arxiv.org/abs/2607.01972v1",
+      "core_innovation": "Open-source graph-based scorer for structured JSON output matching",
+      "significance": "Cheaper, deterministic alternative to LLM-judge for structured tasks",
+      "practical_readiness": "prototype",
+      "significance_score": 0.4,
+      "category": "tooling"
+    },
+    {
+      "title": "Denser != Better: Limits of On-Policy Self-Distillation for Continual Post-Training",
+      "url": "http://arxiv.org/abs/2607.01763v1",
+      "core_innovation": "Shows SDPO fails when teacher signals are unstable during continual learning",
+      "significance": "Tempers optimism around on-policy distillation for forgetting mitigation",
+      "practical_readiness": "research",
+      "significance_score": 0.55,
+      "category": "post-training"
+    },
+    {
+      "title": "Staleness-Learning Rate Scaling Laws for Asynchronous RLHF",
+      "url": "http://arxiv.org/abs/2607.01083v2",
+      "core_innovation": "Formalizes how rollout staleness should scale learning rates in async GRPO",
+      "significance": "Enables more efficient high-throughput RLHF pipelines",
+      "practical_readiness": "research",
+      "significance_score": 0.55,
+      "category": "post-training"
+    },
+    {
+      "title": "Beyond Activation Alignment: Alignment-Diversity Tradeoff in Task-Aware Quantization",
+      "url": "http://arxiv.org/abs/2607.00908v1",
+      "core_innovation": "Reveals perplexity-based sensitivity poorly predicts reasoning-critical layers",
+      "significance": "Challenges standard calibration practices for mixed-precision quantization",
+      "practical_readiness": "research",
+      "significance_score": 0.55,
+      "category": "inference"
+    },
+    {
+      "title": "Is One Layer Enough? A Single Transformer Layer Matches Full-Parameter RL Train",
+      "url": "https://arxiv.org/abs/2607.01232",
+      "core_innovation": "Single-layer tuning matches full-model RL fine-tuning performance",
+      "significance": "Could drastically cut RL post-training compute/memory costs",
+      "practical_readiness": "research",
+      "significance_score": 0.65,
+      "category": "post-training"
+    },
+    {
+      "title": "NVIDIA TwoTower: Diffusion LM on Frozen Autoregressive Backbone",
+      "url": "https://www.marktechpost.com/2026/07/01/nvidia-releases-nemotron-labs-twotower/",
+      "core_innovation": "Hybrid diffusion/AR architecture reusing frozen AR backbone for speed",
+      "significance": "2.42x faster generation at 98.7% quality; new inference architecture pattern",
+      "practical_readiness": "prototype",
+      "significance_score": 0.75,
+      "category": "architecture"
+    },
+    {
+      "title": "Google TabFM: Hybrid Attention Tabular Foundation Model",
+      "url": "https://www.marktechpost.com/2026/07/01/google-ai-introduces-tabfm-a-hybrid-attention-tabular-foundation-model-for-zero-shot-classi",
+      "core_innovation": "Zero-shot tabular classification/regression via row-column attention, single forward pass",
+      "significance": "Extends foundation-model in-context learning to structured/tabular domain",
+      "practical_readiness": "prototype",
+      "significance_score": 0.6,
+      "category": "architecture"
+    },
+    {
+      "title": "LawZero: Honest Output Framework for AI Safety",
+      "url": "https://arxiv.org/abs/2606.29657",
+      "core_innovation": "Prioritizes honest/disinterested outputs over preference-alignment for safety",
+      "significance": "Alternative safety paradigm diverging from RLHF-style alignment",
+      "practical_readiness": "research",
+      "significance_score": 0.5,
+      "category": "research"
+    },
+    {
+      "title": "Asymmetric Quantization: Near-Lossless Retrieval with 97% Storage Reduction",
+      "url": "https://www.mixedbread.com/blog/asymmetric-quant",
+      "core_innovation": "Asymmetric quantization scheme cuts embedding storage ~97% with minimal loss",
+      "significance": "Directly deployable for cheaper large-scale retrieval/RAG systems",
+      "practical_readiness": "production-ready",
+      "significance_score": 0.6,
+      "category": "inference"
+    }
+  ],
+  "trends": [
+    "Quantization research shifting focus from perplexity metrics to task/reasoning-aware calibration",
+    "Efficient RL post-training: single-layer or async-staleness-aware methods reducing compute cost",
+    "Diffusion-autoregressive hybrid architectures emerging for faster inference without frozen-backbone retraining",
+    "Local/open-weight coding agents and voice AI maturing as subscription alternatives to closed APIs",
+    "Growing scrutiny of on-policy distillation and calibration assumptions in continual learning"
+  ],
+  "summary": "This period's most notable developments center on inference efficiency (NVIDIA's TwoTower diffusion-AR hybrid, asymmetric quantization for retrieval) and post-training refinements (staleness-aware async RLHF, single-layer RL fine-tuning, and cautionary findings on self-distillation limits). A parallel trend shows local/open-weight tooling (coding agents, Cerebras-Gemma voice inference) maturing toward practical deployment, while quantization research increasingly challenges standard perplexity-based calibration assumptions.",
+  "generated_at": "2026-07-03T05:54:17.550201",
+  "model": "claude-sonnet-5",
+  "total_items_analyzed": 143
+}
