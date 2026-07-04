@@ -1,0 +1,11 @@
+{
+  "items": [],
+  "trends": [
+    "JSON parsing error - manual review needed"
+  ],
+  "summary": "Failed to parse LLM response. Error: Expecting value: line 1 column 6637 (char 6636). Check debug_response_20260704_054344.txt",
+  "parsing_error": true,
+  "generated_at": "2026-07-04T05:43:44.763493",
+  "model": "claude-sonnet-5",
+  "total_items_analyzed": 158
+}
