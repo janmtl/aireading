@@ -1,0 +1,119 @@
+{
+  "items": [
+    {
+      "title": "TwoTower: Diffusion LM on Frozen Autoregressive Backbone",
+      "url": "https://www.marktechpost.com/2026/07/01/nvidia-releases-nemotron-labs-twotower/",
+      "core_innovation": "Diffusion LM wrapper on frozen AR backbone for parallel decoding",
+      "significance": "2.42x faster generation at 98.7% quality retention",
+      "practical_readiness": "prototype",
+      "significance_score": 0.75,
+      "category": "architecture"
+    },
+    {
+      "title": "GSRQ: Gain-Shape Residual Quantization for Sub-1-bit KV Cache",
+      "url": "http://arxiv.org/abs/2607.01065v1",
+      "core_innovation": "Fixes k-means degeneracy for sub-1-bit KV cache compression",
+      "significance": "Enables much longer context windows with lower memory cost",
+      "practical_readiness": "research",
+      "significance_score": 0.72,
+      "category": "inference"
+    },
+    {
+      "title": "Lynx: Progressive Speculative Quantization for KV Transfer",
+      "url": "http://arxiv.org/abs/2607.01831v1",
+      "core_innovation": "Speculative quantization scheme for disaggregated KV transfer",
+      "significance": "Cuts network-exposed latency in long-context serving",
+      "practical_readiness": "prototype",
+      "significance_score": 0.68,
+      "category": "inference"
+    },
+    {
+      "title": "OrbitQuant: Data-Agnostic Quantization for Diffusion Transformers",
+      "url": "http://arxiv.org/abs/2607.02461v1",
+      "core_innovation": "Calibration-free PTQ for DiTs across timesteps/prompts",
+      "significance": "Removes need to re-fit calibration per checkpoint/modality",
+      "practical_readiness": "research",
+      "significance_score": 0.6,
+      "category": "inference"
+    },
+    {
+      "title": "Beyond Activation Alignment: Alignment-Diversity Tradeoff in Quantization",
+      "url": "http://arxiv.org/abs/2607.00908v1",
+      "core_innovation": "Shows perplexity-based sensitivity misleads for reasoning tasks",
+      "significance": "Challenges standard mixed-precision quantization practice",
+      "practical_readiness": "research",
+      "significance_score": 0.65,
+      "category": "inference"
+    },
+    {
+      "title": "Staleness-Learning Rate Scaling Laws for Asynchronous RLHF",
+      "url": "http://arxiv.org/abs/2607.01083v2",
+      "core_innovation": "Formal treatment of stale rollouts in async GRPO training",
+      "significance": "Guides LR tuning for high-throughput RLHF pipelines",
+      "practical_readiness": "research",
+      "significance_score": 0.65,
+      "category": "post-training"
+    },
+    {
+      "title": "Denser != Better: Limits of On-Policy Self-Distillation",
+      "url": "http://arxiv.org/abs/2607.01763v1",
+      "core_innovation": "Reveals failure modes of self-distillation in continual post-training",
+      "significance": "Cautionary result for a popular anti-forgetting technique",
+      "practical_readiness": "research",
+      "significance_score": 0.6,
+      "category": "post-training"
+    },
+    {
+      "title": "WattGPU: Predicting Inference Power and Latency on Unseen GPUs/LLMs",
+      "url": "http://arxiv.org/abs/2607.02391v1",
+      "core_innovation": "Generalizable predictor for LLM-GPU energy/latency matching",
+      "significance": "Practical tool for deployment cost/efficiency planning",
+      "practical_readiness": "prototype",
+      "significance_score": 0.55,
+      "category": "tooling"
+    },
+    {
+      "title": "Black-Box Inference of LLM Architectural Properties",
+      "url": "http://arxiv.org/abs/2607.01313v1",
+      "core_innovation": "Extracts architecture details even with restricted single-logit API",
+      "significance": "Reveals limits of provider API restrictions as protection",
+      "practical_readiness": "research",
+      "significance_score": 0.55,
+      "category": "research"
+    },
+    {
+      "title": "Mistral AI Releases Leanstral 1.5",
+      "url": "https://www.marktechpost.com/2026/07/03/mistral-ai-releases-leanstral-1-5-an-apache-2-0-lean-4-code-agent-model-solving-587-of-672-putnambench-problems/",
+      "core_innovation": "119B code agent model specialized for Lean 4 proof assistant",
+      "significance": "100% on miniF2F, Apache 2.0 licensed, strong formal reasoning",
+      "practical_readiness": "production-ready",
+      "significance_score": 0.7,
+      "category": "post-training"
+    },
+    {
+      "title": "Is One Layer Enough? Single Transformer Layer Matches Full RL Training",
+      "url": "https://arxiv.org/abs/2607.01232",
+      "core_innovation": "Single-layer training matches full-parameter RL fine-tuning",
+      "significance": "Could drastically cut RLHF compute costs if validated",
+      "practical_readiness": "research",
+      "significance_score": 0.6,
+      "category": "post-training"
+    },
+    {
+      "title": "Hugging Face and Cerebras bring Gemma 4 to real-time voice AI",
+      "url": "https://huggingface.co/blog/cerebras-gemma4-voice-ai",
+      "core_innovation": "Cerebras hardware acceleration for Gemma 4 voice inference",
+      "significance": "Demonstrates real-time low-latency voice AI deployment",
+      "practical_readiness": "production-ready",
+      "significance_score": 0.55,
+      "category": "inference"
+    },
+    {
+      "title": "Google AI Introduces TabFM: Tabular Foundation Model",
+      "url": "https://www.marktechpost.com/2026/07/01/google-ai-introduces-tabfm-a-hybrid-attention-tabular-foundation-model-"
+    }
+  ],
+  "generated_at": "2026-07-05T06:03:10.686951",
+  "model": "claude-sonnet-5",
+  "total_items_analyzed": 155
+}
