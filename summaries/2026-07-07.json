@@ -1,0 +1,11 @@
+{
+  "items": [],
+  "trends": [
+    "API returned no text content - unable to generate summary"
+  ],
+  "summary": "The LLM response contained no text content. This may be due to an API issue or rate limiting.",
+  "api_error": true,
+  "generated_at": "2026-07-07T06:05:59.655496",
+  "model": "claude-sonnet-5",
+  "total_items_analyzed": 160
+}
