@@ -1,0 +1,46 @@
+{
+  "items": [
+    {
+      "title": "Full-Stack FP4: Stable LLM Pretraining with Quantized Projections, Optimizers, and Attention",
+      "url": "http://arxiv.org/abs/2607.04422v1",
+      "core_innovation": "First stable 4-bit training covering linears, optimizer, attention",
+      "significance": "Closes gap to full FP4 pretraining pipelines, cutting compute/memory",
+      "practical_readiness": "research",
+      "significance_score": 0.75,
+      "category": "inference"
+    },
+    {
+      "title": "HiFA4: Training-Free 4-bit FlashAttention on Ascend HIF4 NPUs for LLM Inference",
+      "url": "http://arxiv.org/abs/2607.04302v1",
+      "core_innovation": "4-bit QK/PV FlashAttention on Ascend NPUs, no retraining",
+      "significance": "Enables cheap LLM inference on non-Nvidia hardware",
+      "practical_readiness": "prototype",
+      "significance_score": 0.55,
+      "category": "inference"
+    },
+    {
+      "title": "Layer-Parallel Inference Reduces Encrypted Nonlinear Depth in Transformers",
+      "url": "http://arxiv.org/abs/2607.04819v1",
+      "core_innovation": "Structured Newton parallelism cuts FHE transformer nonlinear depth",
+      "significance": "Step toward practical encrypted LLM inference",
+      "practical_readiness": "research",
+      "significance_score": 0.5,
+      "category": "inference"
+    },
+    {
+      "title": "Adaptive Inference Batching using Policy Gradients",
+      "url": "http://arxiv.org/abs/2607.05272v1",
+      "core_innovation": "RL-learned batching/routing beats static heuristics",
+      "significance": "Could replace manual tuning in production serving stacks",
+      "practical_readiness": "research",
+      "significance_score": 0.55,
+      "category": "inference"
+    },
+    {
+      "title": "FourTune: Towards Fully 4-"
+    }
+  ],
+  "generated_at": "2026-07-08T05:19:44.486288",
+  "model": "claude-sonnet-5",
+  "total_items_analyzed": 164
+}
