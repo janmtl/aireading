@@ -363,7 +363,7 @@
         <div class="container">
             <h1>🧠 AI Research Digest</h1>
             <div class="subtitle">Latest Advancements in AI Inference & Post-Training</div>
-            <div class="last-updated">Last updated: 2026-07-08 05:19 UTC</div>
+            <div class="last-updated">Last updated: 2026-07-10 06:01 UTC</div>
         </div>
     </header>
 
@@ -379,7 +379,7 @@
             
             <div class="summary-overview">
                 <h2>📊 Weekly Overview</h2>
-                <p></p>
+                <p>The LLM response contained no text content. This may be due to an API issue or rate limiting.</p>
             </div>
 
             <div class="stats-grid">
@@ -392,7 +392,7 @@
                     <div class="stat-label">Active Trends</div>
                 </div>
                 <div class="stat-card">
-                    <div class="stat-value">164</div>
+                    <div class="stat-value">166</div>
                     <div class="stat-label">Sources Analyzed</div>
                 </div>
             </div>
@@ -445,27 +445,6 @@
                 <div class="item-card">
                     <div class="item-header">
                         <div class="item-title">
-                            <a href="https://www.marktechpost.com/2026/07/01/nvidia-releases-nemotron-labs-twotower/" target="_blank" rel="noopener">NVIDIA TwoTower: Diffusion LM on Frozen Autoregressive Backbone</a>
-                        </div>
-                        
-                        <span class="significance-badge significance-medium">Notable</span>
-                        
-                    </div>
-                    <div class="item-meta">
-                        <span class="meta-badge">architecture</span>
-                        <span class="meta-badge">prototype</span>
-                    </div>
-                    <div class="item-innovation">
-                        <strong>Innovation:</strong> Hybrid diffusion/AR architecture reusing frozen AR backbone for speed
-                    </div>
-                    <div class="item-significance">
-                        <strong>Why it matters:</strong> 2.42x faster generation at 98.7% quality; new inference architecture pattern
-                    </div>
-                </div>
-                
-                <div class="item-card">
-                    <div class="item-header">
-                        <div class="item-title">
                             <a href="http://arxiv.org/abs/2607.01065v1" target="_blank" rel="noopener">GSRQ: Gain-Shape Residual Quantization for Sub-1-bit KV Cache</a>
                         </div>
                         
@@ -502,48 +481,6 @@
                     </div>
                     <div class="item-significance">
                         <strong>Why it matters:</strong> 100% on miniF2F, Apache 2.0 licensed, strong formal reasoning
-                    </div>
-                </div>
-                
-                <div class="item-card">
-                    <div class="item-header">
-                        <div class="item-title">
-                            <a href="http://arxiv.org/abs/2607.00908v1" target="_blank" rel="noopener">Beyond Activation Alignment: The Alignment-Diversity Tradeoff in Task-Aware LLM Quantization</a>
-                        </div>
-                        
-                        <span class="significance-badge significance-medium">Notable</span>
-                        
-                    </div>
-                    <div class="item-meta">
-                        <span class="meta-badge">inference</span>
-                        <span class="meta-badge">research</span>
-                    </div>
-                    <div class="item-innovation">
-                        <strong>Innovation:</strong> Shows perplexity-based sensitivity mismatches reasoning impact
-                    </div>
-                    <div class="item-significance">
-                        <strong>Why it matters:</strong> Challenges standard practice in mixed-precision quantization
-                    </div>
-                </div>
-                
-                <div class="item-card">
-                    <div class="item-header">
-                        <div class="item-title">
-                            <a href="https://www.marktechpost.com/2026/07/01/nvidia-releases-nemotron-labs-twotower/" target="_blank" rel="noopener">NVIDIA TwoTower: diffusion LM built on frozen autoregressive backbone</a>
-                        </div>
-                        
-                        <span class="significance-badge significance-medium">Notable</span>
-                        
-                    </div>
-                    <div class="item-meta">
-                        <span class="meta-badge">architecture</span>
-                        <span class="meta-badge">prototype</span>
-                    </div>
-                    <div class="item-innovation">
-                        <strong>Innovation:</strong> Diffusion decoding head reuses frozen AR backbone for 2.42x speedup
-                    </div>
-                    <div class="item-significance">
-                        <strong>Why it matters:</strong> Novel hybrid AR-diffusion approach retains 98.7% quality at higher speed
                     </div>
                 </div>
                 
@@ -610,6 +547,69 @@
                     </div>
                 </div>
                 
+                <div class="item-card">
+                    <div class="item-header">
+                        <div class="item-title">
+                            <a href="http://arxiv.org/abs/2607.02461v1" target="_blank" rel="noopener">OrbitQuant: Data-Agnostic Quantization for Diffusion Transformers</a>
+                        </div>
+                        
+                        <span class="significance-badge significance-medium">Notable</span>
+                        
+                    </div>
+                    <div class="item-meta">
+                        <span class="meta-badge">inference</span>
+                        <span class="meta-badge">research</span>
+                    </div>
+                    <div class="item-innovation">
+                        <strong>Innovation:</strong> Calibration-free PTQ for DiTs across timesteps/prompts
+                    </div>
+                    <div class="item-significance">
+                        <strong>Why it matters:</strong> Removes need to re-fit calibration per checkpoint/modality
+                    </div>
+                </div>
+                
+                <div class="item-card">
+                    <div class="item-header">
+                        <div class="item-title">
+                            <a href="http://arxiv.org/abs/2607.01763v1" target="_blank" rel="noopener">Denser != Better: Limits of On-Policy Self-Distillation</a>
+                        </div>
+                        
+                        <span class="significance-badge significance-medium">Notable</span>
+                        
+                    </div>
+                    <div class="item-meta">
+                        <span class="meta-badge">post-training</span>
+                        <span class="meta-badge">research</span>
+                    </div>
+                    <div class="item-innovation">
+                        <strong>Innovation:</strong> Reveals failure modes of self-distillation in continual post-training
+                    </div>
+                    <div class="item-significance">
+                        <strong>Why it matters:</strong> Cautionary result for a popular anti-forgetting technique
+                    </div>
+                </div>
+                
+                <div class="item-card">
+                    <div class="item-header">
+                        <div class="item-title">
+                            <a href="https://arxiv.org/abs/2607.01232" target="_blank" rel="noopener">Is One Layer Enough? Single Transformer Layer Matches Full RL Training</a>
+                        </div>
+                        
+                        <span class="significance-badge significance-medium">Notable</span>
+                        
+                    </div>
+                    <div class="item-meta">
+                        <span class="meta-badge">post-training</span>
+                        <span class="meta-badge">research</span>
+                    </div>
+                    <div class="item-innovation">
+                        <strong>Innovation:</strong> Single-layer training matches full-parameter RL fine-tuning
+                    </div>
+                    <div class="item-significance">
+                        <strong>Why it matters:</strong> Could drastically cut RLHF compute costs if validated
+                    </div>
+                </div>
+                
             </div>
             
         </div>
@@ -623,19 +623,19 @@
             </div>
             <div class="trends">
                 
-                <div class="trend-badge">API returned no text content - unable to generate summary</div>
+                <div class="trend-badge">Quantization research shifting focus from perplexity metrics to task/reasoning-aware calibration</div>
                 
-                <div class="trend-badge">Growing scrutiny of on-policy distillation and calibration assumptions in continual learning</div>
+                <div class="trend-badge">API returned no text content - unable to generate summary</div>
                 
                 <div class="trend-badge">Local/open-weight coding agents and voice AI maturing as subscription alternatives to closed APIs</div>
                 
-                <div class="trend-badge">JSON parsing error - manual review needed</div>
+                <div class="trend-badge">Growing scrutiny of on-policy distillation and calibration assumptions in continual learning</div>
                 
                 <div class="trend-badge">Diffusion-autoregressive hybrid architectures emerging for faster inference without frozen-backbone retraining</div>
                 
                 <div class="trend-badge">Efficient RL post-training: single-layer or async-staleness-aware methods reducing compute cost</div>
                 
-                <div class="trend-badge">Quantization research shifting focus from perplexity metrics to task/reasoning-aware calibration</div>
+                <div class="trend-badge">JSON parsing error - manual review needed</div>
                 
             </div>
             
@@ -649,6 +649,12 @@
                 <p>A longitudinal view of AI advancements over the past month.</p>
             </div>
             <div class="timeline">
+                
+                <div class="timeline-item">
+                    <div class="timeline-date">2026-07-10</div>
+                    <p style="color: var(--text-secondary); margin-bottom: 15px;">The LLM response contained no text content. This may be due to an API issue or rate limiting.</p>
+                    
+                </div>
                 
                 <div class="timeline-item">
                     <div class="timeline-date">2026-07-08</div>
