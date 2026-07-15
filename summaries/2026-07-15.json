@@ -1,0 +1,111 @@
+{
+  "items": [
+    {
+      "title": "Ring-Zero: Scaling Zero RL to a Trillion Parameters for Emergent Reasoning",
+      "url": "http://arxiv.org/abs/2607.12395v1",
+      "core_innovation": "First zero-RL reasoning study at trillion-parameter scale",
+      "significance": "Reveals reasoning emergence dynamics inaccessible at small scale",
+      "practical_readiness": "research",
+      "significance_score": 0.85,
+      "category": "post-training",
+      "id": "ring-zero"
+    },
+    {
+      "title": "Accelerating Masked Diffusion Large Language Models: A Survey",
+      "url": "http://arxiv.org/abs/2607.12829v1",
+      "core_innovation": "Consolidates caching/reuse techniques for dLLM inference",
+      "significance": "Diffusion LLMs need specialized accel to beat autoregressive",
+      "practical_readiness": "research",
+      "significance_score": 0.6,
+      "category": "inference"
+    },
+    {
+      "title": "AVQ-Attention: Adaptive Vector-Quantized Attention",
+      "url": "http://arxiv.org/abs/2607.12789v1",
+      "core_innovation": "Adaptive codebook capacity for VQ attention approximation",
+      "significance": "Improves attention efficiency vs uniform VQ methods",
+      "practical_readiness": "research",
+      "significance_score": 0.55,
+      "category": "inference"
+    },
+    {
+      "title": "Saturation Makes Quantization Error Additive: A Coverage Model",
+      "url": "http://arxiv.org/abs/2607.12266v1",
+      "core_innovation": "Shows sensitivity-based quantization premise breaks at 4-bit",
+      "significance": "Challenges core assumption behind HAWQ-style mixed precision",
+      "practical_readiness": "research",
+      "significance_score": 0.65,
+      "category": "inference"
+    },
+    {
+      "title": "FlashDiff: Efficient Regional Execution and Scheduling for Diffusion Serving",
+      "url": "http://arxiv.org/abs/2607.12121v1",
+      "core_innovation": "Regional execution scheduling cuts diffusion serving latency",
+      "significance": "Addresses diffusion-specific bottleneck in multi-GPU serving",
+      "practical_readiness": "prototype",
+      "significance_score": 0.6,
+      "category": "inference"
+    },
+    {
+      "title": "HyperSafe: Inference-Time Safety Recovery for Fine-Tuned Models",
+      "url": "http://arxiv.org/abs/2607.11475v1",
+      "core_innovation": "Post-hoc, model-specific safety recovery without retraining",
+      "significance": "Cheap fix for fine-tuning-induced safety degradation",
+      "practical_readiness": "prototype",
+      "significance_score": 0.65,
+      "category": "inference"
+    },
+    {
+      "title": "Decomposing Runtime, Kernel, and Quantization Speedups via Matched FP16",
+      "url": "http://arxiv.org/abs/2607.11368v1",
+      "core_innovation": "Attributes quantized-serving speedups to runtime vs kernel",
+      "significance": "Corrects inflated quantization speedup claims in literature",
+      "practical_readiness": "research",
+      "significance_score": 0.6,
+      "category": "inference"
+    },
+    {
+      "title": "Reliability Scaling Laws for Quantized Large Language Models",
+      "url": "http://arxiv.org/abs/2607.10855v1",
+      "core_innovation": "First reliability (perturbation robustness) scaling laws for quant LLMs",
+      "significance": "Quantized accuracy on clean data hides robustness gaps",
+      "practical_readiness": "research",
+      "significance_score": 0.65,
+      "category": "inference"
+    },
+    {
+      "title": "Proxy Exploration and Reusable Guidance (PUST)",
+      "url": "http://arxiv.org/abs/2607.11505v1",
+      "core_innovation": "Decouples policy exploration from distribution alignment via proxy",
+      "significance": "Enables async, reusable, cross-model post-training signals",
+      "practical_readiness": "research",
+      "significance_score": 0.6,
+      "category": "post-training"
+    },
+    {
+      "title": "Reinforcement Learning with Verifiable Physics",
+      "url": "http://arxiv.org/abs/2607.10474v1",
+      "core_innovation": "Continuous PDE-solver rewards for post-training LLMs",
+      "significance": "Moves RLVR beyond binary rewards into scientific code-gen",
+      "practical_readiness": "research",
+      "significance_score": 0.55,
+      "category": "post-training"
+    },
+    {
+      "title": "Do AI Agents Know When a Task Is Simple?",
+      "url": "http://arxiv.org/abs/2607.13034v1",
+      "core_innovation": "Complexity-aware execution-scope estimation for agents",
+      "significance": "Addresses agent overhead from unnecessary max-context reads",
+      "practical_readiness": "research",
+      "significance_score": 0.55,
+      "category": "reasoning"
+    },
+    {
+      "title": "SCOPE-RL: Optimizing Reasoning Paths Before and After Success",
+      "url": "http://arxiv.org/abs/2607.11"
+    }
+  ],
+  "generated_at": "2026-07-15T04:50:05.925331",
+  "model": "claude-sonnet-5",
+  "total_items_analyzed": 159
+}
