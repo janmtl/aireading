@@ -1,0 +1,142 @@
+{
+  "items": [
+    {
+      "title": "Welcome Inkling by Thinking Machines",
+      "url": "https://huggingface.co/blog/thinkingmachines-inkling",
+      "core_innovation": "975B MoE (41B active) open-weight multimodal LLM, 1M context",
+      "significance": "Major open-weights release rivaling closed frontier models",
+      "practical_readiness": "production-ready",
+      "significance_score": 0.9,
+      "category": "architecture"
+    },
+    {
+      "title": "The SIGReg Objective as Variational Free Energy",
+      "url": "http://arxiv.org/abs/2607.13612v1",
+      "core_innovation": "Links JEPA regularizers to Active Inference free energy",
+      "significance": "Gives normative theoretical grounding for world models",
+      "practical_readiness": "research",
+      "significance_score": 0.55,
+      "category": "research"
+    },
+    {
+      "title": "ExTernD: Expanded-Rank Ternary Decomposition",
+      "url": "http://arxiv.org/abs/2607.13511v1",
+      "core_innovation": "Ternary PTQ factorization with expanded rank error correction",
+      "significance": "Approaches arbitrary quantization accuracy with ternary weights",
+      "practical_readiness": "prototype",
+      "significance_score": 0.65,
+      "category": "inference"
+    },
+    {
+      "title": "Adaptive Filtering of the KV Cache",
+      "url": "http://arxiv.org/abs/2607.13205v1",
+      "core_innovation": "Diagnoses structural-role bias in attention-based KV eviction",
+      "significance": "Fixes degraded eviction on schema-dense long-context inputs",
+      "practical_readiness": "prototype",
+      "significance_score": 0.6,
+      "category": "inference"
+    },
+    {
+      "title": "Accelerating Masked Diffusion Large Language Models: A Survey",
+      "url": "http://arxiv.org/abs/2607.12829v1",
+      "core_innovation": "Surveys caching/reuse techniques enabling dLLM speedups",
+      "significance": "Consolidates path to making diffusion LLMs practically fast",
+      "practical_readiness": "research",
+      "significance_score": 0.55,
+      "category": "inference"
+    },
+    {
+      "title": "AVQ-Attention: Adaptive Vector-Quantized Attention",
+      "url": "http://arxiv.org/abs/2607.12789v1",
+      "core_innovation": "Non-uniform codebook capacity allocated by attention mass",
+      "significance": "Improves VQ-attention efficiency for long-context inference",
+      "practical_readiness": "research",
+      "significance_score": 0.5,
+      "category": "inference"
+    },
+    {
+      "title": "Saturation Makes Quantization Error Additive",
+      "url": "http://arxiv.org/abs/2607.12266v1",
+      "core_innovation": "Certificate model challenging isolated-sensitivity quantization",
+      "significance": "Questions core assumption behind mixed-precision methods like HAWQ",
+      "practical_readiness": "research",
+      "significance_score": 0.55,
+      "category": "inference"
+    },
+    {
+      "title": "Where Should RL Post-Training Compute Go?",
+      "url": "http://arxiv.org/abs/2607.13389v1",
+      "core_innovation": "Studies fixed-budget tradeoffs: model size vs search vs feedback",
+      "significance": "Practical guidance for allocating scarce RL post-training compute",
+      "practical_readiness": "research",
+      "significance_score": 0.65,
+      "category": "post-training"
+    },
+    {
+      "title": "Ring-Zero: Scaling Zero RL to a Trillion Parameters",
+      "url": "http://arxiv.org/abs/2607.12395v1",
+      "core_innovation": "Zero RL (no human data) reasoning training at trillion-param scale",
+      "significance": "First large-scale exploration of zero-RL training dynamics",
+      "practical_readiness": "research",
+      "significance_score": 0.7,
+      "category": "post-training"
+    },
+    {
+      "title": "Reinforcement Learning with Verifiable Physics",
+      "url": "http://arxiv.org/abs/2607.10474v1",
+      "core_innovation": "Post-trains LLMs with continuous PDE-solver rewards, not prompting",
+      "significance": "Moves PDE code-gen from inference-time tricks to true post-training",
+      "practical_readiness": "prototype",
+      "significance_score": 0.6,
+      "category": "post-training"
+    },
+    {
+      "title": "Proxy Exploration and Reusable Guidance (PUST)",
+      "url": "http://arxiv.org/abs/2607.11505v1",
+      "core_innovation": "Decouples exploration from policy via reusable proxy signals",
+      "significance": "Enables async, cross-model reuse of post-training update signals",
+      "practical_readiness": "research",
+      "significance_score": 0.55,
+      "category": "post-training"
+    },
+    {
+      "title": "Model Routing Is Simple. Until It Isn't.",
+      "url": "https://huggingface.co/blog/ibm-research/model-routing-is-simple-until-it-isnt",
+      "core_innovation": "Practical pitfalls and design lessons for LLM routing systems",
+      "significance": "Directly actionable guidance for production multi-model deployments",
+      "practical_readiness": "production-ready",
+      "significance_score": 0.6,
+      "category": "inference"
+    },
+    {
+      "title": "Do AI Agents Know When a Task Is Simple?",
+      "url": "http://arxiv.org/abs/2607.13034v1",
+      "core_innovation": "Task-aware execution-scope estimation for agents",
+      "significance": "Addresses agent inefficiency from maximum-context-first strategies",
+      "practical_readiness": "research",
+      "significance_score": 0.5,
+      "category": "reasoning"
+    },
+    {
+      "title": "Claude Sonnet 5 Release (via social coverage)",
+      "url": "https://www.marktechpost.com/2026/07/13/anthropic-claude-sonnet-5-vs-sonnet-4-6-vs-opus-4-8-agentic-coding-benchmarks-api-pricing-and-cost-performance-tradeoffs-compared/",
+      "core_innovation": "New mid-tier agentic model, 63.2% SWE-bench Pro, cheaper than Opus",
+      "significance": "Strong cost/performance shift for agentic coding deployments",
+      "practical_readiness": "production-ready",
+      "significance_score": 0.65,
+      "category": "post-training"
+    },
+    {
+      "title": "DFlash Speculative Decoding for llama.cpp",
+      "url": "https://arint.info/@Arint/116927656136012867",
+      "core_innovation": "Speculative decoding drafts 15 tokens, 2.2x speedup, byte-exact output",
+      "significance": "Practical, lossless inference speedup for local Qwen deployments",
+      "practical_readiness": "prototype",
+      "significance_score": 0.55,
+      "category": "inference"
+    }
+  ],
+  "generated_at": "2026-07-16T04:58:23.559097",
+  "model": "claude-sonnet-5",
+  "total_items_analyzed": 156
+}
