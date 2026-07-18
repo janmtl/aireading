@@ -1,0 +1,118 @@
+{
+  "items": [
+    {
+      "title": "Kimi K3: Open Frontier Intelligence (2.8T param MoE)",
+      "url": "https://www.kimi.com/blog/kimi-k3",
+      "core_innovation": "2.8T param open MoE with Kimi Delta Attention, 1M context",
+      "significance": "First open 3T-class model rivaling closed frontier LLMs",
+      "practical_readiness": "production-ready",
+      "significance_score": 0.9,
+      "category": "architecture"
+    },
+    {
+      "title": "Welcome Inkling by Thinking Machines",
+      "url": "https://huggingface.co/blog/thinkingmachines-inkling",
+      "core_innovation": "Open-weight model tops ARC-AGI 1 and 2 benchmarks",
+      "significance": "Best open reasoning/generalization scores at low per-task cost",
+      "practical_readiness": "production-ready",
+      "significance_score": 0.85,
+      "category": "architecture"
+    },
+    {
+      "title": "Anthropic Claude Sonnet 5 release",
+      "url": "https://www.marktechpost.com/2026/07/13/anthropic-claude-sonnet-5-vs-sonnet-4-6-vs-opus-4-8-agentic-coding-benchmarks-api-pricing-and-cost-performance-tradeoffs-compared/",
+      "core_innovation": "Most agentic mid-tier Claude yet, 63.2% SWE-bench Pro",
+      "significance": "Strong cost/performance shift for agentic coding workloads",
+      "practical_readiness": "production-ready",
+      "significance_score": 0.75,
+      "category": "post-training"
+    },
+    {
+      "title": "NVIDIA Nemotron 3 Embed",
+      "url": "https://www.marktechpost.com/2026/07/17/nvidia-ai-releases-nemotron-3-embed-an-open-embedding-collection-whose-8b-checkpoint-ranks-1-on-rteb/",
+      "core_innovation": "8B open embedding model ranks #1 on RTEB retrieval",
+      "significance": "New SOTA open embedding for enterprise RAG/search",
+      "practical_readiness": "production-ready",
+      "significance_score": 0.7,
+      "category": "inference"
+    },
+    {
+      "title": "Where Should RL Post-Training Compute Go?",
+      "url": "http://arxiv.org/abs/2607.13389v1",
+      "core_innovation": "Studies fixed-budget tradeoffs: model size vs search vs feedback",
+      "significance": "Actionable guidance for allocating scarce RL post-training compute",
+      "practical_readiness": "research",
+      "significance_score": 0.75,
+      "category": "post-training"
+    },
+    {
+      "title": "Adaptive Filtering of the KV Cache: Structural-Role Bias",
+      "url": "http://arxiv.org/abs/2607.13205v1",
+      "core_innovation": "Diagnoses attention-based KV eviction bias toward non-content tokens",
+      "significance": "Improves long-context accuracy on structured/JSON-heavy inputs",
+      "practical_readiness": "prototype",
+      "significance_score": 0.65,
+      "category": "inference"
+    },
+    {
+      "title": "ExTernD: Expanded-Rank Ternary Decomposition PTQ",
+      "url": "http://arxiv.org/abs/2607.13511v1",
+      "core_innovation": "Expanded-rank ternary factorization approaches near-lossless quant",
+      "significance": "Pushes ternary LLM quantization accuracy toward full precision",
+      "practical_readiness": "research",
+      "significance_score": 0.65,
+      "category": "inference"
+    },
+    {
+      "title": "PolyQ: Codesigned Quantization for Edge CPU LLM Inference",
+      "url": "http://arxiv.org/abs/2607.14618v1",
+      "core_innovation": "Compiler-aware per-channel mixed bit-width quantization for CPUs",
+      "significance": "Enables efficient scalable on-device LLM inference on CPUs",
+      "practical_readiness": "prototype",
+      "significance_score": 0.6,
+      "category": "inference"
+    },
+    {
+      "title": "ExaGEMM: CPU-Driven Low-Bit GEMM Framework",
+      "url": "http://arxiv.org/abs/2607.14622v1",
+      "core_innovation": "Associative in-register computing codesign for low-bit CPU GEMM",
+      "significance": "Systematic exploration of CPU-native low-bit inference tradeoffs",
+      "practical_readiness": "research",
+      "significance_score": 0.55,
+      "category": "inference"
+    },
+    {
+      "title": "Quantize with Confidence? Empirical Study of Quantization for Code Gen",
+      "url": "http://arxiv.org/abs/2607.14181v1",
+      "core_innovation": "Empirically evaluates 6 quant methods on code generation quality",
+      "significance": "Practical guidance for local/on-device code model deployment",
+      "practical_readiness": "prototype",
+      "significance_score": 0.6,
+      "category": "inference"
+    },
+    {
+      "title": "Perception-RFT: Reasoning-Free Alignment for Doc QA",
+      "url": "http://arxiv.org/abs/2607.14682v1",
+      "core_innovation": "Training-efficient alignment without verbose RL reasoning traces",
+      "significance": "Cuts inference token cost while keeping visual grounding accuracy",
+      "practical_readiness": "prototype",
+      "significance_score": 0.65,
+      "category": "post-training"
+    },
+    {
+      "title": "LIFT: Reactive Force Injection for VLA Post-Training",
+      "url": "http://arxiv.org/abs/2607.14236v1",
+      "core_innovation": "Adds contact-force reactivity to pretrained vision-language-action policies",
+      "significance": "Improves robot manipulation robustness in occluded/contact states",
+      "practical_readiness": "research",
+      "significance_score": 0.55,
+      "category": "post-training"
+    },
+    {
+      "title": "PUST: Proxy-Guided Update Signal"
+    }
+  ],
+  "generated_at": "2026-07-18T04:47:36.945306",
+  "model": "claude-sonnet-5",
+  "total_items_analyzed": 160
+}
