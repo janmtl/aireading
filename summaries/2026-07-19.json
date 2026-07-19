@@ -1,0 +1,127 @@
+{
+  "items": [
+    {
+      "title": "Kimi K3: Open Frontier Intelligence",
+      "url": "https://www.kimi.com/blog/kimi-k3",
+      "core_innovation": "2.8T param MoE, Kimi Delta Attention, 1M context, open weights",
+      "significance": "First open 3T-class model, closes gap with closed frontier labs",
+      "practical_readiness": "production-ready",
+      "significance_score": 0.92,
+      "category": "architecture"
+    },
+    {
+      "title": "Controlling Reasoning Effort in LLMs",
+      "url": "https://magazine.sebastianraschka.com/p/controlling-reasoning-effort-in-llms",
+      "core_innovation": "Mechanisms for training low/medium/high reasoning effort modes",
+      "significance": "Directly cuts inference cost by tuning reasoning depth per task",
+      "practical_readiness": "prototype",
+      "significance_score": 0.8,
+      "category": "post-training"
+    },
+    {
+      "title": "Where Should RL Post-Training Compute Go? Model Size, Search, Learning, and Feedback",
+      "url": "http://arxiv.org/abs/2607.13389v1",
+      "core_innovation": "Fixed-budget analysis of RL post-training allocation choices",
+      "significance": "Practical guidance for teams designing RL post-training pipelines",
+      "practical_readiness": "research",
+      "significance_score": 0.75,
+      "category": "post-training"
+    },
+    {
+      "title": "Stop Thinking, Start Looking: Efficient Post-Training via Reasoning-Free Alignment",
+      "url": "http://arxiv.org/abs/2607.14682v1",
+      "core_innovation": "Perception-RFT avoids verbose CoT for document QA grounding",
+      "significance": "Cuts inference token cost while matching RL-reasoning accuracy",
+      "practical_readiness": "prototype",
+      "significance_score": 0.7,
+      "category": "post-training"
+    },
+    {
+      "title": "Adaptive Filtering of the KV Cache: Diagnosing Structural-Role Bias",
+      "url": "http://arxiv.org/abs/2607.13205v1",
+      "core_innovation": "Fixes H2O-style KV eviction bias toward non-content sink tokens",
+      "significance": "Improves long-context inference on structured data like JSON",
+      "practical_readiness": "research",
+      "significance_score": 0.68,
+      "category": "inference"
+    },
+    {
+      "title": "ExTernD: Expanded-Rank Ternary Decomposition PTQ",
+      "url": "http://arxiv.org/abs/2607.13511v1",
+      "core_innovation": "Ternary weight factorization with expanded rank for error correction",
+      "significance": "Pushes ternary quantization accuracy near arbitrary bit levels",
+      "practical_readiness": "research",
+      "significance_score": 0.65,
+      "category": "inference"
+    },
+    {
+      "title": "PolyQ: Codesigning End-to-End Quantization for Edge CPU LLM Inference",
+      "url": "http://arxiv.org/abs/2607.14618v1",
+      "core_innovation": "Compiler/quantization co-design for per-channel bit allocation on CPUs",
+      "significance": "Enables efficient mixed-precision LLM inference on commodity CPUs",
+      "practical_readiness": "prototype",
+      "significance_score": 0.62,
+      "category": "inference"
+    },
+    {
+      "title": "ExaGEMM: CPU-Driven ML Inference via Associative In-Register Computing",
+      "url": "http://arxiv.org/abs/2607.14622v1",
+      "core_innovation": "Workload-aware framework for low-bit GEMM on conventional CPUs",
+      "significance": "Addresses fragmented low-bit deployment regimes on CPU hardware",
+      "practical_readiness": "research",
+      "significance_score": 0.55,
+      "category": "inference"
+    },
+    {
+      "title": "Quantize with Confidence? Empirical Study of Quantization for Code Generation",
+      "url": "http://arxiv.org/abs/2607.14181v1",
+      "core_innovation": "Systematic comparison of 6 PTQ methods on code-gen quality",
+      "significance": "Practical guidance for developers running quantized code models locally",
+      "practical_readiness": "prototype",
+      "significance_score": 0.6,
+      "category": "inference"
+    },
+    {
+      "title": "Never Too Late for Force: Accelerating VLA Post-Training with Reactive Force Injection",
+      "url": "http://arxiv.org/abs/2607.14236v1",
+      "core_innovation": "LIFT adds contact-force reactivity to pretrained VLA policies",
+      "significance": "Improves robot manipulation robustness under occlusion/contact",
+      "practical_readiness": "research",
+      "significance_score": 0.6,
+      "category": "post-training"
+    },
+    {
+      "title": "Leveraging Instruction Tuning and Merging for Reasoning Model Adaptation",
+      "url": "http://arxiv.org/abs/2607.14895v1",
+      "core_innovation": "Combines SFT and model merging for unverifiable-domain reasoning",
+      "significance": "Extends RL-reasoning gains to domains lacking verifiers",
+      "practical_readiness": "research",
+      "significance_score": 0.6,
+      "category": "reasoning"
+    },
+    {
+      "title": "Gold-Guided Programmatic Distillation for Financial Reasoning",
+      "url": "http://arxiv.org/abs/2607.14709v1",
+      "core_innovation": "Programmatic distillation transfers reliable numerical reasoning",
+      "significance": "Improves compact models' arithmetic reliability over NL rationales",
+      "practical_readiness": "prototype",
+      "significance_score": 0.55,
+      "category": "reasoning"
+    },
+    {
+      "title": "Ring-Zero: Scaling Zero RL to a Trillion Parameters for Emergent Reasoning",
+      "url": "https://arxiv.org/abs/2607.12395",
+      "core_innovation": "Zero-RL training scaled to trillion-parameter models",
+      "significance": "Tests emergent reasoning limits of RL-from-scratch at scale",
+      "practical_readiness": "research",
+      "significance_score": 0.7,
+      "category": "research"
+    },
+    {
+      "title": "LongStraw: Long-Context RL Beyond 2M"
+    }
+  ],
+  "generated_at": "2026-07-19T05:19:54.915790",
+  "model": "claude-sonnet-5",
+  "total_items_analyzed": 162
+}
