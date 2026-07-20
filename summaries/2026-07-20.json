@@ -1,0 +1,118 @@
+{
+  "items": [
+    {
+      "title": "Controlling Reasoning Effort in LLMs",
+      "url": "https://magazine.sebastianraschka.com/p/controlling-reasoning-effort-in-llms",
+      "core_innovation": "Explains how models learn low/med/high reasoning effort modes",
+      "significance": "Clarifies mechanism behind adjustable inference-time reasoning cost",
+      "practical_readiness": "research",
+      "significance_score": 0.65,
+      "category": "post-training"
+    },
+    {
+      "title": "PagedWeight: Efficient MoE LLM Serving with Dynamic Quality-Aware Weight Quantization",
+      "url": "http://arxiv.org/abs/2607.16184v1",
+      "core_innovation": "Runtime dynamic quantization balancing MoE weights vs KV cache",
+      "significance": "Directly addresses MoE serving memory bottleneck at scale",
+      "practical_readiness": "prototype",
+      "significance_score": 0.75,
+      "category": "inference"
+    },
+    {
+      "title": "QUADS: Stabilizing NVFP4 RL for MoE via Quantization-error Alignment",
+      "url": "http://arxiv.org/abs/2607.15810v1",
+      "core_innovation": "Fixes NVFP4 rollout collapse in MoE RL training",
+      "significance": "Enables FP4-speed RL rollouts without training instability",
+      "practical_readiness": "prototype",
+      "significance_score": 0.75,
+      "category": "post-training"
+    },
+    {
+      "title": "PolyQ: Codesigning End-to-End Quantization for Edge CPU LLM Inference",
+      "url": "http://arxiv.org/abs/2607.14618v1",
+      "core_innovation": "Per-channel bit allocation compiler for CPU LLM inference",
+      "significance": "Practical path to efficient on-device LLM inference on CPUs",
+      "practical_readiness": "prototype",
+      "significance_score": 0.6,
+      "category": "inference"
+    },
+    {
+      "title": "ExaGEMM: CPU-Driven ML Inference via In-Register Low-Bit GEMM",
+      "url": "http://arxiv.org/abs/2607.14622v1",
+      "core_innovation": "Codesign framework for very-low-bit GEMM on CPUs",
+      "significance": "Expands low-bit inference beyond GPU-only regimes",
+      "practical_readiness": "research",
+      "significance_score": 0.55,
+      "category": "inference"
+    },
+    {
+      "title": "Understanding Reasoning from Pretraining to Post-Training",
+      "url": "http://arxiv.org/abs/2607.16097v1",
+      "core_innovation": "Controlled study linking pretraining choices to RL returns",
+      "significance": "First rigorous link between pretraining scale/data and RL gains",
+      "practical_readiness": "research",
+      "significance_score": 0.8,
+      "category": "post-training"
+    },
+    {
+      "title": "Where Should RL Post-Training Compute Go?",
+      "url": "http://arxiv.org/abs/2607.13389v1",
+      "core_innovation": "Systematic study of compute allocation across size/search/feedback",
+      "significance": "Actionable guidance for budgeting RL post-training compute",
+      "practical_readiness": "research",
+      "significance_score": 0.75,
+      "category": "post-training"
+    },
+    {
+      "title": "Stop Thinking, Start Looking: Reasoning-Free Alignment for Document QA",
+      "url": "http://arxiv.org/abs/2607.14682v1",
+      "core_innovation": "Perception-RFT skips verbose CoT for visual grounding tasks",
+      "significance": "Cuts inference token cost while matching RL-reasoning accuracy",
+      "practical_readiness": "prototype",
+      "significance_score": 0.6,
+      "category": "post-training"
+    },
+    {
+      "title": "Bootstrapped Iterative Self-Reasoning Distillation for Compressed Reasoning",
+      "url": "http://arxiv.org/abs/2607.15736v1",
+      "core_innovation": "Fixes initialization bottleneck in self-distillation for CoT compression",
+      "significance": "Improves practical reasoning-cost reduction via distillation",
+      "practical_readiness": "research",
+      "significance_score": 0.55,
+      "category": "reasoning"
+    },
+    {
+      "title": "Leveraging Instruction Tuning and Merging for Reasoning Model Adaptation",
+      "url": "http://arxiv.org/abs/2607.14895v1",
+      "core_innovation": "Combines SFT and model merging for unverifiable-domain reasoning",
+      "significance": "Extends RL-style reasoning gains to domains without verifiers",
+      "practical_readiness": "prototype",
+      "significance_score": 0.55,
+      "category": "post-training"
+    },
+    {
+      "title": "Model Routing Is Simple. Until It Isn't.",
+      "url": "https://huggingface.co/blog/ibm-research/model-routing-is-simple-until-it-isnt",
+      "core_innovation": "Practical pitfalls and design patterns for LLM routing systems",
+      "significance": "Useful field guide as multi-model routing becomes standard",
+      "practical_readiness": "production-ready",
+      "significance_score": 0.5,
+      "category": "tooling"
+    },
+    {
+      "title": "Kimi K3: 2.8T Open MoE Model with Kimi Delta Attention, 1M Context",
+      "url": "https://www.marktechpost.com/2026/07/16/moonshot-ai-releases-kimi-k3-a-2-8-trillion-parameter-open-moe-model-with-kimi-delta-attention-and-1m-context/",
+      "core_innovation": "Largest open-weight MoE model with novel attention variant",
+      "significance": "Pushes open-weight frontier to trillion-scale, rivaling closed labs",
+      "practical_readiness": "production-ready",
+      "significance_score": 0.85,
+      "category": "architecture"
+    },
+    {
+      "title": "Qwen 3.8: 2.4T Parameter Open-"
+    }
+  ],
+  "generated_at": "2026-07-20T05:37:57.013139",
+  "model": "claude-sonnet-5",
+  "total_items_analyzed": 161
+}
