@@ -1,0 +1,11 @@
+{
+  "items": [],
+  "trends": [
+    "JSON parsing error - manual review needed"
+  ],
+  "summary": "Failed to parse LLM response. Error: Expecting ',' delimiter: line 1 column 4026 (char 4025). Check debug_response_20260721_051911.txt",
+  "parsing_error": true,
+  "generated_at": "2026-07-21T05:19:11.411972",
+  "model": "claude-sonnet-5",
+  "total_items_analyzed": 161
+}
