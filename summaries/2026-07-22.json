@@ -1,0 +1,147 @@
+{
+  "items": [
+    {
+      "title": "Controlling Reasoning Effort in LLMs",
+      "url": "https://magazine.sebastianraschka.com/p/controlling-reasoning-effort-in-llms",
+      "core_innovation": "Explains mechanisms behind low/med/high reasoning effort modes",
+      "significance": "Clarifies how models learn to trade compute for accuracy",
+      "practical_readiness": "production-ready",
+      "significance_score": 0.75,
+      "category": "post-training"
+    },
+    {
+      "title": "Kimi K3: 2.8T parameter open MoE with Kimi Delta Attention",
+      "url": "https://www.marktechpost.com/2026/07/16/moonshot-ai-releases-kimi-k3-a-2-8-trillion-parameter-open-moe-model-with-kimi-delta-attention-and-1m-context/",
+      "core_innovation": "First open 3T-class MoE model with 1M context, novel attention",
+      "significance": "Closes open/closed gap; competitive with frontier closed models",
+      "practical_readiness": "production-ready",
+      "significance_score": 0.9,
+      "category": "architecture"
+    },
+    {
+      "title": "QUADS: Stabilizing NVFP4 RL for MoE via Quantization-error Alignment",
+      "url": "http://arxiv.org/abs/2607.15810v1",
+      "core_innovation": "Dual-side quant-error alignment stabilizes FP4 RL rollouts",
+      "significance": "Enables 4-bit rollout speed without RL training collapse",
+      "practical_readiness": "prototype",
+      "significance_score": 0.75,
+      "category": "post-training"
+    },
+    {
+      "title": "MXSens: Sensitivity-Aware Mixed-Precision Quantization for LLM Inference",
+      "url": "http://arxiv.org/abs/2607.17733v1",
+      "core_innovation": "Hardware-native microscaling quant compatible with rotation methods",
+      "significance": "Reduces 4-bit accuracy loss without software overhead",
+      "practical_readiness": "prototype",
+      "significance_score": 0.65,
+      "category": "inference"
+    },
+    {
+      "title": "Distilled Reinforcement Learning for LLM Post-training",
+      "url": "http://arxiv.org/abs/2607.17247v1",
+      "core_innovation": "Hybrid RL/on-policy-distillation resolving credit assignment tradeoffs",
+      "significance": "Bridges outcome-RL and teacher-distillation limitations",
+      "practical_readiness": "research",
+      "significance_score": 0.6,
+      "category": "post-training"
+    },
+    {
+      "title": "Understanding Reasoning from Pretraining to Post-Training",
+      "url": "http://arxiv.org/abs/2607.16097v1",
+      "core_innovation": "Controlled study linking pretraining choices to RL returns",
+      "significance": "First systematic account of what RL post-training actually changes",
+      "practical_readiness": "research",
+      "significance_score": 0.7,
+      "category": "post-training"
+    },
+    {
+      "title": "Copy Less, Ground More: Evidence-Aware RL for Long-Context Reasoning",
+      "url": "http://arxiv.org/abs/2607.19345v1",
+      "core_innovation": "RL method fixing repetitive copying failure in long-context CoT",
+      "significance": "Addresses pervasive failure mode across frontier long-context LLMs",
+      "practical_readiness": "prototype",
+      "significance_score": 0.7,
+      "category": "reasoning"
+    },
+    {
+      "title": "Selective State-Space Adaptation and Retrieval (MaLoRA)",
+      "url": "http://arxiv.org/abs/2607.19326v1",
+      "core_innovation": "Mamba-modulated LoRA with token-level dynamic adaptation",
+      "significance": "Moves beyond static LoRA toward instance-aware adaptation",
+      "practical_readiness": "research",
+      "significance_score": 0.55,
+      "category": "architecture"
+    },
+    {
+      "title": "How Does Alignment Tuning Shape Sycophancy Representations?",
+      "url": "http://arxiv.org/abs/2607.18114v1",
+      "core_innovation": "Locates cue-induced bias directions in hidden states across models",
+      "significance": "Mechanistic insight into why alignment tuning induces sycophancy",
+      "practical_readiness": "research",
+      "significance_score": 0.6,
+      "category": "post-training"
+    },
+    {
+      "title": "FailureAtlas: Taxonomy of Failure Modes in Multi-Provider LLM Serving",
+      "url": "http://arxiv.org/abs/2607.17525v1",
+      "core_innovation": "First unified taxonomy for LLM gateway/proxy failure modes",
+      "significance": "Practical framework for production LLM infra reliability",
+      "practical_readiness": "prototype",
+      "significance_score": 0.6,
+      "category": "tooling"
+    },
+    {
+      "title": "Model Routing Is Simple. Until It Isn't.",
+      "url": "https://huggingface.co/blog/ibm-research/model-routing-is-simple-until-it-isnt",
+      "core_innovation": "Practical lessons on production LLM routing complexity",
+      "significance": "Actionable guidance for multi-model deployment architectures",
+      "practical_readiness": "production-ready",
+      "significance_score": 0.55,
+      "category": "tooling"
+    },
+    {
+      "title": "Gemini 3.6 Flash, 3.5 Flash-Lite, and 3.5 Flash Cyber",
+      "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-6-flash-3-5-flash-lite-3-5-flash-cyber/",
+      "core_innovation": "New efficient Flash-tier models targeting agents and cost",
+      "significance": "Signals shift toward token-efficient inference over frontier scale",
+      "practical_readiness": "production-ready",
+      "significance_score": 0.65,
+      "category": "inference"
+    },
+    {
+      "title": "Laguna S 2.1 (Poolside)",
+      "url": "https://poolside.ai/blog/introducing-laguna-s-2-1",
+      "core_innovation": "118B open-weight model designed for local DGX Spark execution",
+      "significance": "Notable Western open-weight entrant amid Chinese MoE dominance",
+      "practical_readiness": "production-ready",
+      "significance_score": 0.6,
+      "category": "architecture"
+    },
+    {
+      "title": "NVIDIA Nemotron 3 Embed",
+      "url": "https://www.marktechpost.com/2026/07/17/nvidia-ai-releases-nemotron-3-embed-an-open-embedding-collection-whose-8b-checkpoint-ranks-1-on-rteb/",
+      "core_innovation": "Open 8B embedding model topping RTEB retrieval benchmark",
+      "significance": "Strong open option for enterprise RAG/search pipelines",
+      "practical_readiness": "production-ready",
+      "significance_score": 0.6,
+      "category": "inference"
+    },
+    {
+      "title": "Feyn AI SQRL: Text-to-SQL with DB Inspection",
+      "url": "https://www.marktechpost.com/2026/07/19/feyn-ai-releases-sqrl-a-text-to-sql-model-family-that-inspects-the-database-before-writing-a-query/",
+      "core_innovation": "Small model (35B-A3B) inspects schema before query generation",
+      "significance": "Outperforms larger closed models on BIRD benchmark efficiently",
+      "practical_readiness": "production-ready",
+      "significance_score": 0.55,
+      "category": "post-training"
+    },
+    {
+      "title": "Contraction-Gauge Preconditioning for Quantized Matrix Multiplication",
+      "url": "http://arxiv.org/abs/2607.18745v1",
+      "core_innovation": "Exact error "
+    }
+  ],
+  "generated_at": "2026-07-22T05:17:47.023696",
+  "model": "claude-sonnet-5",
+  "total_items_analyzed": 163
+}
