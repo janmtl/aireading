@@ -1,0 +1,65 @@
+{
+  "items": [
+    {
+      "title": "Controlling Reasoning Effort in LLMs",
+      "url": "https://magazine.sebastianraschka.com/p/controlling-reasoning-effort-in-llms",
+      "core_innovation": "Explains training for low/med/high effort reasoning modes",
+      "significance": "Clarifies mechanism behind adjustable inference-time compute",
+      "practical_readiness": "production-ready",
+      "significance_score": 0.75,
+      "category": "post-training"
+    },
+    {
+      "title": "Distilled Reinforcement Learning for LLM Post-training",
+      "url": "http://arxiv.org/abs/2607.17247v1",
+      "core_innovation": "Hybrid RL+distillation fixing credit assignment & knowledge gain",
+      "significance": "Addresses core weaknesses of both RLHF and on-policy distillation",
+      "practical_readiness": "research",
+      "significance_score": 0.8,
+      "category": "post-training"
+    },
+    {
+      "title": "SLPO: Scaling Latent Reasoning via a Surrogate Policy",
+      "url": "http://arxiv.org/abs/2607.19691v1",
+      "core_innovation": "RL scaling for latent (non-token) chain-of-thought reasoning",
+      "significance": "Latent reasoning matches CoT at much lower decode cost",
+      "practical_readiness": "research",
+      "significance_score": 0.8,
+      "category": "reasoning"
+    },
+    {
+      "title": "PoTRE: Test-Time Reasoning inspired by Cognitive Heterogeneity",
+      "url": "http://arxiv.org/abs/2607.20268v1",
+      "core_innovation": "Multi-agent decoupled test-time reasoning ensemble",
+      "significance": "New pattern for robust long-horizon reasoning at inference",
+      "practical_readiness": "prototype",
+      "significance_score": 0.65,
+      "category": "reasoning"
+    },
+    {
+      "title": "How Fast Can Reward Models Score? RLHF Runtime Study",
+      "url": "http://arxiv.org/abs/2607.19712v1",
+      "core_invnovation": "Systems benchmark of C++ vs PyTorch reward scoring engines",
+      "core_innovation": "Systems benchmark of C++ vs PyTorch reward scoring engines",
+      "significance": "Identifies real RLHF bottlenecks and freed-up compute gains",
+      "practical_readiness": "prototype",
+      "significance_score": 0.6,
+      "category": "inference"
+    },
+    {
+      "title": "Efficient Clustering with Provable Guardrails for LLM Inference at Scale",
+      "url": "http://arxiv.org/abs/2607.19704v1",
+      "core_innovation": "Provably-bounded clustering to reuse LLM outputs across inputs",
+      "significance": "Cuts inference cost at scale with quality guarantees",
+      "practical_readiness": "prototype",
+      "significance_score": 0.7,
+      "category": "inference"
+    },
+    {
+      "title": "BaseRT: LLM Inference with Apple M5 Ne"
+    }
+  ],
+  "generated_at": "2026-07-23T05:22:58.168285",
+  "model": "claude-sonnet-5",
+  "total_items_analyzed": 161
+}
