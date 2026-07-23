@@ -363,7 +363,7 @@
         <div class="container">
             <h1>🧠 AI Research Digest</h1>
             <div class="subtitle">Latest Advancements in AI Inference & Post-Training</div>
-            <div class="last-updated">Last updated: 2026-07-22 05:17 UTC</div>
+            <div class="last-updated">Last updated: 2026-07-23 05:22 UTC</div>
         </div>
     </header>
 
@@ -392,7 +392,7 @@
                     <div class="stat-label">Active Trends</div>
                 </div>
                 <div class="stat-card">
-                    <div class="stat-value">163</div>
+                    <div class="stat-value">161</div>
                     <div class="stat-label">Sources Analyzed</div>
                 </div>
             </div>
@@ -466,27 +466,6 @@
                 <div class="item-card">
                     <div class="item-header">
                         <div class="item-title">
-                            <a href="https://huggingface.co/blog/thinkingmachines-inkling" target="_blank" rel="noopener">Welcome Inkling by Thinking Machines</a>
-                        </div>
-                        
-                        <span class="significance-badge significance-high">High Impact</span>
-                        
-                    </div>
-                    <div class="item-meta">
-                        <span class="meta-badge">architecture</span>
-                        <span class="meta-badge">production-ready</span>
-                    </div>
-                    <div class="item-innovation">
-                        <strong>Innovation:</strong> 975B MoE (41B active) open-weight multimodal LLM, 1M context
-                    </div>
-                    <div class="item-significance">
-                        <strong>Why it matters:</strong> Major open-weights release rivaling closed frontier models
-                    </div>
-                </div>
-                
-                <div class="item-card">
-                    <div class="item-header">
-                        <div class="item-title">
                             <a href="https://www.marktechpost.com/2026/07/16/moonshot-ai-releases-kimi-k3-a-2-8-trillion-parameter-open-moe-model-with-kimi-delta-attention-and-1m-context/" target="_blank" rel="noopener">Kimi K3: 2.8T Open MoE Model with Kimi Delta Attention, 1M Context</a>
                         </div>
                         
@@ -523,6 +502,48 @@
                     </div>
                     <div class="item-significance">
                         <strong>Why it matters:</strong> Best open reasoning/generalization scores at low per-task cost
+                    </div>
+                </div>
+                
+                <div class="item-card">
+                    <div class="item-header">
+                        <div class="item-title">
+                            <a href="http://arxiv.org/abs/2607.17247v1" target="_blank" rel="noopener">Distilled Reinforcement Learning for LLM Post-training</a>
+                        </div>
+                        
+                        <span class="significance-badge significance-high">High Impact</span>
+                        
+                    </div>
+                    <div class="item-meta">
+                        <span class="meta-badge">post-training</span>
+                        <span class="meta-badge">research</span>
+                    </div>
+                    <div class="item-innovation">
+                        <strong>Innovation:</strong> Hybrid RL+distillation fixing credit assignment & knowledge gain
+                    </div>
+                    <div class="item-significance">
+                        <strong>Why it matters:</strong> Addresses core weaknesses of both RLHF and on-policy distillation
+                    </div>
+                </div>
+                
+                <div class="item-card">
+                    <div class="item-header">
+                        <div class="item-title">
+                            <a href="http://arxiv.org/abs/2607.19691v1" target="_blank" rel="noopener">SLPO: Scaling Latent Reasoning via a Surrogate Policy</a>
+                        </div>
+                        
+                        <span class="significance-badge significance-high">High Impact</span>
+                        
+                    </div>
+                    <div class="item-meta">
+                        <span class="meta-badge">reasoning</span>
+                        <span class="meta-badge">research</span>
+                    </div>
+                    <div class="item-innovation">
+                        <strong>Innovation:</strong> RL scaling for latent (non-token) chain-of-thought reasoning
+                    </div>
+                    <div class="item-significance">
+                        <strong>Why it matters:</strong> Latent reasoning matches CoT at much lower decode cost
                     </div>
                 </div>
                 
@@ -582,31 +603,10 @@
                         <span class="meta-badge">production-ready</span>
                     </div>
                     <div class="item-innovation">
-                        <strong>Innovation:</strong> Explains mechanisms behind low/med/high reasoning effort modes
+                        <strong>Innovation:</strong> Explains training for low/med/high effort reasoning modes
                     </div>
                     <div class="item-significance">
-                        <strong>Why it matters:</strong> Clarifies how models learn to trade compute for accuracy
-                    </div>
-                </div>
-                
-                <div class="item-card">
-                    <div class="item-header">
-                        <div class="item-title">
-                            <a href="http://arxiv.org/abs/2607.15810v1" target="_blank" rel="noopener">QUADS: Stabilizing NVFP4 RL for MoE via Quantization-error Alignment</a>
-                        </div>
-                        
-                        <span class="significance-badge significance-medium">Notable</span>
-                        
-                    </div>
-                    <div class="item-meta">
-                        <span class="meta-badge">post-training</span>
-                        <span class="meta-badge">prototype</span>
-                    </div>
-                    <div class="item-innovation">
-                        <strong>Innovation:</strong> Dual-side quant-error alignment stabilizes FP4 RL rollouts
-                    </div>
-                    <div class="item-significance">
-                        <strong>Why it matters:</strong> Enables 4-bit rollout speed without RL training collapse
+                        <strong>Why it matters:</strong> Clarifies mechanism behind adjustable inference-time compute
                     </div>
                 </div>
                 
@@ -637,6 +637,66 @@
                 <p>A longitudinal view of AI advancements over the past month.</p>
             </div>
             <div class="timeline">
+                
+                <div class="timeline-item">
+                    <div class="timeline-date">2026-07-23</div>
+                    <p style="color: var(--text-secondary); margin-bottom: 15px;"></p>
+                    
+                    <div class="items-grid">
+                        
+                        
+                        <div class="item-card">
+                            <div class="item-header">
+                                <div class="item-title">
+                                    <a href="https://magazine.sebastianraschka.com/p/controlling-reasoning-effort-in-llms" target="_blank" rel="noopener">Controlling Reasoning Effort in LLMs</a>
+                                </div>
+                            </div>
+                            <div class="item-meta">
+                                <span class="meta-badge">post-training</span>
+                            </div>
+                            <div class="item-innovation">Explains training for low/med/high effort reasoning modes</div>
+                        </div>
+                        
+                        
+                        
+                        <div class="item-card">
+                            <div class="item-header">
+                                <div class="item-title">
+                                    <a href="http://arxiv.org/abs/2607.17247v1" target="_blank" rel="noopener">Distilled Reinforcement Learning for LLM Post-training</a>
+                                </div>
+                            </div>
+                            <div class="item-meta">
+                                <span class="meta-badge">post-training</span>
+                            </div>
+                            <div class="item-innovation">Hybrid RL+distillation fixing credit assignment & knowledge gain</div>
+                        </div>
+                        
+                        
+                        
+                        <div class="item-card">
+                            <div class="item-header">
+                                <div class="item-title">
+                                    <a href="http://arxiv.org/abs/2607.19691v1" target="_blank" rel="noopener">SLPO: Scaling Latent Reasoning via a Surrogate Policy</a>
+                                </div>
+                            </div>
+                            <div class="item-meta">
+                                <span class="meta-badge">reasoning</span>
+                            </div>
+                            <div class="item-innovation">RL scaling for latent (non-token) chain-of-thought reasoning</div>
+                        </div>
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                    </div>
+                    
+                </div>
                 
                 <div class="timeline-item">
                     <div class="timeline-date">2026-07-22</div>
