@@ -1,0 +1,139 @@
+{
+  "items": [
+    {
+      "title": "Claude Opus 5",
+      "url": "https://www.anthropic.com/news/claude-opus-5",
+      "core_innovation": "Frontier-level intelligence at ~half the cost of predecessor",
+      "significance": "Shifts competition from raw capability to cost/token efficiency",
+      "practical_readiness": "production-ready",
+      "significance_score": 0.9,
+      "category": "post-training"
+    },
+    {
+      "title": "Bringing Nunchaku 4-bit Diffusion Inference to Diffusers",
+      "url": "https://huggingface.co/blog/nunchaku-diffusers",
+      "core_innovation": "4-bit quantized diffusion inference integrated into Diffusers",
+      "significance": "Makes low-bit diffusion inference accessible in mainstream tooling",
+      "practical_readiness": "production-ready",
+      "significance_score": 0.7,
+      "category": "inference"
+    },
+    {
+      "title": "Controlling Reasoning Effort in LLMs",
+      "url": "https://magazine.sebastianraschka.com/p/controlling-reasoning-effort-in-llms",
+      "core_innovation": "Explains how models learn low/medium/high reasoning-effort modes",
+      "significance": "Clarifies mechanism behind adjustable reasoning budgets, key for cost control",
+      "practical_readiness": "research",
+      "significance_score": 0.75,
+      "category": "reasoning"
+    },
+    {
+      "title": "KroQuant: Kronecker-Structured Block Transforms for PTQ of Diffusion Transformers",
+      "url": "http://arxiv.org/abs/2607.21446v1",
+      "core_innovation": "Kronecker-structured transforms cut online quantization compute cost",
+      "significance": "Enables W4A4 quantization of DiTs without prohibitive inference overhead",
+      "practical_readiness": "prototype",
+      "significance_score": 0.65,
+      "category": "inference"
+    },
+    {
+      "title": "GaugeQuant: Online Learning of Quantization-Optimal Bases from LLM Symmetries",
+      "url": "http://arxiv.org/abs/2607.20757v1",
+      "core_innovation": "Exploits continuous model symmetries to learn quantization-friendly bases",
+      "significance": "Calibration-free approach could simplify LLM quantization pipelines",
+      "practical_readiness": "research",
+      "significance_score": 0.6,
+      "category": "inference"
+    },
+    {
+      "title": "Leaky Language Models: Stealing Architecture via Per-Token Timing",
+      "url": "http://arxiv.org/abs/2607.20723v1",
+      "core_innovation": "Side-channel attack infers model/architecture from API timing alone",
+      "significance": "Exposes new security risk for proprietary model deployments",
+      "practical_readiness": "research",
+      "significance_score": 0.65,
+      "category": "inference"
+    },
+    {
+      "title": "How Fast Can Reward Models Score? C++ vs PyTorch Runtimes for RLHF",
+      "url": "http://arxiv.org/abs/2607.19712v1",
+      "core_innovation": "Systematic benchmark of reward-scoring runtimes in RLHF loops",
+      "significance": "Practical guidance to reduce RLHF pipeline bottlenecks",
+      "practical_readiness": "prototype",
+      "significance_score": 0.6,
+      "category": "post-training"
+    },
+    {
+      "title": "X3-OPD: Distilling Reasoning into Audio-Language Models via On-Policy Alignment",
+      "url": "http://arxiv.org/abs/2607.21550v1",
+      "core_innovation": "Cross-modal on-policy distillation transfers text reasoning to audio models",
+      "significance": "Extends reasoning-distillation techniques beyond text to audio modality",
+      "practical_readiness": "research",
+      "significance_score": 0.55,
+      "category": "post-training"
+    },
+    {
+      "title": "Token Budget Saturation and Early Detection of Reasoning Non-Convergence",
+      "url": "http://arxiv.org/abs/2607.21433v1",
+      "core_innovation": "Detects early whether CoT generation will fail to converge",
+      "significance": "Could enable early-exit to save compute on doomed reasoning chains",
+      "practical_readiness": "research",
+      "significance_score": 0.65,
+      "category": "reasoning"
+    },
+    {
+      "title": "Euclid-MCP: Model Context Protocol Server for Deterministic Reasoning via Prolog",
+      "url": "http://arxiv.org/abs/2607.21412v1",
+      "core_innovation": "Standardized MCP interface coupling LLMs to Prolog symbolic engine",
+      "significance": "Practical neuro-symbolic tool for reliable multi-step logic in agents",
+      "practical_readiness": "prototype",
+      "significance_score": 0.6,
+      "category": "tooling"
+    },
+    {
+      "title": "The Weight of Silence: Causal Case for Weights Over Scratchpad in Latent Reasoning",
+      "url": "http://arxiv.org/abs/2607.20952v1",
+      "core_innovation": "RL training shifts reliance from latent scratchpad to model weights",
+      "significance": "Challenges assumption that latent reasoning functions as active scratchpad",
+      "practical_readiness": "research",
+      "significance_score": 0.6,
+      "category": "reasoning"
+    },
+    {
+      "title": "Chemical Chain-of-Thought Functions as Hallucination-Prone Scratchpad",
+      "url": "http://arxiv.org/abs/2607.20935v1",
+      "core_innovation": "Shows CoT hallucinations decoupled from answer correctness in chemistry",
+      "significance": "Warns against trusting CoT faithfulness in specialized scientific domains",
+      "practical_readiness": "research",
+      "significance_score": 0.55,
+      "category": "reasoning"
+    },
+    {
+      "title": "REFACT: Adaptive Fact Restatement for Compact, Faithful CoT",
+      "url": "http://arxiv.org/abs/2607.20833v1",
+      "core_innovation": "Adaptive citation restatement ensures grounded reasoning traces",
+      "significance": "Improves CoT faithfulness without inflating trace length",
+      "practical_readiness": "prototype",
+      "significance_score": 0.55,
+      "category": "reasoning"
+    },
+    {
+      "title": "How Does Alignment Tuning Shape Representations of Sycophancy?",
+      "url": "http://arxiv.org/abs/2607.18114v1",
+      "core_innovation": "Locates per-bias directions for sycophancy/cue-induced biases in hidden states",
+      "significance": "Interpretability insight enabling targeted debiasing interventions",
+      "practical_readiness": "research",
+      "significance_score": 0.6,
+      "category": "post-training"
+    },
+    {
+      "title": "Nvidia, Microsoft, Meta warn against overregulating open-weight models",
+      "url": "https://www.cnbc.com/2026/07/24/nvidia-microsoft-meta-open-weight-ai-models.html",
+      "core_innovation": "Joint industry push against restrictive open-weight regulation",
+      "significance": "Signals coordinated stance shaping future open-"
+    }
+  ],
+  "generated_at": "2026-07-25T05:13:11.412060",
+  "model": "claude-sonnet-5",
+  "total_items_analyzed": 162
+}
