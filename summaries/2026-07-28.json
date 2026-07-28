@@ -1,0 +1,11 @@
+{
+  "items": [],
+  "trends": [
+    "JSON parsing error - manual review needed"
+  ],
+  "summary": "Failed to parse LLM response. Error: Expecting property name enclosed in double quotes: line 1 column 4237 (char 4236). Check debug_response_20260728_051332.txt",
+  "parsing_error": true,
+  "generated_at": "2026-07-28T05:13:32.681546",
+  "model": "claude-sonnet-5",
+  "total_items_analyzed": 128
+}
