@@ -1,0 +1,84 @@
+{
+  "items": [
+    {
+      "title": "Stable FP4 Training via Transposition-Invariant Block Quantization",
+      "url": "http://arxiv.org/abs/2607.24953v1",
+      "core_innovation": "Fixes scale inconsistency enabling stable FP4 LLM training",
+      "significance": "Could push training precision below FP8 into production use",
+      "practical_readiness": "research",
+      "significance_score": 0.82,
+      "category": "architecture"
+    },
+    {
+      "title": "Conformal Cascade: Distribution-Free Accuracy Guarantees for Multi-Tier LLM Inference",
+      "url": "http://arxiv.org/abs/2607.25018v1",
+      "core_innovation": "Formal accuracy bounds for LLM cascade routing via conformal prediction",
+      "significance": "Solves miscalibration problem plaguing cost-saving cascades",
+      "practical_readiness": "prototype",
+      "significance_score": 0.75,
+      "category": "inference"
+    },
+    {
+      "title": "DraftExpert: Expansion-Aware Self-Speculative Decoding for End-Device MoE Inference",
+      "url": "http://arxiv.org/abs/2607.24434v1",
+      "core_innovation": "Speculative decoding tuned for memory-constrained on-device MoE",
+      "significance": "Enables faster local MoE inference on phones/laptops",
+      "practical_readiness": "prototype",
+      "significance_score": 0.68,
+      "category": "inference"
+    },
+    {
+      "title": "MXAttention: Data-Free Optimal Scaling and Pre-Normalization Quantization for MXFP4 Attention",
+      "url": "http://arxiv.org/abs/2607.24377v1",
+      "core_innovation": "Data-free MXFP4 quantization fixing clipping/underflow in attention",
+      "significance": "Cuts diffusion video-gen attention cost without calibration data",
+      "practical_readiness": "prototype",
+      "significance_score": 0.65,
+      "category": "inference"
+    },
+    {
+      "title": "ACRL: Adaptive Control of Training-Inference Discrepancy for Stable Reinforcement Learning",
+      "url": "http://arxiv.org/abs/2607.24062v1",
+      "core_innovation": "Adaptive correction for train/inference precision mismatch in RL",
+      "significance": "Addresses common instability in LLM RLHF/RL pipelines",
+      "practical_readiness": "research",
+      "significance_score": 0.62,
+      "category": "post-training"
+    },
+    {
+      "title": "SpecBox: Speculative Sandbox Scheduling for Efficient LLM Agent Serving",
+      "url": "http://arxiv.org/abs/2607.23933v1",
+      "core_innovation": "Speculative sandbox pre-warming for MCP-based agent serving",
+      "significance": "Tackles cold-start/latency tension in multi-tenant agent infra",
+      "practical_readiness": "prototype",
+      "significance_score": 0.6,
+      "category": "inference"
+    },
+    {
+      "title": "Bits and Memories: Measuring Verbatim Extraction Across LLM Quantization",
+      "url": "http://arxiv.org/abs/2607.25451v1",
+      "core_innovation": "Direct measurement of verbatim memorization risk under quantization",
+      "significance": "Challenges assumption that quantization reduces privacy risk",
+      "practical_readiness": "research",
+      "significance_score": 0.58,
+      "category": "inference"
+    },
+    {
+      "title": "The Physics of Multi-Turn Long-Horizon Planning",
+      "url": "http://arxiv.org/abs/2607.24720v1",
+      "core_innovation": "Controlled study of agentic distillation for long-horizon planning",
+      "significance": "Shows trajectory quality, not scale, drives multi-turn agent gains",
+      "practical_readiness": "research",
+      "significance_score": 0.78,
+      "category": "post-training"
+    },
+    {
+      "title": "Inverse RL Helps Align AI by Imitating Humans",
+      "url": "http://arxiv.org/abs/2607.24900v1",
+      "core_innovation": "Extrac"
+    }
+  ],
+  "generated_at": "2026-07-29T05:20:01.701608",
+  "model": "claude-sonnet-5",
+  "total_items_analyzed": 155
+}
