@@ -363,7 +363,7 @@
         <div class="container">
             <h1>🧠 AI Research Digest</h1>
             <div class="subtitle">Latest Advancements in AI Inference & Post-Training</div>
-            <div class="last-updated">Last updated: 2026-07-29 05:20 UTC</div>
+            <div class="last-updated">Last updated: 2026-07-30 04:56 UTC</div>
         </div>
     </header>
 
@@ -392,7 +392,7 @@
                     <div class="stat-label">Active Trends</div>
                 </div>
                 <div class="stat-card">
-                    <div class="stat-value">155</div>
+                    <div class="stat-value">158</div>
                     <div class="stat-label">Sources Analyzed</div>
                 </div>
             </div>
@@ -424,6 +424,27 @@
                 <div class="item-card">
                     <div class="item-header">
                         <div class="item-title">
+                            <a href="http://arxiv.org/abs/2607.26515v1" target="_blank" rel="noopener">HiFloat4 Format for End-To-End RL Post-Training of LLMs</a>
+                        </div>
+                        
+                        <span class="significance-badge significance-high">High Impact</span>
+                        
+                    </div>
+                    <div class="item-meta">
+                        <span class="meta-badge">post-training</span>
+                        <span class="meta-badge">research</span>
+                    </div>
+                    <div class="item-innovation">
+                        <strong>Innovation:</strong> First fully FP4 RL post-training (rollout+training, fwd+bwd)
+                    </div>
+                    <div class="item-significance">
+                        <strong>Why it matters:</strong> Could drastically cut RL post-training compute/memory costs
+                    </div>
+                </div>
+                
+                <div class="item-card">
+                    <div class="item-header">
+                        <div class="item-title">
                             <a href="http://arxiv.org/abs/2607.24953v1" target="_blank" rel="noopener">Stable FP4 Training via Transposition-Invariant Block Quantization</a>
                         </div>
                         
@@ -439,48 +460,6 @@
                     </div>
                     <div class="item-significance">
                         <strong>Why it matters:</strong> Could push training precision below FP8 into production use
-                    </div>
-                </div>
-                
-                <div class="item-card">
-                    <div class="item-header">
-                        <div class="item-title">
-                            <a href="http://arxiv.org/abs/2607.17247v1" target="_blank" rel="noopener">Distilled Reinforcement Learning for LLM Post-training</a>
-                        </div>
-                        
-                        <span class="significance-badge significance-high">High Impact</span>
-                        
-                    </div>
-                    <div class="item-meta">
-                        <span class="meta-badge">post-training</span>
-                        <span class="meta-badge">research</span>
-                    </div>
-                    <div class="item-innovation">
-                        <strong>Innovation:</strong> Hybrid RL+distillation fixing credit assignment & knowledge gain
-                    </div>
-                    <div class="item-significance">
-                        <strong>Why it matters:</strong> Addresses core weaknesses of both RLHF and on-policy distillation
-                    </div>
-                </div>
-                
-                <div class="item-card">
-                    <div class="item-header">
-                        <div class="item-title">
-                            <a href="http://arxiv.org/abs/2607.19691v1" target="_blank" rel="noopener">SLPO: Scaling Latent Reasoning via a Surrogate Policy</a>
-                        </div>
-                        
-                        <span class="significance-badge significance-high">High Impact</span>
-                        
-                    </div>
-                    <div class="item-meta">
-                        <span class="meta-badge">reasoning</span>
-                        <span class="meta-badge">research</span>
-                    </div>
-                    <div class="item-innovation">
-                        <strong>Innovation:</strong> RL scaling for latent (non-token) chain-of-thought reasoning
-                    </div>
-                    <div class="item-significance">
-                        <strong>Why it matters:</strong> Latent reasoning matches CoT at much lower decode cost
                     </div>
                 </div>
                 
@@ -571,21 +550,21 @@
                 <div class="item-card">
                     <div class="item-header">
                         <div class="item-title">
-                            <a href="https://magazine.sebastianraschka.com/p/controlling-reasoning-effort-in-llms" target="_blank" rel="noopener">Controlling Reasoning Effort in LLMs</a>
+                            <a href="http://arxiv.org/abs/2607.27090v1" target="_blank" rel="noopener">InferScale: GPU-Native KV Injection for Personalized LLM Serving</a>
                         </div>
                         
                         <span class="significance-badge significance-medium">Notable</span>
                         
                     </div>
                     <div class="item-meta">
-                        <span class="meta-badge">post-training</span>
-                        <span class="meta-badge">production-ready</span>
+                        <span class="meta-badge">inference</span>
+                        <span class="meta-badge">prototype</span>
                     </div>
                     <div class="item-innovation">
-                        <strong>Innovation:</strong> Explains training for low/med/high effort reasoning modes
+                        <strong>Innovation:</strong> Avoids re-prefilling shared personalized memory context
                     </div>
                     <div class="item-significance">
-                        <strong>Why it matters:</strong> Clarifies mechanism behind adjustable inference-time compute
+                        <strong>Why it matters:</strong> Cuts TTFT for memory-augmented agents (Mem0/MemGPT-style)
                     </div>
                 </div>
                 
@@ -607,6 +586,27 @@
                     </div>
                     <div class="item-significance">
                         <strong>Why it matters:</strong> Makes extreme low-bit diffusion inference accessible/production-ready
+                    </div>
+                </div>
+                
+                <div class="item-card">
+                    <div class="item-header">
+                        <div class="item-title">
+                            <a href="https://huggingface.co/blog/nunchaku-diffusers" target="_blank" rel="noopener">Bringing Nunchaku 4-bit Diffusion Inference to Diffusers</a>
+                        </div>
+                        
+                        <span class="significance-badge significance-medium">Notable</span>
+                        
+                    </div>
+                    <div class="item-meta">
+                        <span class="meta-badge">inference</span>
+                        <span class="meta-badge">production-ready</span>
+                    </div>
+                    <div class="item-innovation">
+                        <strong>Innovation:</strong> 4-bit quantized diffusion inference integrated into Diffusers
+                    </div>
+                    <div class="item-significance">
+                        <strong>Why it matters:</strong> Makes low-bit diffusion inference accessible in mainstream tooling
                     </div>
                 </div>
                 
@@ -639,6 +639,70 @@
                 <p>A longitudinal view of AI advancements over the past month.</p>
             </div>
             <div class="timeline">
+                
+                <div class="timeline-item">
+                    <div class="timeline-date">2026-07-30</div>
+                    <p style="color: var(--text-secondary); margin-bottom: 15px;"></p>
+                    
+                    <div class="items-grid">
+                        
+                        
+                        <div class="item-card">
+                            <div class="item-header">
+                                <div class="item-title">
+                                    <a href="http://arxiv.org/abs/2607.26515v1" target="_blank" rel="noopener">HiFloat4 Format for End-To-End RL Post-Training of LLMs</a>
+                                </div>
+                            </div>
+                            <div class="item-meta">
+                                <span class="meta-badge">post-training</span>
+                            </div>
+                            <div class="item-innovation">First fully FP4 RL post-training (rollout+training, fwd+bwd)</div>
+                        </div>
+                        
+                        
+                        
+                        <div class="item-card">
+                            <div class="item-header">
+                                <div class="item-title">
+                                    <a href="http://arxiv.org/abs/2607.27090v1" target="_blank" rel="noopener">InferScale: GPU-Native KV Injection for Personalized LLM Serving</a>
+                                </div>
+                            </div>
+                            <div class="item-meta">
+                                <span class="meta-badge">inference</span>
+                            </div>
+                            <div class="item-innovation">Avoids re-prefilling shared personalized memory context</div>
+                        </div>
+                        
+                        
+                        
+                        <div class="item-card">
+                            <div class="item-header">
+                                <div class="item-title">
+                                    <a href="https://huggingface.co/blog/LiquidAI/lfm2-5-encoders" target="_blank" rel="noopener">LFM2.5-Encoders for Fast Long-Context Inference on CPU</a>
+                                </div>
+                            </div>
+                            <div class="item-meta">
+                                <span class="meta-badge">inference</span>
+                            </div>
+                            <div class="item-innovation">Efficient long-context encoder models tuned for CPU inference</div>
+                        </div>
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                    </div>
+                    
+                </div>
                 
                 <div class="timeline-item">
                     <div class="timeline-date">2026-07-29</div>
