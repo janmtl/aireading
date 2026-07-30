@@ -1,0 +1,82 @@
+{
+  "items": [
+    {
+      "title": "HiFloat4 Format for End-To-End RL Post-Training of LLMs",
+      "url": "http://arxiv.org/abs/2607.26515v1",
+      "core_innovation": "First fully FP4 RL post-training (rollout+training, fwd+bwd)",
+      "significance": "Could drastically cut RL post-training compute/memory costs",
+      "practical_readiness": "research",
+      "significance_score": 0.85,
+      "category": "post-training"
+    },
+    {
+      "title": "InferScale: GPU-Native KV Injection for Personalized LLM Serving",
+      "url": "http://arxiv.org/abs/2607.27090v1",
+      "core_innovation": "Avoids re-prefilling shared personalized memory context",
+      "significance": "Cuts TTFT for memory-augmented agents (Mem0/MemGPT-style)",
+      "practical_readiness": "prototype",
+      "significance_score": 0.7,
+      "category": "inference"
+    },
+    {
+      "title": "LFM2.5-Encoders for Fast Long-Context Inference on CPU",
+      "url": "https://huggingface.co/blog/LiquidAI/lfm2-5-encoders",
+      "core_innovation": "Efficient long-context encoder models tuned for CPU inference",
+      "significance": "Enables long-context deployment without GPU dependency",
+      "practical_readiness": "production-ready",
+      "significance_score": 0.65,
+      "category": "inference"
+    },
+    {
+      "title": "From Interface to Inference: Any-Order Inference from Any-Order Models",
+      "url": "http://arxiv.org/abs/2607.26504v1",
+      "core_innovation": "Native any-order inference via masked diffusion models",
+      "significance": "Alternative to hand-designed infilling/edit mechanisms",
+      "practical_readiness": "research",
+      "significance_score": 0.6,
+      "category": "architecture"
+    },
+    {
+      "title": "Constitutional Midtraining: Content Presence Drives Alignment Gains",
+      "url": "http://arxiv.org/abs/2607.26654v1",
+      "core_innovation": "Values-based content injected during midtraining, not post-training",
+      "significance": "Tests durability of alignment against fine-tuning erosion",
+      "practical_readiness": "research",
+      "significance_score": 0.65,
+      "category": "post-training"
+    },
+    {
+      "title": "MemSFT: Mitigating Alignment Tax with an External Parametric Memory",
+      "url": "http://arxiv.org/abs/2607.25614v1",
+      "core_innovation": "Plug-and-play memory decouples domain SFT from backbone updates",
+      "significance": "Practical fix for catastrophic forgetting during fine-tuning",
+      "practical_readiness": "prototype",
+      "significance_score": 0.6,
+      "category": "post-training"
+    },
+    {
+      "title": "Post-Training at the Edge of Detectability: Game-Theoretic Fine-Tuning",
+      "url": "http://arxiv.org/abs/2607.26358v1",
+      "core_innovation": "Principled method to set KL regularization coefficient in RL",
+      "significance": "Reduces heuristic tuning overhead in RLHF pipelines",
+      "practical_readiness": "research",
+      "significance_score": 0.55,
+      "category": "post-training"
+    },
+    {
+      "title": "Probing the Origins of Reasoning Performance: RL vs SFT",
+      "url": "http://arxiv.org/abs/2607.26119v1",
+      "core_innovation": "Linear probes show RL models build higher-quality representations",
+      "significance": "Mechanistic explanation for RL's edge on math reasoning",
+      "practical_readiness": "research",
+      "significance_score": 0.65,
+      "category": "research"
+    },
+    {
+      "title": "The Physics of Multi-Turn Long-Horizon Planning via"
+    }
+  ],
+  "generated_at": "2026-07-30T04:56:56.915004",
+  "model": "claude-sonnet-5",
+  "total_items_analyzed": 158
+}
