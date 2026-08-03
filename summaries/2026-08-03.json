@@ -1,0 +1,73 @@
+{
+  "items": [
+    {
+      "title": "OnlineCache: Learning Dynamic Caching Policies for Diffusion Inference",
+      "url": "http://arxiv.org/abs/2607.29398v1",
+      "core_innovation": "Adaptive per-sample caching with error correction for diffusion models",
+      "significance": "Moves beyond static caching, cuts latency without quality loss",
+      "practical_readiness": "prototype",
+      "significance_score": 0.65,
+      "category": "inference"
+    },
+    {
+      "title": "DeltaServe: Host-Agnostic Co-Serving of Inference and Fine-Tuning for LLMs",
+      "url": "http://arxiv.org/abs/2607.28848v1",
+      "core_innovation": "Converts idle inference GPU capacity into LoRA fine-tuning throughput",
+      "significance": "Directly improves GPU utilization economics for LLM serving",
+      "practical_readiness": "prototype",
+      "significance_score": 0.72,
+      "category": "inference"
+    },
+    {
+      "title": "WIDE: Boosting Adaptive LLM Inference via Token-level Dynamic Width Pruning",
+      "url": "http://arxiv.org/abs/2607.28418v1",
+      "core_innovation": "Fine-grained per-token dynamic width pruning vs coarse static pruning",
+      "significance": "Better accuracy-efficiency tradeoff for structured LLM sparsity",
+      "practical_readiness": "research",
+      "significance_score": 0.55,
+      "category": "inference"
+    },
+    {
+      "title": "BLADE: Boundary-Expanded Layer-Adaptive Dynamic Exit for Efficient LLM Reasoning",
+      "url": "http://arxiv.org/abs/2607.28966v1",
+      "core_innovation": "Detects early-exit points beyond explicit self-doubt cues in CoT",
+      "significance": "Cuts wasted reasoning compute on redundant verification",
+      "practical_readiness": "research",
+      "significance_score": 0.6,
+      "category": "reasoning"
+    },
+    {
+      "title": "Knowing When to Quit: Diagnosing and Training LLMs to Abort Futile Reasoning",
+      "url": "http://arxiv.org/abs/2607.29211v1",
+      "core_innovation": "Trains models to detect and halt beyond-capability reasoning",
+      "significance": "Addresses risk of confident-but-wrong long CoT outputs",
+      "practical_readiness": "research",
+      "significance_score": 0.68,
+      "category": "reasoning"
+    },
+    {
+      "title": "Translation with Thought (TwT): Difficulty-Adaptive Reasoning via RL for MT",
+      "url": "http://arxiv.org/abs/2607.29287v1",
+      "core_innovation": "RL-trained model modulates reasoning depth by task difficulty",
+      "significance": "Generalizable pattern for resource-rational adaptive reasoning",
+      "practical_readiness": "research",
+      "significance_score": 0.55,
+      "category": "reasoning"
+    },
+    {
+      "title": "Learning Latent Reasoning Traces for Scalar Reward Models End-to-End",
+      "url": "http://arxiv.org/abs/2607.29185v1",
+      "core_innovation": "Combines generative reasoning robustness with scalar reward efficiency",
+      "significance": "Could improve RLHF reward model generalization and speed",
+      "practical_readiness": "research",
+      "significance_score": 0.6,
+      "category": "post-training"
+    },
+    {
+      "title": "Compliance2LoRA: On-Demand Safety Alignment via Hypern"
+    }
+  ],
+  "generated_at": "2026-08-03T05:39:45.249742",
+  "model": "claude-sonnet-5",
+  "total_items_analyzed": 157
+}
