@@ -363,7 +363,7 @@
         <div class="container">
             <h1>🧠 AI Research Digest</h1>
             <div class="subtitle">Latest Advancements in AI Inference & Post-Training</div>
-            <div class="last-updated">Last updated: 2026-08-04 05:13 UTC</div>
+            <div class="last-updated">Last updated: 2026-08-05 05:12 UTC</div>
         </div>
     </header>
 
@@ -379,7 +379,7 @@
             
             <div class="summary-overview">
                 <h2>📊 Weekly Overview</h2>
-                <p>Failed to parse LLM response. Error: Expecting property name enclosed in double quotes: line 1 column 5570 (char 5569). Check debug_response_20260804_051300.txt</p>
+                <p>The LLM response contained no text content. This may be due to an API issue or rate limiting.</p>
             </div>
 
             <div class="stats-grid">
@@ -392,7 +392,7 @@
                     <div class="stat-label">Active Trends</div>
                 </div>
                 <div class="stat-card">
-                    <div class="stat-value">160</div>
+                    <div class="stat-value">155</div>
                     <div class="stat-label">Sources Analyzed</div>
                 </div>
             </div>
@@ -445,48 +445,6 @@
                 <div class="item-card">
                     <div class="item-header">
                         <div class="item-title">
-                            <a href="http://arxiv.org/abs/2607.24953v1" target="_blank" rel="noopener">Stable FP4 Training via Transposition-Invariant Block Quantization</a>
-                        </div>
-                        
-                        <span class="significance-badge significance-high">High Impact</span>
-                        
-                    </div>
-                    <div class="item-meta">
-                        <span class="meta-badge">architecture</span>
-                        <span class="meta-badge">research</span>
-                    </div>
-                    <div class="item-innovation">
-                        <strong>Innovation:</strong> Fixes scale inconsistency enabling stable FP4 LLM training
-                    </div>
-                    <div class="item-significance">
-                        <strong>Why it matters:</strong> Could push training precision below FP8 into production use
-                    </div>
-                </div>
-                
-                <div class="item-card">
-                    <div class="item-header">
-                        <div class="item-title">
-                            <a href="http://arxiv.org/abs/2607.24720v1" target="_blank" rel="noopener">The Physics of Multi-Turn Long-Horizon Planning</a>
-                        </div>
-                        
-                        <span class="significance-badge significance-medium">Notable</span>
-                        
-                    </div>
-                    <div class="item-meta">
-                        <span class="meta-badge">post-training</span>
-                        <span class="meta-badge">research</span>
-                    </div>
-                    <div class="item-innovation">
-                        <strong>Innovation:</strong> Controlled study of agentic distillation for long-horizon planning
-                    </div>
-                    <div class="item-significance">
-                        <strong>Why it matters:</strong> Shows trajectory quality, not scale, drives multi-turn agent gains
-                    </div>
-                </div>
-                
-                <div class="item-card">
-                    <div class="item-header">
-                        <div class="item-title">
                             <a href="https://artificialanalysis.ai/models/deepseek-v4-flash" target="_blank" rel="noopener">DeepSeek-V4-Flash-0731 Release</a>
                         </div>
                         
@@ -502,27 +460,6 @@
                     </div>
                     <div class="item-significance">
                         <strong>Why it matters:</strong> Strong open-weight option for self-hosted low-cost inference
-                    </div>
-                </div>
-                
-                <div class="item-card">
-                    <div class="item-header">
-                        <div class="item-title">
-                            <a href="http://arxiv.org/abs/2607.25018v1" target="_blank" rel="noopener">Conformal Cascade: Distribution-Free Accuracy Guarantees for Multi-Tier LLM Inference</a>
-                        </div>
-                        
-                        <span class="significance-badge significance-medium">Notable</span>
-                        
-                    </div>
-                    <div class="item-meta">
-                        <span class="meta-badge">inference</span>
-                        <span class="meta-badge">prototype</span>
-                    </div>
-                    <div class="item-innovation">
-                        <strong>Innovation:</strong> Formal accuracy bounds for LLM cascade routing via conformal prediction
-                    </div>
-                    <div class="item-significance">
-                        <strong>Why it matters:</strong> Solves miscalibration problem plaguing cost-saving cascades
                     </div>
                 </div>
                 
@@ -592,7 +529,7 @@
                 <div class="item-card">
                     <div class="item-header">
                         <div class="item-title">
-                            <a href="http://arxiv.org/abs/2607.24434v1" target="_blank" rel="noopener">DraftExpert: Expansion-Aware Self-Speculative Decoding for End-Device MoE Inference</a>
+                            <a href="http://arxiv.org/abs/2607.29398v1" target="_blank" rel="noopener">OnlineCache: Learning Dynamic Caching Policies for Diffusion Inference</a>
                         </div>
                         
                         <span class="significance-badge significance-medium">Notable</span>
@@ -603,10 +540,73 @@
                         <span class="meta-badge">prototype</span>
                     </div>
                     <div class="item-innovation">
-                        <strong>Innovation:</strong> Speculative decoding tuned for memory-constrained on-device MoE
+                        <strong>Innovation:</strong> Adaptive per-sample caching with error correction for diffusion models
                     </div>
                     <div class="item-significance">
-                        <strong>Why it matters:</strong> Enables faster local MoE inference on phones/laptops
+                        <strong>Why it matters:</strong> Moves beyond static caching, cuts latency without quality loss
+                    </div>
+                </div>
+                
+                <div class="item-card">
+                    <div class="item-header">
+                        <div class="item-title">
+                            <a href="https://www.marktechpost.com/2026/07/30/tencent-open-sources-angelspec-a-unified-training-framework-for-mtp-and-block-parallel-speculative-decoding-on-hy3-models/" target="_blank" rel="noopener">Tencent Open-Sources AngelSpec: Unified Speculative Decoding Training Framework</a>
+                        </div>
+                        
+                        <span class="significance-badge significance-medium">Notable</span>
+                        
+                    </div>
+                    <div class="item-meta">
+                        <span class="meta-badge">inference</span>
+                        <span class="meta-badge">prototype</span>
+                    </div>
+                    <div class="item-innovation">
+                        <strong>Innovation:</strong> Dual drafters (autoregressive + block-parallel) for speculative decoding
+                    </div>
+                    <div class="item-significance">
+                        <strong>Why it matters:</strong> Addresses workload heterogeneity in production draft-model training
+                    </div>
+                </div>
+                
+                <div class="item-card">
+                    <div class="item-header">
+                        <div class="item-title">
+                            <a href="http://arxiv.org/abs/2607.26654v2" target="_blank" rel="noopener">Constitutional Midtraining: Content Presence Drives Alignment Gains</a>
+                        </div>
+                        
+                        <span class="significance-badge significance-medium">Notable</span>
+                        
+                    </div>
+                    <div class="item-meta">
+                        <span class="meta-badge">post-training</span>
+                        <span class="meta-badge">research</span>
+                    </div>
+                    <div class="item-innovation">
+                        <strong>Innovation:</strong> Values-based content in midtraining yields durable alignment
+                    </div>
+                    <div class="item-significance">
+                        <strong>Why it matters:</strong> Suggests alignment can be made robust to later fine-tuning erosion
+                    </div>
+                </div>
+                
+                <div class="item-card">
+                    <div class="item-header">
+                        <div class="item-title">
+                            <a href="https://huggingface.co/blog/LiquidAI/lfm2-5-encoders" target="_blank" rel="noopener">LFM2.5-Encoders for Fast Long-Context Inference on CPU</a>
+                        </div>
+                        
+                        <span class="significance-badge significance-medium">Notable</span>
+                        
+                    </div>
+                    <div class="item-meta">
+                        <span class="meta-badge">inference</span>
+                        <span class="meta-badge">production-ready</span>
+                    </div>
+                    <div class="item-innovation">
+                        <strong>Innovation:</strong> Efficient long-context encoder models tuned for CPU inference
+                    </div>
+                    <div class="item-significance">
+                        <strong>Why it matters:</strong> Enables long-context deployment without GPU dependency
                     </div>
                 </div>
                 
@@ -639,6 +639,12 @@
                 <p>A longitudinal view of AI advancements over the past month.</p>
             </div>
             <div class="timeline">
+                
+                <div class="timeline-item">
+                    <div class="timeline-date">2026-08-05</div>
+                    <p style="color: var(--text-secondary); margin-bottom: 15px;">The LLM response contained no text content. This may be due to an API issue or rate limiting.</p>
+                    
+                </div>
                 
                 <div class="timeline-item">
                     <div class="timeline-date">2026-08-04</div>
@@ -1668,12 +1674,6 @@
                 
                 <div class="timeline-item">
                     <div class="timeline-date">2026-07-07</div>
-                    <p style="color: var(--text-secondary); margin-bottom: 15px;">The LLM response contained no text content. This may be due to an API issue or rate limiting.</p>
-                    
-                </div>
-                
-                <div class="timeline-item">
-                    <div class="timeline-date">2026-07-06</div>
                     <p style="color: var(--text-secondary); margin-bottom: 15px;">The LLM response contained no text content. This may be due to an API issue or rate limiting.</p>
                     
                 </div>
