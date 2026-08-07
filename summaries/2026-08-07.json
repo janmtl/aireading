@@ -1,0 +1,146 @@
+{
+  "items": [
+    {
+      "title": "Deploy local agents everywhere with LFM2.5-2.6B",
+      "url": "https://huggingface.co/blog/LiquidAI/lfm2-5-2-6b",
+      "core_innovation": "Small edge-optimized model tuned for agentic local deployment",
+      "significance": "Enables production agent workloads on-device without cloud",
+      "practical_readiness": "production-ready",
+      "significance_score": 0.6,
+      "category": "inference"
+    },
+    {
+      "title": "AMD acquires Taalas to boost inference performance by etching models in silicon",
+      "url": "https://www.theregister.com/systems/2026/08/06/amd-acquires-ai-chip-startup-taalas-to-boost-inference-performance-by-etching-models-into-silicon/5284344",
+      "core_innovation": "Hardware-baked model weights via silicon etching for inference",
+      "significance": "Signals major push toward model-specific ASICs for efficiency",
+      "practical_readiness": "prototype",
+      "significance_score": 0.75,
+      "category": "inference"
+    },
+    {
+      "title": "Changes at Google DeepMind: Jeff Dean and researchers launch Discovery Loop",
+      "url": "https://blog.google/company-news/inside-google/message-ceo/next-chapter-ai-momentum/",
+      "core_innovation": "Top Google researchers exit to build AI-for-science automation startup",
+      "significance": "Major talent shift toward automated scientific discovery agents",
+      "practical_readiness": "research",
+      "significance_score": 0.7,
+      "category": "research"
+    },
+    {
+      "title": "Inside vLLM: Anatomy of a High-Throughput LLM Inference System",
+      "url": "https://www.aleksagordic.com/blog/vllm",
+      "core_innovation": "Deep technical breakdown of vLLM's scheduling and memory design",
+      "significance": "Valuable practical reference for deploying high-throughput inference",
+      "practical_readiness": "production-ready",
+      "significance_score": 0.65,
+      "category": "tooling"
+    },
+    {
+      "title": "BaKron: Efficient Quantization with Kronecker-Factored Hessians",
+      "url": "http://arxiv.org/abs/2608.06291v1",
+      "core_innovation": "Fast two-sided Kronecker-Hessian GPTQ-style quantization",
+      "significance": "Improves quantization accuracy without prohibitive compute cost",
+      "practical_readiness": "research",
+      "significance_score": 0.55,
+      "category": "inference"
+    },
+    {
+      "title": "LLM Inference Under Bursty Workload Distribution: Modifying WAIT",
+      "url": "http://arxiv.org/abs/2608.06135v1",
+      "core_innovation": "Scheduling algorithm adapted for bursty, non-Poisson traffic",
+      "significance": "Addresses real-world serving conditions ignored by prior schedulers",
+      "practical_readiness": "prototype",
+      "significance_score": 0.5,
+      "category": "inference"
+    },
+    {
+      "title": "QEvict: Recoverable Quantized KV Eviction for Long-Context Decoding",
+      "url": "http://arxiv.org/abs/2608.05326v1",
+      "core_innovation": "Reversible KV eviction via quantized recovery instead of deletion",
+      "significance": "Fixes brittleness of irreversible KV cache pruning methods",
+      "practical_readiness": "research",
+      "significance_score": 0.6,
+      "category": "inference"
+    },
+    {
+      "title": "EdgeXpert: Memory-Efficient LLM Inference with MoE and Speculative Decoding",
+      "url": "http://arxiv.org/abs/2608.05303v1",
+      "core_innovation": "Hardware co-design resolving MoE/speculative decoding incompatibility",
+      "significance": "Enables faster on-device LLM inference for sparse MoE models",
+      "practical_readiness": "prototype",
+      "significance_score": 0.55,
+      "category": "inference"
+    },
+    {
+      "title": "APQF: Agentic Profiling-Guided Pruning and Mixed-Precision Quantization",
+      "url": "http://arxiv.org/abs/2608.05499v1",
+      "core_innovation": "Agent automates layer-wise pruning/quantization decisions",
+      "significance": "Reduces manual expertise needed for edge model compression",
+      "practical_readiness": "prototype",
+      "significance_score": 0.5,
+      "category": "inference"
+    },
+    {
+      "title": "A Six-Dimensional Taxonomy of Post-Training Adaptation Techniques",
+      "url": "http://arxiv.org/abs/2608.06246v1",
+      "core_innovation": "Unified framework categorizing fine-tuning, alignment, editing, etc.",
+      "significance": "Useful governance/comparison tool amid fragmented post-training landscape",
+      "practical_readiness": "research",
+      "significance_score": 0.5,
+      "category": "post-training"
+    },
+    {
+      "title": "SAGA: Score-Weighted Adaptive Generation Alignment for Nordic Languages",
+      "url": "http://arxiv.org/abs/2608.06179v1",
+      "core_innovation": "Parser-supervised preference optimization without human labels",
+      "significance": "Cuts annotation cost for aligning low-resource language models",
+      "practical_readiness": "prototype",
+      "significance_score": 0.5,
+      "category": "post-training"
+    },
+    {
+      "title": "RP-OPSD: Reasoning-Pivot-Guided On-Policy Self-Distillation",
+      "url": "http://arxiv.org/abs/2608.06347v1",
+      "core_innovation": "Targets reasoning-critical tokens in multilingual self-distillation",
+      "significance": "Improves cross-lingual reasoning transfer efficiency",
+      "practical_readiness": "research",
+      "significance_score": 0.55,
+      "category": "reasoning"
+    },
+    {
+      "title": "On-Policy Delta Distillation for Multilingual Math Reasoning",
+      "url": "http://arxiv.org/abs/2608.05802v1",
+      "core_innovation": "Uses teacher-base probability gap as multilingual distillation signal",
+      "significance": "Strengthens OPD as RL alternative for post-training reasoning",
+      "practical_readiness": "prototype",
+      "significance_score": 0.55,
+      "category": "reasoning"
+    },
+    {
+      "title": "Answer First, Reason Later: Commitment Order in Diffusion LLMs",
+      "url": "http://arxiv.org/abs/2608.05687v1",
+      "core_innovation": "Shows dLLM token-order freedom causes early answer commitment",
+      "significance": "Identifies core failure mode limiting diffusion LLM reasoning quality",
+      "practical_readiness": "research",
+      "significance_score": 0.65,
+      "category": "reasoning"
+    },
+    {
+      "title": "Reasoning Errors Have a Region and Direction in Residual-Stream Trajectory",
+      "url": "http://arxiv.org/abs/2608.05660v1",
+      "core_innovation": "Localizes reasoning error signals in residual stream geometry",
+      "significance": "Enables better verification/detection of flawed LLM reasoning",
+      "practical_readiness": "research",
+      "significance_score": 0.55,
+      "category": "reasoning"
+    },
+    {
+      "title": "Qwen3.8 Max now ranked as best overall model by agentic index",
+      "url": "https://artificialan"
+    }
+  ],
+  "generated_at": "2026-08-07T04:24:19.600433",
+  "model": "claude-sonnet-5",
+  "total_items_analyzed": 155
+}
