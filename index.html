@@ -363,7 +363,7 @@
         <div class="container">
             <h1>🧠 AI Research Digest</h1>
             <div class="subtitle">Latest Advancements in AI Inference & Post-Training</div>
-            <div class="last-updated">Last updated: 2026-08-09 03:30 UTC</div>
+            <div class="last-updated">Last updated: 2026-08-10 03:50 UTC</div>
         </div>
     </header>
 
@@ -392,7 +392,7 @@
                     <div class="stat-label">Active Trends</div>
                 </div>
                 <div class="stat-card">
-                    <div class="stat-value">158</div>
+                    <div class="stat-value">159</div>
                     <div class="stat-label">Sources Analyzed</div>
                 </div>
             </div>
@@ -424,27 +424,6 @@
                 <div class="item-card">
                     <div class="item-header">
                         <div class="item-title">
-                            <a href="http://arxiv.org/abs/2607.28848v1" target="_blank" rel="noopener">DeltaServe: Host-Agnostic Co-Serving of Inference and Fine-Tuning for LLMs</a>
-                        </div>
-                        
-                        <span class="significance-badge significance-medium">Notable</span>
-                        
-                    </div>
-                    <div class="item-meta">
-                        <span class="meta-badge">inference</span>
-                        <span class="meta-badge">prototype</span>
-                    </div>
-                    <div class="item-innovation">
-                        <strong>Innovation:</strong> Converts idle inference GPU capacity into LoRA fine-tuning throughput
-                    </div>
-                    <div class="item-significance">
-                        <strong>Why it matters:</strong> Directly improves GPU utilization economics for LLM serving
-                    </div>
-                </div>
-                
-                <div class="item-card">
-                    <div class="item-header">
-                        <div class="item-title">
                             <a href="https://blog.google/company-news/inside-google/message-ceo/next-chapter-ai-momentum/" target="_blank" rel="noopener">Changes at Google DeepMind: Jeff Dean and researchers launch Discovery Loop</a>
                         </div>
                         
@@ -460,27 +439,6 @@
                     </div>
                     <div class="item-significance">
                         <strong>Why it matters:</strong> Major talent shift toward automated scientific discovery agents
-                    </div>
-                </div>
-                
-                <div class="item-card">
-                    <div class="item-header">
-                        <div class="item-title">
-                            <a href="http://arxiv.org/abs/2607.29211v1" target="_blank" rel="noopener">Knowing When to Quit: Diagnosing and Training LLMs to Abort Futile Reasoning</a>
-                        </div>
-                        
-                        <span class="significance-badge significance-medium">Notable</span>
-                        
-                    </div>
-                    <div class="item-meta">
-                        <span class="meta-badge">reasoning</span>
-                        <span class="meta-badge">research</span>
-                    </div>
-                    <div class="item-innovation">
-                        <strong>Innovation:</strong> Trains models to detect and halt beyond-capability reasoning
-                    </div>
-                    <div class="item-significance">
-                        <strong>Why it matters:</strong> Addresses risk of confident-but-wrong long CoT outputs
                     </div>
                 </div>
                 
@@ -529,27 +487,6 @@
                 <div class="item-card">
                     <div class="item-header">
                         <div class="item-title">
-                            <a href="http://arxiv.org/abs/2607.29398v1" target="_blank" rel="noopener">OnlineCache: Learning Dynamic Caching Policies for Diffusion Inference</a>
-                        </div>
-                        
-                        <span class="significance-badge significance-medium">Notable</span>
-                        
-                    </div>
-                    <div class="item-meta">
-                        <span class="meta-badge">inference</span>
-                        <span class="meta-badge">prototype</span>
-                    </div>
-                    <div class="item-innovation">
-                        <strong>Innovation:</strong> Adaptive per-sample caching with error correction for diffusion models
-                    </div>
-                    <div class="item-significance">
-                        <strong>Why it matters:</strong> Moves beyond static caching, cuts latency without quality loss
-                    </div>
-                </div>
-                
-                <div class="item-card">
-                    <div class="item-header">
-                        <div class="item-title">
                             <a href="https://huggingface.co/blog/LiquidAI/lfm2-5-2-6b" target="_blank" rel="noopener">Deploy local agents everywhere with LFM2.5-2.6B</a>
                         </div>
                         
@@ -592,10 +529,52 @@
                 <div class="item-card">
                     <div class="item-header">
                         <div class="item-title">
-                            <a href="http://arxiv.org/abs/2607.28966v1" target="_blank" rel="noopener">BLADE: Boundary-Expanded Layer-Adaptive Dynamic Exit for Efficient LLM Reasoning</a>
+                            <a href="http://arxiv.org/abs/2608.06291v1" target="_blank" rel="noopener">BaKron: Efficient Quantization with Kronecker-Factored Hessians</a>
                         </div>
                         
-                        <span class="significance-badge significance-medium">Notable</span>
+                        <span class="significance-badge significance-low">Interesting</span>
+                        
+                    </div>
+                    <div class="item-meta">
+                        <span class="meta-badge">inference</span>
+                        <span class="meta-badge">research</span>
+                    </div>
+                    <div class="item-innovation">
+                        <strong>Innovation:</strong> Fast two-sided Kronecker-Hessian GPTQ-style quantization
+                    </div>
+                    <div class="item-significance">
+                        <strong>Why it matters:</strong> Improves quantization accuracy without prohibitive compute cost
+                    </div>
+                </div>
+                
+                <div class="item-card">
+                    <div class="item-header">
+                        <div class="item-title">
+                            <a href="http://arxiv.org/abs/2608.05303v1" target="_blank" rel="noopener">EdgeXpert: Memory-Efficient LLM Inference with MoE and Speculative Decoding</a>
+                        </div>
+                        
+                        <span class="significance-badge significance-low">Interesting</span>
+                        
+                    </div>
+                    <div class="item-meta">
+                        <span class="meta-badge">inference</span>
+                        <span class="meta-badge">prototype</span>
+                    </div>
+                    <div class="item-innovation">
+                        <strong>Innovation:</strong> Hardware co-design resolving MoE/speculative decoding incompatibility
+                    </div>
+                    <div class="item-significance">
+                        <strong>Why it matters:</strong> Enables faster on-device LLM inference for sparse MoE models
+                    </div>
+                </div>
+                
+                <div class="item-card">
+                    <div class="item-header">
+                        <div class="item-title">
+                            <a href="http://arxiv.org/abs/2608.06347v1" target="_blank" rel="noopener">RP-OPSD: Reasoning-Pivot-Guided On-Policy Self-Distillation</a>
+                        </div>
+                        
+                        <span class="significance-badge significance-low">Interesting</span>
                         
                     </div>
                     <div class="item-meta">
@@ -603,10 +582,31 @@
                         <span class="meta-badge">research</span>
                     </div>
                     <div class="item-innovation">
-                        <strong>Innovation:</strong> Detects early-exit points beyond explicit self-doubt cues in CoT
+                        <strong>Innovation:</strong> Targets reasoning-critical tokens in multilingual self-distillation
                     </div>
                     <div class="item-significance">
-                        <strong>Why it matters:</strong> Cuts wasted reasoning compute on redundant verification
+                        <strong>Why it matters:</strong> Improves cross-lingual reasoning transfer efficiency
+                    </div>
+                </div>
+                
+                <div class="item-card">
+                    <div class="item-header">
+                        <div class="item-title">
+                            <a href="http://arxiv.org/abs/2608.05802v1" target="_blank" rel="noopener">On-Policy Delta Distillation for Multilingual Math Reasoning</a>
+                        </div>
+                        
+                        <span class="significance-badge significance-low">Interesting</span>
+                        
+                    </div>
+                    <div class="item-meta">
+                        <span class="meta-badge">reasoning</span>
+                        <span class="meta-badge">prototype</span>
+                    </div>
+                    <div class="item-innovation">
+                        <strong>Innovation:</strong> Uses teacher-base probability gap as multilingual distillation signal
+                    </div>
+                    <div class="item-significance">
+                        <strong>Why it matters:</strong> Strengthens OPD as RL alternative for post-training reasoning
                     </div>
                 </div>
                 
@@ -641,6 +641,12 @@
                 <p>A longitudinal view of AI advancements over the past month.</p>
             </div>
             <div class="timeline">
+                
+                <div class="timeline-item">
+                    <div class="timeline-date">2026-08-10</div>
+                    <p style="color: var(--text-secondary); margin-bottom: 15px;">Unable to generate AI summary due to an error. Please check logs.</p>
+                    
+                </div>
                 
                 <div class="timeline-item">
                     <div class="timeline-date">2026-08-09</div>
@@ -1699,12 +1705,6 @@
                         
                         
                     </div>
-                    
-                </div>
-                
-                <div class="timeline-item">
-                    <div class="timeline-date">2026-07-11</div>
-                    <p style="color: var(--text-secondary); margin-bottom: 15px;">The LLM response contained no text content. This may be due to an API issue or rate limiting.</p>
                     
                 </div>
                 
