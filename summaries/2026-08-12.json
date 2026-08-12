@@ -1,0 +1,11 @@
+{
+  "items": [],
+  "trends": [
+    "Summary generation failed: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your cred"
+  ],
+  "summary": "Unable to generate AI summary due to an error. Please check logs.",
+  "generated_at": "2026-08-12T04:09:49.152867",
+  "model": "claude-sonnet-5",
+  "total_items_analyzed": 147,
+  "generation_error": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CdxCVFQ8M8ChKRq3eBxsp'}"
+}
